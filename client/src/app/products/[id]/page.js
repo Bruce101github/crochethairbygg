@@ -15,7 +15,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { NEXT_CACHE_REVALIDATE_TAG_TOKEN_HEADER } from "next/dist/lib/constants";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   HiChevronDown,
   HiPlus,

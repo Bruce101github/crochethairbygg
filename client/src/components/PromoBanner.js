@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { HiX } from "react-icons/hi";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 export default function PromoBanner() {

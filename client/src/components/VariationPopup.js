@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { HiX, HiPlus, HiMinus } from "react-icons/hi";
 import toast from "react-hot-toast";
 

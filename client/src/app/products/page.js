@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import ProductFilters from "@/components/ProductFilters";
 import { HiAdjustments, HiX, HiChevronDown } from "react-icons/hi";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default function Page() {

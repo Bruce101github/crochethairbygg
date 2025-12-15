@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { HiX, HiChevronDown, HiChevronUp, HiAdjustments } from "react-icons/hi";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function ProductFilters({ 
   filters, 

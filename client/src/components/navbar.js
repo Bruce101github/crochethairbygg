@@ -8,7 +8,7 @@ import { HiSearch } from "react-icons/hi";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { GH, US, EU, GB, NG, ZA, AE, CA } from "country-flag-icons/react/1x1";
-import {motion, AnimatePresence} from "motion/react";
+import {motion, AnimatePresence} from "framer-motion";
 
 export default function Navbar() {
   const pathname = usePathname();
