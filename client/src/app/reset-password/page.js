@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { HiEye, HiEyeOff, HiLock, HiCheckCircle } from "react-icons/hi";
+import { HiEye, HiEyeOff, HiLockClosed, HiCheckCircle } from "react-icons/hi";
 import toast from "react-hot-toast";
 
 export default function ResetPasswordPage() {
@@ -142,7 +142,7 @@ export default function ResetPasswordPage() {
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <HiLock className="h-5 w-5 text-gray-400" />
+                  <HiLockClosed className="h-5 w-5 text-gray-400" />
                 </div>
                 <input
                   id="password"
@@ -180,7 +180,7 @@ export default function ResetPasswordPage() {
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <HiLock className="h-5 w-5 text-gray-400" />
+                  <HiLockClosed className="h-5 w-5 text-gray-400" />
                 </div>
                 <input
                   id="confirmPassword"
