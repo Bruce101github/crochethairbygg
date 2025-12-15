@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { HiEye, HiEyeOff, HiLockClosed, HiCheckCircle } from "react-icons/hi";
@@ -117,6 +117,7 @@ export default function ResetPasswordPage() {
   }
 
   return (
+    <Suspense fallback={<div>Loading...</div>}>
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4 py-12 transition-colors">
       <div className="w-full max-w-md">
         {/* Header */}
@@ -232,7 +233,7 @@ export default function ResetPasswordPage() {
           </div>
         </div>
       </div>
-    </div>
+    </div></Suspense>
   );
 }
 
