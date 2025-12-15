@@ -1,4 +1,5 @@
 "use client";
+
 import { Suspense } from "react";
 import Listing from "@/components/listing";
 import { useSearchParams } from "next/navigation";
