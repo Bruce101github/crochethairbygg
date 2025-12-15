@@ -1,4 +1,5 @@
 "use client";
+import { Suspense } from "react";
 import Listing from "@/components/listing";
 import { useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -31,6 +32,7 @@ export default function Page() {
   }, []);
 
   return (
+    <Suspense fallback={<div>Loading...</div>}>
     <div className="px-2 md:px-5 lg:px-40 pb-20 min-h-screen">
       <Breadcrumbs
         items={[
@@ -222,6 +224,6 @@ export default function Page() {
           />
         </div>
       </div>
-    </div>
+    </div></Suspense>
   );
 }
