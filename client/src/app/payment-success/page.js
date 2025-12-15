@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { HiCheckCircle, HiShoppingBag, HiHome } from "react-icons/hi";
 
-export default function PaymentSuccessPage() {
+function PaymentSuccessContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [orderId, setOrderId] = useState(null);
@@ -18,7 +18,6 @@ export default function PaymentSuccessPage() {
         const id = reference.split("_")[1];
         setOrderId(id);
       } else {
-        // Try to extract order ID from reference if it's just a number
         setOrderId(reference);
       }
       setLoading(false);
@@ -26,6 +25,8 @@ export default function PaymentSuccessPage() {
       setLoading(false);
     }
   }, [searchParams]);
+
+  if (loading) return <div>Loading...</div>;
 
   return (
     <div className="min-h-screen flex items-center justify-center px-5">
@@ -65,3 +66,10 @@ export default function PaymentSuccessPage() {
   );
 }
 
+export default function PaymentSuccessPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PaymentSuccessContent />
+    </Suspense>
+  );
+}
