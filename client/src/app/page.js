@@ -22,7 +22,7 @@ export default function Home() {
       setWindowWidth(window.innerWidth);
     }
 
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/?ordering=-base_price")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/?ordering=-base_price/`)
       .then((res) => res.json())
       .then((data) => {
         setFeaturedProducts(data.slice(0, 8));
