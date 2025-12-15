@@ -34,12 +34,7 @@ SECRET_KEY = 'django-insecure-iw(v&6z$p(5$+^y&ku+fe#!tu)ssqxe2u#46a=l8b5-d1b(*#p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "127.0.0.1",
-    "localhost",
-    "770b902f04fb.ngrok-free.app"
-]
-
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOST', '').split(',') # expects comma-separated env var
 
 # Application definition
 
