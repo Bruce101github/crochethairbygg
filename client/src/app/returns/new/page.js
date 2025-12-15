@@ -1,14 +1,15 @@
 "use client";
 
+import React, { Suspense } from "react";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { HiArrowLeft, HiShoppingBag } from "react-icons/hi";
+import { HiArrowLeft } from "react-icons/hi";
 import toast from "react-hot-toast";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
-export default function NewReturnPage() {
+function NewReturnPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const orderId = searchParams.get("order");
@@ -55,6 +56,7 @@ export default function NewReturnPage() {
     }
 
     fetchOrder();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [accessToken, orderId, router]);
 
   async function fetchOrder() {
@@ -68,8 +70,7 @@ export default function NewReturnPage() {
       if (res.ok) {
         const data = await res.json();
         setOrder(data);
-        
-        // Set default refund amount to item total if item is specified
+
         if (itemId && data.items) {
           const item = data.items.find(i => i.id === parseInt(itemId));
           if (item) {
@@ -79,14 +80,12 @@ export default function NewReturnPage() {
             }));
           }
         } else {
-          // Set to order total if full order return
           setFormData(prev => ({
             ...prev,
             requested_refund_amount: data.total.toString(),
           }));
         }
 
-        // Check if order is eligible for return
         if (!['paid', 'processing', 'shipped', 'delivered'].includes(data.status)) {
           toast.error("This order is not eligible for return");
           router.push(`/orders/${orderId}`);
@@ -116,8 +115,6 @@ export default function NewReturnPage() {
         requested_refund_amount: formData.requested_refund_amount ? parseFloat(formData.requested_refund_amount) : null,
       };
 
-      console.log("Submitting return request payload:", payload);
-
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/return-requests/`, {
         method: "POST",
         headers: {
@@ -130,14 +127,11 @@ export default function NewReturnPage() {
       const data = await res.json();
 
       if (res.ok) {
-        console.log("Return request created:", data);
         toast.success("Return request submitted successfully!");
         router.push("/returns");
       } else {
-        console.error("Return request error:", data);
-        // Handle different error formats
         let errorMessage = "Failed to submit return request";
-        
+
         if (data.non_field_errors && data.non_field_errors.length > 0) {
           errorMessage = data.non_field_errors[0];
         } else if (data.error) {
@@ -153,7 +147,7 @@ export default function NewReturnPage() {
         } else if (data.reason_description) {
           errorMessage = Array.isArray(data.reason_description) ? data.reason_description[0] : data.reason_description;
         }
-        
+
         toast.error(errorMessage);
       }
     } catch (error) {
@@ -301,5 +295,13 @@ export default function NewReturnPage() {
         </div>
       </div>
     </ProtectedRoute>
+  );
+}
+
+export default function WrappedNewReturnPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <NewReturnPage />
+    </Suspense>
   );
 }
