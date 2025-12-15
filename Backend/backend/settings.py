@@ -33,7 +33,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = 'django-insecure-iw(v&6z$p(5$+^y&ku+fe#!tu)ssqxe2u#46a=l8b5-d1b(*#p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOST', '').split(',') # expects comma-separated env var
 
@@ -142,6 +142,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:3001",
     "http://127.0.0.1:3001",
+    "https://crochethairbygg.vercel.app",
+    "https://admin-crochethairbygg.vercel.app"
 ]
 CORS_ALLOW_METHODS = [
     'DELETE',
@@ -179,6 +181,11 @@ REST_FRAMEWORK = {
     ],
 }
 
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://crochethairbygg-production.up.railway.app",
+    # add other trusted origins if needed
+]
 
 
 DJANGO_FILTER_BACKEND_TEMPLATE = None
