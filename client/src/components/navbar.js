@@ -134,7 +134,7 @@ useEffect(() => {
 
   useEffect(() => {
     // Fetch navigation categories
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories/?is_nav_link=true")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories/?is_nav_link=true`)
       .then((res) => res.json())
       .then((data) => {
         // Filter to get only top-level categories that are nav links
