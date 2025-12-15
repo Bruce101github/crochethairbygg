@@ -118,7 +118,7 @@ export default function NewReturnPage() {
 
       console.log("Submitting return request payload:", payload);
 
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/return-requests/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/return-requests/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

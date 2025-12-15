@@ -43,7 +43,7 @@ export default function FavoritesPage() {
 
   async function fetchFavorites() {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/`, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -108,7 +108,7 @@ export default function FavoritesPage() {
     toast.loading("Adding to bag...");
     try {
       // First, fetch current cart
-      const getCartRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
+      const getCartRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -167,7 +167,7 @@ export default function FavoritesPage() {
           }),
         });
       } else {
-        res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
+        res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/`, {
           method: "POST",
           headers: {
             Authorization: `Bearer ${accessToken}`,

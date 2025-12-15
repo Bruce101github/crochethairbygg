@@ -83,7 +83,7 @@ export default function ProductPage() {
     if (!currentRefreshToken) return null;
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/token/refresh/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/token/refresh/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ refresh: currentRefreshToken }),
@@ -246,7 +246,7 @@ export default function ProductPage() {
         try {
           if (data.liked) {
             // Add to favorites
-            const favRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/", {
+            const favRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/`, {
               method: "POST",
               headers: {
                 Authorization: `Bearer ${accessToken}`,
@@ -261,7 +261,7 @@ export default function ProductPage() {
             }
           } else {
             // Remove from favorites - need to find favorite ID first
-            const favListRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/", {
+            const favListRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/`, {
               headers: {
                 Authorization: `Bearer ${accessToken}`,
               },
@@ -463,7 +463,7 @@ export default function ProductPage() {
     const performCartOperation = async (currentToken, retry = false) => {
     try {
       // First, fetch current cart
-        let getCartRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
+        let getCartRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/`, {
         method: "GET",
         headers: {
             Authorization: `Bearer ${currentToken}`,
@@ -556,7 +556,7 @@ export default function ProductPage() {
         });
       } else {
         // Use POST to create new cart
-        response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
+        response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/`, {
           method: "POST",
           headers: {
               Authorization: `Bearer ${currentToken}`,

@@ -52,7 +52,7 @@ export function AuthProvider({ children }) {
     if (!refreshToken) return false;
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/token/refresh/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/token/refresh/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ refresh: refreshToken }),
@@ -81,7 +81,7 @@ export function AuthProvider({ children }) {
     }
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/user/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/user/`, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -96,7 +96,7 @@ export function AuthProvider({ children }) {
           const refreshed = await refreshAccessToken();
           if (refreshed) {
             // Retry fetching user after refresh
-            const retryRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/user/", {
+            const retryRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/user/`, {
               headers: {
                 Authorization: `Bearer ${localStorage.getItem("access")}`,
               },
@@ -145,7 +145,7 @@ export function AuthProvider({ children }) {
   // Login function
   const login = async (username, password) => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/token/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/token/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),

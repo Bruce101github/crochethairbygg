@@ -43,7 +43,7 @@ export default function EditProduct() {
 
   async function fetchCategories() {
     try {
-      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories/");
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories/`);
       if (res.ok) {
         const data = await res.json();
         setCategories(data);
@@ -176,7 +176,7 @@ export default function EditProduct() {
         });
       } else {
         // Create new product
-        productRes = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/", {
+        productRes = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -204,7 +204,7 @@ export default function EditProduct() {
           imageFormData.append("is_main", images.length === 0 && newImages.indexOf(imageFile) === 0);
 
           try {
-            await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/product-images/", {
+            await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/product-images/`, {
               method: "POST",
               body: imageFormData,
             });
@@ -242,7 +242,7 @@ export default function EditProduct() {
             stock: variant.stock || 0,
           };
           
-          await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/product-variants/", {
+          await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/product-variants/`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

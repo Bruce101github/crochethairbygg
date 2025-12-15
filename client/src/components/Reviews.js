@@ -48,7 +48,7 @@ export default function Reviews({ productId, canReview, onReviewSubmitted }) {
 
     setSubmitting(true);
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/reviews/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/reviews/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

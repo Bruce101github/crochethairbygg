@@ -30,7 +30,7 @@ export default function OrdersPage() {
     if (!currentRefreshToken) return null;
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/token/refresh/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/token/refresh/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ refresh: currentRefreshToken }),
@@ -57,7 +57,7 @@ export default function OrdersPage() {
 
   async function fetchOrders() {
     try {
-      let res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/history/", {
+      let res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/history/`, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -68,7 +68,7 @@ export default function OrdersPage() {
         const newToken = await refreshAccessToken();
         if (newToken) {
           // Retry with new token
-          res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/history/", {
+          res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/history/`, {
             headers: {
               Authorization: `Bearer ${newToken}`,
             },

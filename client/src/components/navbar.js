@@ -66,7 +66,7 @@ const languageOptions = [
       return;
     }
 
-  fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
+  fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -240,7 +240,7 @@ useEffect(() => {
   useEffect(() => {
     // Fetch user info
     if (accessToken) {
-      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/user/", {
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/user/`, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },

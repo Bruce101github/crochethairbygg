@@ -39,7 +39,7 @@ export default function AdminReturns() {
 
   async function fetchReturns() {
     try {
-      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/return-requests/");
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/return-requests/`);
       if (res.ok) {
         const data = await res.json();
         console.log("Admin return requests response:", data);

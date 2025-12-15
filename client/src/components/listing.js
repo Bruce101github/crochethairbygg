@@ -30,7 +30,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
   const hasFetchedRef = useRef(false);
   
   function fetchProducts() {
-    let url = `${process.env.NEXT_PUBLIC_API_URL}/api/products/";
+    let url = `${process.env.NEXT_PUBLIC_API_URL}/api/products/`;
     const params = new URLSearchParams();
     
     if (searchQuery) {
@@ -258,7 +258,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
         try {
           if (data.liked) {
             // Add to favorites
-            const favRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/", {
+            const favRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/`, {
               method: "POST",
               headers: {
                 Authorization: `Bearer ${accessToken}`,
@@ -273,7 +273,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
             }
           } else {
             // Remove from favorites - need to find favorite ID first
-            const favListRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/", {
+            const favListRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/`, {
               headers: {
                 Authorization: `Bearer ${accessToken}`,
               },
@@ -346,7 +346,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
     toast.loading("Adding to bag...");
     try {
       // First, fetch current cart
-      const getCartRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
+      const getCartRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -408,7 +408,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
         });
       } else {
         // Use POST to create new cart
-        res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
+        res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/`, {
           method: "POST",
           headers: {
             Authorization: `Bearer ${accessToken}`,

@@ -22,7 +22,7 @@ export default function AdminProducts() {
 
   async function fetchProducts() {
     try {
-      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/");
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/`);
       if (res.ok) {
         const data = await res.json();
         setProducts(data);
@@ -64,7 +64,7 @@ export default function AdminProducts() {
 
   async function fetchProducts() {
     try {
-      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/");
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/`);
       if (res.ok) {
         const data = await res.json();
         setProducts(data);

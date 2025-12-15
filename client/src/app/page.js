@@ -31,13 +31,13 @@ export default function Home() {
       .catch(() => setLoading(false));
 
     // Fetch categories
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories/")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories/`)
       .then((res) => res.json())
       .then((data) => setCategories(data))
       .catch((err) => console.error("Error fetching categories:", err));
 
     // Fetch hero slides
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/hero-slides/")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/hero-slides/`)
       .then((res) => res.json())
       .then((data) => {
         if (data && Array.isArray(data) && data.length > 0) {

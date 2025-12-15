@@ -46,7 +46,7 @@ export default function AdminPromoBanners() {
 
   async function fetchBanners() {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/promo-banners/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/promo-banners/`, {
         headers: { Authorization: `Bearer ${accessToken}` },
       });
       if (res.ok) {
@@ -66,7 +66,7 @@ export default function AdminPromoBanners() {
     try {
       const url = editingId
         ? `${process.env.NEXT_PUBLIC_API_URL}/api/promo-banners/${editingId}/`
-        : `${process.env.NEXT_PUBLIC_API_URL}/api/promo-banners/";
+        : `${process.env.NEXT_PUBLIC_API_URL}/api/promo-banners/`;
       const method = editingId ? "PUT" : "POST";
 
       const res = await authenticatedFetch(url, {

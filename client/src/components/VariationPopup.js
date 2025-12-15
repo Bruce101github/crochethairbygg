@@ -104,7 +104,7 @@ export default function VariationPopup({ product, isOpen, onClose, onAddToCart, 
     
     try {
       // Fetch current cart
-      const getCartRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
+      const getCartRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -162,7 +162,7 @@ export default function VariationPopup({ product, isOpen, onClose, onAddToCart, 
           }),
         });
       } else {
-        res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
+        res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/`, {
           method: "POST",
           headers: {
             Authorization: `Bearer ${accessToken}`,

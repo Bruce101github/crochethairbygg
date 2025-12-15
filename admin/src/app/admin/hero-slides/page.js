@@ -52,7 +52,7 @@ export default function AdminHeroSlides() {
 
   async function fetchSlides() {
     try {
-      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/hero-slides/");
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/hero-slides/`);
       if (res.ok) {
         const data = await res.json();
         setSlides(data);
@@ -123,7 +123,7 @@ export default function AdminHeroSlides() {
 
       const url = editingId
         ? `${process.env.NEXT_PUBLIC_API_URL}/api/hero-slides/${editingId}/`
-        : `${process.env.NEXT_PUBLIC_API_URL}/api/hero-slides/";
+        : `${process.env.NEXT_PUBLIC_API_URL}/api/hero-slides/`;
       const method = editingId ? "PUT" : "POST";
 
       const res = await authenticatedFetch(url, {

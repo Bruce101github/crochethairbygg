@@ -26,7 +26,7 @@ export default function SettingsPage() {
       return;
     }
 
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/user/", {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/user/`, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },

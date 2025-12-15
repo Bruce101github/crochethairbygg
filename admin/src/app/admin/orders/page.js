@@ -35,7 +35,7 @@ export default function AdminOrders() {
 
   async function fetchOrders() {
     try {
-      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/");
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/`);
       
       if (res.ok) {
         const data = await res.json();
