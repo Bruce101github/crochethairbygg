@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.utils.text import slugify
 from django.conf import settings
 from decimal import Decimal
+from cloudinary.models import CloudinaryField
 
 
 # ============================
@@ -81,7 +82,7 @@ class ProductVariant(models.Model):
 # ============================
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="images")
-    image = models.ImageField(upload_to="products/")
+    image = CloudinaryField('image')
     is_main = models.BooleanField(default=False)
 
     def __str__(self):

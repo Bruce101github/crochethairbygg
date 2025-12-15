@@ -14,6 +14,7 @@ djangorestframework-simplejwt = "*"
 psycopg2-binary = "*"
 requests = "*"
 gunicorn = "*"
+cloudinary = "*"
 dj-database-url = "*"
 
 [dev-packages]
