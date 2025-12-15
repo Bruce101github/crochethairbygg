@@ -24,7 +24,7 @@ export default function Page() {
 
   useEffect(() => {
     // Fetch categories
-    fetch("http://127.0.0.1:8000/api/categories/")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories/`)
       .then((res) => res.json())
       .then((data) => setCategories(data))
       .catch((err) => console.error("Error fetching categories:", err));
@@ -43,7 +43,7 @@ export default function Page() {
           <div className="flex-1">
             {searchQuery && (
               <h1 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white">
-                Search results for: "{searchQuery}"
+                Search results for: &quot;{searchQuery}&quot;
               </h1>
             )}
             {!searchQuery && (

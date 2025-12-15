@@ -59,7 +59,7 @@ export default function NewReturnPage() {
 
   async function fetchOrder() {
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/orders/${orderId}/`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/${orderId}/`, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -118,7 +118,7 @@ export default function NewReturnPage() {
 
       console.log("Submitting return request payload:", payload);
 
-      const res = await fetch("http://127.0.0.1:8000/api/return-requests/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/return-requests/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

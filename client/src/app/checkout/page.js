@@ -55,7 +55,7 @@ export default function CheckoutPage() {
 
   async function fetchCart() {
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/cart/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -77,7 +77,7 @@ export default function CheckoutPage() {
 
   async function fetchAddresses() {
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/addresses/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/addresses/", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -99,7 +99,7 @@ export default function CheckoutPage() {
 
   async function fetchShippingMethods() {
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/shipping-methods/");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/shipping-methods/");
       if (res.ok) {
         const data = await res.json();
         setShippingMethods(data);
@@ -114,7 +114,7 @@ export default function CheckoutPage() {
 
   async function createAddress() {
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/addresses/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/addresses/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -234,7 +234,7 @@ export default function CheckoutPage() {
       // Debug: Log request body
       console.log("Checkout request body:", JSON.stringify(body, null, 2));
 
-      const res = await fetch("http://127.0.0.1:8000/api/checkout/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/checkout/", {
         method: "POST",
         headers,
         body: JSON.stringify(body),

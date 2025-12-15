@@ -35,7 +35,7 @@ export default function AdminCategories() {
 
   async function fetchCategories() {
     try {
-      const res = await authenticatedFetch("http://127.0.0.1:8000/api/categories/");
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories/`);
       if (res.ok) {
         const data = await res.json();
         setCategories(data);
@@ -58,8 +58,8 @@ export default function AdminCategories() {
 
     try {
       const url = editingId
-        ? `http://127.0.0.1:8000/api/categories/${editingId}/`
-        : "http://127.0.0.1:8000/api/categories/";
+        ? `${process.env.NEXT_PUBLIC_API_URL}/api/categories/${editingId}/`
+        : `${process.env.NEXT_PUBLIC_API_URL}/api/categories/`;
       const method = editingId ? "PATCH" : "POST"; // Use PATCH for updates to allow partial updates
 
       // Use FormData for file uploads
@@ -162,7 +162,7 @@ export default function AdminCategories() {
     if (!confirm("Are you sure you want to delete this category?")) return;
 
     try {
-      const res = await authenticatedFetch(`http://127.0.0.1:8000/api/categories/${id}/`, {
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories/${id}/`, {
         method: "DELETE",
       });
 

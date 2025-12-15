@@ -52,7 +52,7 @@ export default function AdminHeroSlides() {
 
   async function fetchSlides() {
     try {
-      const res = await authenticatedFetch("http://127.0.0.1:8000/api/hero-slides/");
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/hero-slides/");
       if (res.ok) {
         const data = await res.json();
         setSlides(data);
@@ -122,8 +122,8 @@ export default function AdminHeroSlides() {
       }
 
       const url = editingId
-        ? `http://127.0.0.1:8000/api/hero-slides/${editingId}/`
-        : "http://127.0.0.1:8000/api/hero-slides/";
+        ? `${process.env.NEXT_PUBLIC_API_URL}/api/hero-slides/${editingId}/`
+        : `${process.env.NEXT_PUBLIC_API_URL}/api/hero-slides/";
       const method = editingId ? "PUT" : "POST";
 
       const res = await authenticatedFetch(url, {
@@ -155,7 +155,7 @@ export default function AdminHeroSlides() {
     if (!confirm("Are you sure you want to delete this slide?")) return;
 
     try {
-      const res = await authenticatedFetch(`http://127.0.0.1:8000/api/hero-slides/${id}/`, {
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/hero-slides/${id}/`, {
         method: "DELETE",
       });
 
@@ -236,7 +236,7 @@ export default function AdminHeroSlides() {
 
     try {
       for (const slide of updatedSlidesWithOrder) {
-        await authenticatedFetch(`http://127.0.0.1:8000/api/hero-slides/${slide.id}/`, {
+        await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/hero-slides/${slide.id}/`, {
           method: "PATCH",
           body: JSON.stringify({ order: slide.order }),
         });

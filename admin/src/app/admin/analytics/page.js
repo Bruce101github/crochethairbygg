@@ -42,7 +42,7 @@ export default function AnalyticsPage() {
     setLoading(true);
     try {
       const res = await authenticatedFetch(
-        `http://127.0.0.1:8000/api/analytics/sales/?days=${periodDays}`
+        `${process.env.NEXT_PUBLIC_API_URL}/api/analytics/sales/?days=${periodDays}`
       );
       if (res.ok) {
         const data = await res.json();

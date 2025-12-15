@@ -28,7 +28,7 @@ export default function OrderDetailPage() {
 
   async function fetchOrder() {
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/orders/${params.id}/`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/${params.id}/`, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },

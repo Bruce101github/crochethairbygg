@@ -43,7 +43,7 @@ export default function EditProduct() {
 
   async function fetchCategories() {
     try {
-      const res = await authenticatedFetch("http://127.0.0.1:8000/api/categories/");
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories/");
       if (res.ok) {
         const data = await res.json();
         setCategories(data);
@@ -55,7 +55,7 @@ export default function EditProduct() {
 
   async function fetchProduct() {
     try {
-      const res = await authenticatedFetch(`http://127.0.0.1:8000/api/products/${productId}/`);
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${productId}/`);
       if (res.ok) {
         const data = await res.json();
         setFormData({
@@ -167,7 +167,7 @@ export default function EditProduct() {
       let productRes;
       if (productId && productId !== "new") {
         // Update existing product
-        productRes = await authenticatedFetch(`http://127.0.0.1:8000/api/products/${productId}/`, {
+        productRes = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${productId}/`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -176,7 +176,7 @@ export default function EditProduct() {
         });
       } else {
         // Create new product
-        productRes = await authenticatedFetch("http://127.0.0.1:8000/api/products/", {
+        productRes = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -204,7 +204,7 @@ export default function EditProduct() {
           imageFormData.append("is_main", images.length === 0 && newImages.indexOf(imageFile) === 0);
 
           try {
-            await authenticatedFetch("http://127.0.0.1:8000/api/product-images/", {
+            await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/product-images/", {
               method: "POST",
               body: imageFormData,
             });
@@ -218,7 +218,7 @@ export default function EditProduct() {
       const existingVariants = variants.filter(v => v.id && !v.id.toString().startsWith("new-"));
       for (const variant of existingVariants) {
         try {
-          await authenticatedFetch(`http://127.0.0.1:8000/api/product-variants/${variant.id}/`, {
+          await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/product-variants/${variant.id}/`, {
             method: "DELETE",
           });
         } catch (error) {
@@ -242,7 +242,7 @@ export default function EditProduct() {
             stock: variant.stock || 0,
           };
           
-          await authenticatedFetch("http://127.0.0.1:8000/api/product-variants/", {
+          await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/product-variants/", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

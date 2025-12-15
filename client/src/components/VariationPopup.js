@@ -104,7 +104,7 @@ export default function VariationPopup({ product, isOpen, onClose, onAddToCart, 
     
     try {
       // Fetch current cart
-      const getCartRes = await fetch("http://127.0.0.1:8000/api/cart/", {
+      const getCartRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -151,7 +151,7 @@ export default function VariationPopup({ product, isOpen, onClose, onAddToCart, 
       // Update or create cart
       let res;
       if (cartExists && cartId) {
-        res = await fetch(`http://127.0.0.1:8000/api/cart/${cartId}/`, {
+        res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/${cartId}/`, {
           method: "PUT",
           headers: {
             Authorization: `Bearer ${accessToken}`,
@@ -162,7 +162,7 @@ export default function VariationPopup({ product, isOpen, onClose, onAddToCart, 
           }),
         });
       } else {
-        res = await fetch("http://127.0.0.1:8000/api/cart/", {
+        res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${accessToken}`,

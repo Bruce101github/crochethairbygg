@@ -40,10 +40,10 @@ export default function PaymentPage() {
           headers["Authorization"] = `Bearer ${accessToken}`;
         }
         
-        let url = `http://127.0.0.1:8000/api/orders/${orderId}/`;
+        let url = `${process.env.NEXT_PUBLIC_API_URL}/api/orders/${orderId}/`;
         if (!accessToken && guestEmail) {
           // Use guest order tracking endpoint
-          url = `http://127.0.0.1:8000/api/orders/track/?order_id=${orderId}&email=${encodeURIComponent(guestEmail)}`;
+          url = `${process.env.NEXT_PUBLIC_API_URL}/api/orders/track/?order_id=${orderId}&email=${encodeURIComponent(guestEmail)}`;
         }
         
         const res = await fetch(url, { headers });
@@ -102,7 +102,7 @@ export default function PaymentPage() {
         : { payment_channel: paymentMethod };
       
       const res = await fetch(
-        `http://127.0.0.1:8000/api/paystack/initiate/${orderId}/`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/paystack/initiate/${orderId}/`,
         {
           method: "POST",
           headers,

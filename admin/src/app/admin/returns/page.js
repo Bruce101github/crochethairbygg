@@ -39,7 +39,7 @@ export default function AdminReturns() {
 
   async function fetchReturns() {
     try {
-      const res = await authenticatedFetch("http://127.0.0.1:8000/api/return-requests/");
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/return-requests/");
       if (res.ok) {
         const data = await res.json();
         console.log("Admin return requests response:", data);
@@ -68,7 +68,7 @@ export default function AdminReturns() {
       }
       if (editForm.admin_notes !== undefined) updateData.admin_notes = editForm.admin_notes;
 
-      const res = await authenticatedFetch(`http://127.0.0.1:8000/api/return-requests/${id}/`, {
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/return-requests/${id}/`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -103,7 +103,7 @@ export default function AdminReturns() {
     setProcessingRefundId(id);
     try {
       const res = await authenticatedFetch(
-        `http://127.0.0.1:8000/api/return-requests/${id}/process-refund/`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/return-requests/${id}/process-refund/`,
         {
           method: "POST",
         }
@@ -289,7 +289,7 @@ export default function AdminReturns() {
                           onChange={async (e) => {
                             const newStatus = e.target.value;
                             try {
-                              const res = await authenticatedFetch(`http://127.0.0.1:8000/api/return-requests/${returnReq.id}/`, {
+                              const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/return-requests/${returnReq.id}/`, {
                                 method: "PATCH",
                                 headers: { "Content-Type": "application/json" },
                                 body: JSON.stringify({ status: newStatus }),

@@ -22,7 +22,7 @@ export default function AdminProducts() {
 
   async function fetchProducts() {
     try {
-      const res = await authenticatedFetch("http://127.0.0.1:8000/api/products/");
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/");
       if (res.ok) {
         const data = await res.json();
         setProducts(data);
@@ -41,7 +41,7 @@ export default function AdminProducts() {
     if (!confirm("Are you sure you want to delete this product?")) return;
 
     try {
-      const res = await authenticatedFetch(`http://127.0.0.1:8000/api/products/${id}/`, {
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${id}/`, {
         method: "DELETE",
       });
 
@@ -64,7 +64,7 @@ export default function AdminProducts() {
 
   async function fetchProducts() {
     try {
-      const res = await authenticatedFetch("http://127.0.0.1:8000/api/products/");
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/");
       if (res.ok) {
         const data = await res.json();
         setProducts(data);

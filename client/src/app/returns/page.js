@@ -29,7 +29,7 @@ export default function ReturnsPage() {
 
   async function fetchReturns() {
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/return-requests/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/return-requests/", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },

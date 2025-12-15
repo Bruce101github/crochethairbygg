@@ -43,7 +43,7 @@ export default function FavoritesPage() {
 
   async function fetchFavorites() {
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/favorites/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -67,7 +67,7 @@ export default function FavoritesPage() {
 
   async function removeFavorite(id) {
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/favorites/${id}/`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/${id}/`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -108,7 +108,7 @@ export default function FavoritesPage() {
     toast.loading("Adding to bag...");
     try {
       // First, fetch current cart
-      const getCartRes = await fetch("http://127.0.0.1:8000/api/cart/", {
+      const getCartRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -156,7 +156,7 @@ export default function FavoritesPage() {
       // Determine method: POST if no cart exists, PUT if cart exists
       let res;
       if (cartExists && cartId) {
-        res = await fetch(`http://127.0.0.1:8000/api/cart/${cartId}/`, {
+        res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/${cartId}/`, {
           method: "PUT",
           headers: {
             Authorization: `Bearer ${accessToken}`,
@@ -167,7 +167,7 @@ export default function FavoritesPage() {
           }),
         });
       } else {
-        res = await fetch("http://127.0.0.1:8000/api/cart/", {
+        res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${accessToken}`,

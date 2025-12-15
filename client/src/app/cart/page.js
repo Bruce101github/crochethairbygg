@@ -40,7 +40,7 @@ export default function Page() {
     if (!refreshToken) return null;
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/token/refresh/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/token/refresh/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ refresh: refreshToken }),
@@ -59,7 +59,7 @@ export default function Page() {
 
   async function fetchCartItems(token) {
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/cart/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -96,7 +96,7 @@ export default function Page() {
   }
 
   function fetchProducts() {
-    fetch("http://127.0.0.1:8000/api/products/")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/`)
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch(() => {});
@@ -111,7 +111,7 @@ export default function Page() {
     setDiscountError("");
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/discount-code/validate/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/discount-code/validate/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -266,7 +266,7 @@ export default function Page() {
         return;
       }
 
-      const res = await fetch(`http://127.0.0.1:8000/api/cart/${cart.id}/`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/${cart.id}/`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -336,7 +336,7 @@ export default function Page() {
       const updatedItems = cart.items.filter((item) => item.id !== itemId);
 
       // Use cart ID in the URL
-      const res = await fetch(`http://127.0.0.1:8000/api/cart/${cart.id}/`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/${cart.id}/`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

@@ -18,7 +18,7 @@ export default function PromoBanner() {
 
   useEffect(() => {
     // Fetch banners from API
-    fetch("http://127.0.0.1:8000/api/promo-banners/")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/promo-banners/")
       .then((res) => res.json())
       .then((data) => {
         if (data && data.length > 0) {

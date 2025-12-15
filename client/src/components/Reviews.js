@@ -27,7 +27,7 @@ export default function Reviews({ productId, canReview, onReviewSubmitted }) {
 
   async function fetchReviews() {
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/reviews/?product=${productId}`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/reviews/?product=${productId}`);
       if (res.ok) {
         const data = await res.json();
         setReviews(data);
@@ -48,7 +48,7 @@ export default function Reviews({ productId, canReview, onReviewSubmitted }) {
 
     setSubmitting(true);
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/reviews/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/reviews/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

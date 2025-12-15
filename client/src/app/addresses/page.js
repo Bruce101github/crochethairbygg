@@ -35,7 +35,7 @@ export default function AddressesPage() {
 
   async function fetchAddresses() {
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/addresses/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/addresses/", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -72,7 +72,7 @@ export default function AddressesPage() {
 
   async function deleteAddress(id) {
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/addresses/${id}/`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/addresses/${id}/`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -95,8 +95,8 @@ export default function AddressesPage() {
 
     try {
       const url = editingId
-        ? `http://127.0.0.1:8000/api/addresses/${editingId}/`
-        : "http://127.0.0.1:8000/api/addresses/";
+        ? `${process.env.NEXT_PUBLIC_API_URL}/api/addresses/${editingId}/`
+        : `${process.env.NEXT_PUBLIC_API_URL}/api/addresses/";
       const method = editingId ? "PUT" : "POST";
 
       const res = await fetch(url, {

@@ -22,7 +22,7 @@ export default function Home() {
       setWindowWidth(window.innerWidth);
     }
 
-    fetch("http://127.0.0.1:8000/api/products/?ordering=-base_price")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/?ordering=-base_price")
       .then((res) => res.json())
       .then((data) => {
         setFeaturedProducts(data.slice(0, 8));
@@ -31,13 +31,13 @@ export default function Home() {
       .catch(() => setLoading(false));
 
     // Fetch categories
-    fetch("http://127.0.0.1:8000/api/categories/")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories/")
       .then((res) => res.json())
       .then((data) => setCategories(data))
       .catch((err) => console.error("Error fetching categories:", err));
 
     // Fetch hero slides
-    fetch("http://127.0.0.1:8000/api/hero-slides/")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/hero-slides/")
       .then((res) => res.json())
       .then((data) => {
         if (data && Array.isArray(data) && data.length > 0) {

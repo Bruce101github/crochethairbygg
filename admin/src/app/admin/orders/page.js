@@ -35,7 +35,7 @@ export default function AdminOrders() {
 
   async function fetchOrders() {
     try {
-      const res = await authenticatedFetch("http://127.0.0.1:8000/api/orders/");
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/");
       
       if (res.ok) {
         const data = await res.json();
@@ -74,7 +74,7 @@ export default function AdminOrders() {
         payload.tracking_number = order.tracking_number;
       }
       
-      const res = await authenticatedFetch(`http://127.0.0.1:8000/api/orders/${orderId}/status/`, {
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/${orderId}/status/`, {
         method: "PATCH",
         body: JSON.stringify(payload),
       });
@@ -113,7 +113,7 @@ export default function AdminOrders() {
         tracking_number: trackingNumber.trim() || null
       };
       
-      const res = await authenticatedFetch(`http://127.0.0.1:8000/api/orders/${orderId}/status/`, {
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/${orderId}/status/`, {
         method: "PATCH",
         body: JSON.stringify(payload),
       });

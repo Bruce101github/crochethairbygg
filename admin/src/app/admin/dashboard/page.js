@@ -45,9 +45,9 @@ export default function AdminDashboard() {
   async function fetchStats() {
     try {
       const [productsRes, ordersRes, usersRes] = await Promise.all([
-        authenticatedFetch("http://127.0.0.1:8000/api/products/"),
-        authenticatedFetch("http://127.0.0.1:8000/api/orders/"),
-        authenticatedFetch("http://127.0.0.1:8000/api/users/stats/"),
+        authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/`),
+        authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/`),
+        authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/stats/`),
       ]);
 
       const products = await productsRes.json();
@@ -197,7 +197,7 @@ export default function AdminDashboard() {
           <div className="mb-8 flex justify-between items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-2">Dashboard Overview</h2>
-              <p className="text-gray-600">Monitor your store's performance and manage your business</p>
+              <p className="text-gray-600">Monitor your store&apos;s performance and manage your business</p>
             </div>
             <Link
               href="/admin/analytics"

@@ -45,7 +45,7 @@ export default function AdminDiscountCodes() {
 
   async function fetchCodes() {
     try {
-      const res = await authenticatedFetch("http://127.0.0.1:8000/api/discount-codes/");
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/discount-codes/`);
       if (res.ok) {
         const data = await res.json();
         setCodes(data);
@@ -67,8 +67,8 @@ export default function AdminDiscountCodes() {
 
     try {
       const url = editingId
-        ? `http://127.0.0.1:8000/api/discount-codes/${editingId}/`
-        : "http://127.0.0.1:8000/api/discount-codes/";
+        ? `${process.env.NEXT_PUBLIC_API_URL}/api/discount-codes/${editingId}/`
+        : `${process.env.NEXT_PUBLIC_API_URL}/api/discount-codes/`;
       const method = editingId ? "PATCH" : "POST";
 
       const payload = {
@@ -129,7 +129,7 @@ export default function AdminDiscountCodes() {
     if (!confirm("Are you sure you want to delete this discount code?")) return;
 
     try {
-      const res = await authenticatedFetch(`http://127.0.0.1:8000/api/discount-codes/${id}/`, {
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/discount-codes/${id}/`, {
         method: "DELETE",
       });
 

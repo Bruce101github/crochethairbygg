@@ -66,7 +66,7 @@ const languageOptions = [
       return;
     }
 
-  fetch("http://127.0.0.1:8000/api/cart/", {
+  fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -134,7 +134,7 @@ useEffect(() => {
 
   useEffect(() => {
     // Fetch navigation categories
-    fetch("http://127.0.0.1:8000/api/categories/?is_nav_link=true")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories/?is_nav_link=true")
       .then((res) => res.json())
       .then((data) => {
         // Filter to get only top-level categories that are nav links
@@ -240,7 +240,7 @@ useEffect(() => {
   useEffect(() => {
     // Fetch user info
     if (accessToken) {
-      fetch("http://127.0.0.1:8000/api/user/", {
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/user/", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },

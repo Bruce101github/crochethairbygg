@@ -46,7 +46,7 @@ export default function AdminPromoBanners() {
 
   async function fetchBanners() {
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/promo-banners/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/promo-banners/", {
         headers: { Authorization: `Bearer ${accessToken}` },
       });
       if (res.ok) {
@@ -65,8 +65,8 @@ export default function AdminPromoBanners() {
 
     try {
       const url = editingId
-        ? `http://127.0.0.1:8000/api/promo-banners/${editingId}/`
-        : "http://127.0.0.1:8000/api/promo-banners/";
+        ? `${process.env.NEXT_PUBLIC_API_URL}/api/promo-banners/${editingId}/`
+        : `${process.env.NEXT_PUBLIC_API_URL}/api/promo-banners/";
       const method = editingId ? "PUT" : "POST";
 
       const res = await authenticatedFetch(url, {
@@ -97,7 +97,7 @@ export default function AdminPromoBanners() {
     if (!confirm("Are you sure you want to delete this banner?")) return;
 
     try {
-      const res = await authenticatedFetch(`http://127.0.0.1:8000/api/promo-banners/${id}/`, {
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/promo-banners/${id}/`, {
         method: "DELETE",
       });
 
@@ -168,7 +168,7 @@ export default function AdminPromoBanners() {
 
             try {
               for (const banner of updatedBannersWithOrder) {
-                await authenticatedFetch(`http://127.0.0.1:8000/api/promo-banners/${banner.id}/`, {
+                await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/api/promo-banners/${banner.id}/`, {
                   method: "PATCH",
                   body: JSON.stringify({ order: banner.order }),
                 });

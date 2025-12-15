@@ -30,7 +30,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
   const hasFetchedRef = useRef(false);
   
   function fetchProducts() {
-    let url = "http://127.0.0.1:8000/api/products/";
+    let url = `${process.env.NEXT_PUBLIC_API_URL}/api/products/";
     const params = new URLSearchParams();
     
     if (searchQuery) {
@@ -171,7 +171,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
     if (accessToken && products.length > 0) {
         const likedSet = new Set();
         const promises = products.map((product) =>
-        fetch(`http://127.0.0.1:8000/api/products/${product.id}/like/`, {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${product.id}/like/`, {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
@@ -224,7 +224,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
 
     try {
       const res = await fetch(
-        `http://127.0.0.1:8000/api/products/${productId}/like/`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/products/${productId}/like/`,
         {
           method: "POST",
           headers: {
@@ -258,7 +258,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
         try {
           if (data.liked) {
             // Add to favorites
-            const favRes = await fetch("http://127.0.0.1:8000/api/favorites/", {
+            const favRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/", {
               method: "POST",
               headers: {
                 Authorization: `Bearer ${accessToken}`,
@@ -273,7 +273,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
             }
           } else {
             // Remove from favorites - need to find favorite ID first
-            const favListRes = await fetch("http://127.0.0.1:8000/api/favorites/", {
+            const favListRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/", {
               headers: {
                 Authorization: `Bearer ${accessToken}`,
               },
@@ -282,7 +282,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
               const favorites = await favListRes.json();
               const favorite = favorites.find((f) => f.product.id === parseInt(productId));
               if (favorite) {
-                await fetch(`http://127.0.0.1:8000/api/favorites/${favorite.id}/`, {
+                await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/${favorite.id}/`, {
                   method: "DELETE",
                   headers: {
                     Authorization: `Bearer ${accessToken}`,
@@ -346,7 +346,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
     toast.loading("Adding to bag...");
     try {
       // First, fetch current cart
-      const getCartRes = await fetch("http://127.0.0.1:8000/api/cart/", {
+      const getCartRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -396,7 +396,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
       if (cartExists && cartId) {
         
         // Use PUT with cart ID
-        res = await fetch(`http://127.0.0.1:8000/api/cart/${cartId}/`, {
+        res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/${cartId}/`, {
           method: "PUT",
           headers: {
             Authorization: `Bearer ${accessToken}`,
@@ -408,7 +408,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
         });
       } else {
         // Use POST to create new cart
-        res = await fetch("http://127.0.0.1:8000/api/cart/", {
+        res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${accessToken}`,

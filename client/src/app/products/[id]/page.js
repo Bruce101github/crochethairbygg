@@ -83,7 +83,7 @@ export default function ProductPage() {
     if (!currentRefreshToken) return null;
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/token/refresh/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/token/refresh/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ refresh: currentRefreshToken }),
@@ -161,7 +161,7 @@ export default function ProductPage() {
         }
 
         const res = await fetch(
-          `http://127.0.0.1:8000/api/products/${params.id}/`,
+          `${process.env.NEXT_PUBLIC_API_URL}/api/products/${params.id}/`,
           { headers }
         );
         if (!res.ok) throw new Error("Failed to fetch product");
@@ -186,7 +186,7 @@ export default function ProductPage() {
       
       try {
         const res = await fetch(
-          `http://127.0.0.1:8000/api/products/${params.id}/like/`,
+          `${process.env.NEXT_PUBLIC_API_URL}/api/products/${params.id}/like/`,
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,
@@ -226,7 +226,7 @@ export default function ProductPage() {
 
     try {
       const res = await fetch(
-        `http://127.0.0.1:8000/api/products/${params.id}/like/`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/products/${params.id}/like/`,
         {
           method: "POST",
           headers: {
@@ -246,7 +246,7 @@ export default function ProductPage() {
         try {
           if (data.liked) {
             // Add to favorites
-            const favRes = await fetch("http://127.0.0.1:8000/api/favorites/", {
+            const favRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/", {
               method: "POST",
               headers: {
                 Authorization: `Bearer ${accessToken}`,
@@ -261,7 +261,7 @@ export default function ProductPage() {
             }
           } else {
             // Remove from favorites - need to find favorite ID first
-            const favListRes = await fetch("http://127.0.0.1:8000/api/favorites/", {
+            const favListRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/", {
               headers: {
                 Authorization: `Bearer ${accessToken}`,
               },
@@ -270,7 +270,7 @@ export default function ProductPage() {
               const favorites = await favListRes.json();
               const favorite = favorites.find((f) => f.product.id === parseInt(params.id));
               if (favorite) {
-                await fetch(`http://127.0.0.1:8000/api/favorites/${favorite.id}/`, {
+                await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/favorites/${favorite.id}/`, {
                   method: "DELETE",
                   headers: {
                     Authorization: `Bearer ${accessToken}`,
@@ -463,7 +463,7 @@ export default function ProductPage() {
     const performCartOperation = async (currentToken, retry = false) => {
     try {
       // First, fetch current cart
-        let getCartRes = await fetch("http://127.0.0.1:8000/api/cart/", {
+        let getCartRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
         method: "GET",
         headers: {
             Authorization: `Bearer ${currentToken}`,
@@ -544,7 +544,7 @@ export default function ProductPage() {
       let response;
       if (cartExists && cartId) {
         // Use PUT with cart ID
-        response = await fetch(`http://127.0.0.1:8000/api/cart/${cartId}/`, {
+        response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/${cartId}/`, {
           method: "PUT",
           headers: {
               Authorization: `Bearer ${currentToken}`,
@@ -556,7 +556,7 @@ export default function ProductPage() {
         });
       } else {
         // Use POST to create new cart
-        response = await fetch("http://127.0.0.1:8000/api/cart/", {
+        response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/", {
           method: "POST",
           headers: {
               Authorization: `Bearer ${currentToken}`,
@@ -773,7 +773,7 @@ export default function ProductPage() {
               canReview={product.can_review || false}
               onReviewSubmitted={() => {
                 // Refresh product data to update can_review status
-                fetch(`http://127.0.0.1:8000/api/products/${params.id}/`)
+                fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${params.id}/`)
                   .then((res) => res.json())
                   .then((data) => {
                     setProduct(data);
@@ -1302,7 +1302,7 @@ export default function ProductPage() {
                 if (currentToken) {
                   headers.Authorization = `Bearer ${currentToken}`;
                 }
-                const res = await fetch(`http://127.0.0.1:8000/api/products/${params.id}/`, { headers });
+                const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${params.id}/`, { headers });
                 const data = await res.json();
                   setProduct(data);
               } catch (err) {
