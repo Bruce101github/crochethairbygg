@@ -463,7 +463,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
         <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-[#FF6B9D] hover:shadow-lg transition-all duration-300 bg-white dark:bg-gray-800 group">
           <div className="relative overflow-hidden">
             <Image
-              src={product.images[0]?.image || "/placeholder.jpg"}
+              src={product.images[0]?.image_url || "/placeholder.jpg"}
               alt={product.title}
               width={300}
               height={300}
