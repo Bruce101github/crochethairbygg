@@ -143,7 +143,7 @@ export default function AdminProducts() {
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="w-16 h-16 rounded-lg overflow-hidden border border-gray-200">
                           <Image
-                            src={product.images?.[0]?.image || "/placeholder.jpg"}
+                            src={product.images?.[0]?.image_url || "/placeholder.jpg"}
                             alt={product.title}
                             width={64}
                             height={64}

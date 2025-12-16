@@ -268,7 +268,7 @@ export default function FavoritesPage() {
                     <div className="relative">
                       <Image
                         src={
-                          product.images?.[0]?.image ||
+                          product.images?.[0]?.image_url ||
                           "/placeholder.jpg"
                         }
                         alt={product.title}

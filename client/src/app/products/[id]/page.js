@@ -668,7 +668,7 @@ export default function ProductPage() {
               product.images.map((p, index) => {
                 const isFirstImage = index === 0;
                 const isImageLoaded = loadedImages.has(index) || isFirstImage;
-                const optimizedUrl = p.image;
+                const optimizedUrl = p.image_url;
                 return (
                   <CarouselItem key={index}>
                     {isImageLoaded ? (
@@ -750,7 +750,7 @@ export default function ProductPage() {
                 onTouchStart={() => api?.scrollTo(index)}
               >
                 <NextImage
-                  src={p.image}
+                  src={p.image_url}
                   alt={`Thumbnail ${index + 1}`}
                   width={60}
                   height={60}
