@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Category, Product, ProductVariant, ProductImage, Order, OrderItem, Cart, CartItem, Address, ShippingMethod, Favorite, ProductLike, HeroSlide, PromoBanner, Review, DiscountCode, ReturnRequest
+from django.conf import settings
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -13,7 +14,7 @@ class CategorySerializer(serializers.ModelSerializer):
     
     def get_image_url(self, obj):
         if obj.image:
-            return obj.image.url
+            return settings.CLOUDINARY_BASE_URL.rstrip('/') + obj.image.url
         return None 
     
     def get_subcategories(self, obj):
@@ -22,13 +23,15 @@ class CategorySerializer(serializers.ModelSerializer):
 
 
 class ProductImageSerializer(serializers.ModelSerializer):
+    image_url = serializers.SerializerMethodField()
+
     class Meta:
         model = ProductImage
-        fields = ['id', 'product', 'image', 'is_main']
+        fields = ['id', 'product', 'image', 'image_url']
 
     def get_image_url(self, obj):
         if obj.image:
-            return obj.image.url
+            return settings.CLOUDINARY_BASE_URL.rstrip('/') + obj.image.url
         return None
 
 
@@ -531,32 +534,35 @@ class FavoriteSerializer(serializers.ModelSerializer):
 
 class HeroSlideSerializer(serializers.ModelSerializer):
     background_image_url = serializers.SerializerMethodField()
+    mobile_image_url = serializers.SerializerMethodField()
+    tablet_image_url = serializers.SerializerMethodField()
 
     class Meta:
         model = HeroSlide
         fields = [
             'id', 'title', 'subtitle', 'description',
             'cta1_text', 'cta1_link', 'cta2_text', 'cta2_link',
-            'background_image', 'background_image_url', 'is_active', 'order',
+            'background_image', 'background_image_url',
+            'mobile_image_url', 'tablet_image_url',
+            'is_active', 'order',
             'created_at', 'updated_at'
         ]
         read_only_fields = ('created_at', 'updated_at')
 
     def get_background_image_url(self, obj):
         if obj.background_image:
-            return obj.background_image.url
+            return settings.CLOUDINARY_BASE_URL.rstrip('/') + obj.background_image.url
         return None
     
     def get_mobile_image_url(self, obj):
         if obj.mobile_image:
-            return obj.mobile_image.url
+            return settings.CLOUDINARY_BASE_URL.rstrip('/') + obj.mobile_image.url
         return None
 
     def get_tablet_image_url(self, obj):
         if obj.tablet_image:
-            return obj.tablet_image.url
+            return settings.CLOUDINARY_BASE_URL.rstrip('/') + obj.tablet_image.url
         return None
-
 
 class PromoBannerSerializer(serializers.ModelSerializer):
     class Meta:

@@ -20,6 +20,8 @@ import cloudinary.uploader
 import cloudinary.api
 
 
+CLOUDINARY_BASE_URL = os.getenv('CLOUDINARY_BASE_URL', 'https://res.cloudinary.com/doevqkpue/')
+
 
 # Cloudinary config (use your actual credentials or env vars)
 CLOUDINARY_STORAGE = {
