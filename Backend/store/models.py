@@ -12,7 +12,7 @@ from cloudinary.models import CloudinaryField
 class Category(models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField(blank=True)
-    image = models.ImageField(upload_to="categories/", blank=True, null=True)
+    image = CloudinaryField('image', blank=True, null=True)
     parent = models.ForeignKey('self', on_delete=models.CASCADE, related_name='subcategories', null=True, blank=True)
     is_nav_link = models.BooleanField(default=False, help_text="Show as a navigation link in the main nav bar")
     nav_order = models.IntegerField(default=0, help_text="Order in navigation menu")
@@ -341,15 +341,19 @@ class HeroSlide(models.Model):
     title = models.CharField(max_length=255)
     subtitle = models.CharField(max_length=255, blank=True)
     description = models.TextField(blank=True)
+
     cta1_text = models.CharField(max_length=100, default="Shop Now")
     cta1_link = models.CharField(max_length=255, default="/products")
     cta2_text = models.CharField(max_length=100, blank=True)
     cta2_link = models.CharField(max_length=255, blank=True)
-    background_image = models.ImageField(upload_to='hero_slides/', blank=True, null=True)
-    mobile_image = models.ImageField(upload_to='hero_slides/', blank=True, null=True, help_text="Optional: Different image for mobile screens")
-    tablet_image = models.ImageField(upload_to='hero_slides/', blank=True, null=True, help_text="Optional: Different image for tablet screens")
+
+    background_image = CloudinaryField('image', blank=True, null=True)
+    mobile_image = CloudinaryField('image', blank=True, null=True)
+    tablet_image = CloudinaryField('image', blank=True, null=True)
+
     is_active = models.BooleanField(default=True)
-    order = models.IntegerField(default=0)  # For ordering slides
+    order = models.IntegerField(default=0)
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

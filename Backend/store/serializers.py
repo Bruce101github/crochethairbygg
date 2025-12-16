@@ -13,11 +13,8 @@ class CategorySerializer(serializers.ModelSerializer):
     
     def get_image_url(self, obj):
         if obj.image:
-            request = self.context.get('request')
-            if request:
-                return request.build_absolute_uri(obj.image.url)
             return obj.image.url
-        return None
+        return None 
     
     def get_subcategories(self, obj):
         subcats = obj.subcategories.all().order_by('nav_order', 'name')
@@ -246,10 +243,7 @@ class OrderItemDetailSerializer(serializers.ModelSerializer):
             image_urls = []
             for img in images:
                 if img.image:
-                    if request:
-                        image_urls.append({'image': request.build_absolute_uri(img.image.url)})
-                    else:
-                        image_urls.append({'image': img.image.url if hasattr(img.image, 'url') else str(img.image)})
+                    image_urls.append({'image': img.image.url})
             return {
                 'id': product.id,
                 'title': product.title,
@@ -545,9 +539,6 @@ class HeroSlideSerializer(serializers.ModelSerializer):
 
     def get_background_image_url(self, obj):
         if obj.background_image:
-            request = self.context.get('request')
-            if request:
-                return request.build_absolute_uri(obj.background_image.url)
             return obj.background_image.url
         return None
 
