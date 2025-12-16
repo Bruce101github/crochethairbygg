@@ -26,6 +26,11 @@ class ProductImageSerializer(serializers.ModelSerializer):
         model = ProductImage
         fields = ['id', 'product', 'image', 'is_main']
 
+    def get_image_url(self, obj):
+        if obj.image:
+            return obj.image.url
+        return None
+
 
 class ProductVariantSerializer(serializers.ModelSerializer):
     class Meta:
@@ -540,6 +545,16 @@ class HeroSlideSerializer(serializers.ModelSerializer):
     def get_background_image_url(self, obj):
         if obj.background_image:
             return obj.background_image.url
+        return None
+    
+    def get_mobile_image_url(self, obj):
+        if obj.mobile_image:
+            return obj.mobile_image.url
+        return None
+
+    def get_tablet_image_url(self, obj):
+        if obj.tablet_image:
+            return obj.tablet_image.url
         return None
 
 
