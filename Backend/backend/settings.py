@@ -20,6 +20,37 @@ import cloudinary.uploader
 import cloudinary.api
 
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '[{asctime}] {levelname} {name} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'error.log'),
+            'formatter': 'verbose',
+        },
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file', 'console'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}
+
+
 CLOUDINARY_BASE_URL = os.getenv('CLOUDINARY_BASE_URL', 'https://res.cloudinary.com/doevqkpue/')
 
 
