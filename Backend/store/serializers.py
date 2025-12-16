@@ -14,6 +14,8 @@ class CategorySerializer(serializers.ModelSerializer):
     
     def get_image_url(self, obj):
         if obj.image:
+            if obj.image.url.startswith('http'):
+                return obj.image.url
             return settings.CLOUDINARY_BASE_URL.rstrip('/') + obj.image.url
         return None 
     
@@ -31,6 +33,8 @@ class ProductImageSerializer(serializers.ModelSerializer):
 
     def get_image_url(self, obj):
         if obj.image:
+            if obj.image.url.startswith('http'):
+                return obj.image.url
             return settings.CLOUDINARY_BASE_URL.rstrip('/') + obj.image.url
         return None
 
@@ -551,16 +555,22 @@ class HeroSlideSerializer(serializers.ModelSerializer):
 
     def get_background_image_url(self, obj):
         if obj.background_image:
+            if obj.image.url.startswith('http'):
+                return obj.image.url
             return settings.CLOUDINARY_BASE_URL.rstrip('/') + obj.background_image.url
         return None
     
     def get_mobile_image_url(self, obj):
         if obj.mobile_image:
+            if obj.image.url.startswith('http'):
+                return obj.image.url
             return settings.CLOUDINARY_BASE_URL.rstrip('/') + obj.mobile_image.url
         return None
 
     def get_tablet_image_url(self, obj):
         if obj.tablet_image:
+            if obj.image.url.startswith('http'):
+                return obj.image.url
             return settings.CLOUDINARY_BASE_URL.rstrip('/') + obj.tablet_image.url
         return None
 
