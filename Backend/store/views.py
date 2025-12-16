@@ -646,7 +646,15 @@ class PromoBannerViewSet(viewsets.ModelViewSet):
         if self.action in ['create', 'update', 'partial_update', 'destroy']:
             return [permissions.IsAdminUser()]
         return [permissions.AllowAny()]
-
+    
+    def create(self, request, *args, **kwargs):
+        try:
+            return super().create(request, *args, **kwargs)
+        except Exception as e:
+            print(f"Error creating HeroSlide: {e}")
+            import traceback
+            traceback.print_exc()
+            return Response({"error": "An error occurred while creating the hero slide."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 class UsersStatsView(APIView):
     permission_classes = [permissions.IsAdminUser]
