@@ -1,6 +1,8 @@
 from rest_framework import serializers
 from .models import Category, Product, ProductVariant, ProductImage, Order, OrderItem, Cart, CartItem, Address, ShippingMethod, Favorite, ProductLike, HeroSlide, PromoBanner, Review, DiscountCode, ReturnRequest
 from django.conf import settings
+from urllib.parse import urljoin
+
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -556,21 +558,21 @@ class HeroSlideSerializer(serializers.ModelSerializer):
     def get_background_image_url(self, obj):
         if obj.background_image:
             if obj.image.url.startswith('http'):
-                return obj.image.url
+                return obj.background_image.url
             return settings.CLOUDINARY_BASE_URL.rstrip('/') + obj.background_image.url
         return None
     
     def get_mobile_image_url(self, obj):
         if obj.mobile_image:
             if obj.image.url.startswith('http'):
-                return obj.image.url
+                return obj.mobile_image.url
             return settings.CLOUDINARY_BASE_URL.rstrip('/') + obj.mobile_image.url
         return None
 
     def get_tablet_image_url(self, obj):
         if obj.tablet_image:
             if obj.image.url.startswith('http'):
-                return obj.image.url
+                return obj.tablet_mage.url
             return settings.CLOUDINARY_BASE_URL.rstrip('/') + obj.tablet_image.url
         return None
 
