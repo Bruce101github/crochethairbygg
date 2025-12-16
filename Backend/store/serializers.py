@@ -557,22 +557,22 @@ class HeroSlideSerializer(serializers.ModelSerializer):
 
     def get_background_image_url(self, obj):
         if obj.background_image:
-            if obj.image.url.startswith('http'):
+            if obj.background_image.url.startswith('http'):
                 return obj.background_image.url
             return settings.CLOUDINARY_BASE_URL.rstrip('/') + obj.background_image.url
         return None
     
     def get_mobile_image_url(self, obj):
         if obj.mobile_image:
-            if obj.image.url.startswith('http'):
+            if obj.mobile_image.url.startswith('http'):
                 return obj.mobile_image.url
             return settings.CLOUDINARY_BASE_URL.rstrip('/') + obj.mobile_image.url
         return None
 
     def get_tablet_image_url(self, obj):
         if obj.tablet_image:
-            if obj.image.url.startswith('http'):
-                return obj.tablet_mage.url
+            if obj.tablet_image.url.startswith('http'):
+                return obj.tablet_image.url
             return settings.CLOUDINARY_BASE_URL.rstrip('/') + obj.tablet_image.url
         return None
 
