@@ -114,7 +114,7 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             <label className="font-bold">Contact Us</label>
             <div  className="text-sm">
-              <p>Email: inf@crochethairbygg.com</p>
+              <p>Email: inf@museira.com</p>
               <p>Phone: 123-456-7890</p>
             </div>
           </div>
