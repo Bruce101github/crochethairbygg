@@ -186,9 +186,9 @@ export default function AdminHeroSlides() {
       is_active: slide.is_active,
       order: slide.order || 0,
     });
-    setImagePreview(slide.background_image || null);
-    setMobileImagePreview(slide.mobile_image || null);
-    setTabletImagePreview(slide.tablet_image || null);
+    setImagePreview(slide.background_image_url || null);
+    setMobileImagePreview(slide.mobile_image_url || null);
+    setTabletImagePreview(slide.tablet_image_url || null);
     setShowForm(true);
   }
 
@@ -513,7 +513,7 @@ export default function AdminHeroSlides() {
                         {slide.background_image && (
                           <div className="w-20 h-12 rounded-lg overflow-hidden border border-gray-200">
                             <Image
-                              src={slide.background_image}
+                              src={slide.background_image_url}
                               alt={slide.title}
                               width={80}
                               height={48}
