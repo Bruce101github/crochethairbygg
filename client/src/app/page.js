@@ -166,9 +166,9 @@ export default function Home() {
               return (
                 <div
                   key={slide.id || index}
-                  className={`relative flex items-center justify-center transition-all duration-500 ease-in-out w-full h-full ${
+                  className={`relative flex items-center justify-center transition-all duration-500 ease-in-out${
                     index === currentHeroIndex
-                      ? "translate-x-0 opacity-100 z-10"
+                      ? "translate-x-0 opacity-100 z-10  w-full h-full"
                       : index < currentHeroIndex
                         ? "-translate-x-full opacity-0 z-0"
                         : "translate-x-full opacity-0 z-0"
