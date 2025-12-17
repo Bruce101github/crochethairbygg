@@ -510,7 +510,7 @@ export default function AdminHeroSlides() {
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        {slide.background_image && (
+                        {slide.background_image_url && (
                           <div className="w-20 h-12 rounded-lg overflow-hidden border border-gray-200">
                             <Image
                               src={slide.background_image_url}
