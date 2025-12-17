@@ -30,22 +30,22 @@ export default function PaymentPage() {
     async function fetchOrderDetails() {
       try {
         const searchParams = new URLSearchParams(window.location.search);
-        const guestEmail = searchParams.get('guest_email');
-        
+        const guestEmail = searchParams.get("guest_email");
+
         const headers = {
           "Content-Type": "application/json",
         };
-        
+
         if (accessToken) {
           headers["Authorization"] = `Bearer ${accessToken}`;
         }
-        
+
         let url = `${process.env.NEXT_PUBLIC_API_URL}/api/orders/${orderId}/`;
         if (!accessToken && guestEmail) {
           // Use guest order tracking endpoint
           url = `${process.env.NEXT_PUBLIC_API_URL}/api/orders/track/?order_id=${orderId}&email=${encodeURIComponent(guestEmail)}`;
         }
-        
+
         const res = await fetch(url, { headers });
         if (res.ok) {
           const data = await res.json();
@@ -70,7 +70,9 @@ export default function PaymentPage() {
 
     return () => {
       // Cleanup script if component unmounts
-      const existingScript = document.querySelector('script[src="https://js.paystack.co/v1/inline.js"]');
+      const existingScript = document.querySelector(
+        'script[src="https://js.paystack.co/v1/inline.js"]'
+      );
       if (existingScript) {
         document.body.removeChild(existingScript);
       }
@@ -87,20 +89,20 @@ export default function PaymentPage() {
     try {
       // Get guest email from URL params if guest checkout
       const searchParams = new URLSearchParams(window.location.search);
-      const guestEmail = searchParams.get('guest_email');
-      
+      const guestEmail = searchParams.get("guest_email");
+
       const headers = {
         "Content-Type": "application/json",
       };
-      
+
       if (accessToken) {
         headers["Authorization"] = `Bearer ${accessToken}`;
       }
-      
-      const body = guestEmail 
+
+      const body = guestEmail
         ? { guest_email: guestEmail, payment_channel: paymentMethod }
         : { payment_channel: paymentMethod };
-      
+
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_API_URL}/api/paystack/initiate/${orderId}/`,
         {
@@ -118,15 +120,20 @@ export default function PaymentPage() {
       } else {
         // Handle duplicate payment error specifically
         if (data.message && data.message.includes("Duplicate charge request")) {
-          toast.error("Payment already initialized. Please check your email or try refreshing the page.", {
-            duration: 5000,
-          });
+          toast.error(
+            "Payment already initialized. Please check your email or try refreshing the page.",
+            {
+              duration: 5000,
+            }
+          );
           // Still try to show payment data if available, or redirect
           setTimeout(() => {
             router.push("/checkout");
           }, 3000);
         } else {
-          toast.error(data.error || data.message || "Failed to initialize payment");
+          toast.error(
+            data.error || data.message || "Failed to initialize payment"
+          );
           setTimeout(() => {
             router.push("/checkout");
           }, 2000);
@@ -167,7 +174,7 @@ export default function PaymentPage() {
         // Payment successful
         setProcessing(false);
         toast.success("Payment successful! Processing your order...");
-        
+
         // Redirect to success page
         router.push(`/payment-success?reference=${paymentData.reference}`);
       },
@@ -193,130 +200,153 @@ export default function PaymentPage() {
   }
 
   // Get order amount from orderDetails or paymentData
-  const amountInGHS = paymentData 
+  const amountInGHS = paymentData
     ? (paymentData.amount / 100).toFixed(2)
-    : orderDetails 
+    : orderDetails
       ? parseFloat(orderDetails.total || 0).toFixed(2)
       : "0.00";
 
   return (
     <div className="min-h-screen pb-20 px-5 lg:px-40">
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="text-center mb-8">
-              <div className="flex justify-center mb-4">
-                <div className="bg-[#FF6B9D]/10 p-4 rounded-full">
-                  <HiCreditCard size={48} className="text-[#FF6B9D]" />
-                </div>
+      <div className="max-w-2xl mx-auto">
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="text-center mb-8">
+            <div className="flex justify-center mb-4">
+              <div className="bg-[#FF6B9D]/10 p-4 rounded-full">
+                <HiCreditCard size={48} className="text-[#FF6B9D]" />
               </div>
-              <h1 className="text-3xl font-bold mb-2">Complete Your Payment</h1>
-              <p className="text-gray-600">Secure payment powered by Paystack</p>
             </div>
+            <h1 className="text-3xl font-bold mb-2">Complete Your Payment</h1>
+            <p className="text-gray-600">Secure payment powered by Paystack</p>
+          </div>
 
-            <div className="bg-gray-50 rounded-lg p-6 mb-6">
+          <div className="bg-gray-50 rounded-lg p-6 mb-6">
+            <div className="flex justify-between items-center mb-4">
+              <span className="text-gray-600">Order ID</span>
+              <span className="font-semibold">#{orderId}</span>
+            </div>
+            {paymentData && (
               <div className="flex justify-between items-center mb-4">
-                <span className="text-gray-600">Order ID</span>
-                <span className="font-semibold">#{orderId}</span>
+                <span className="text-gray-600">Email</span>
+                <span className="font-semibold">{paymentData.email}</span>
               </div>
-              {paymentData && (
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-gray-600">Email</span>
-                  <span className="font-semibold">{paymentData.email}</span>
-                </div>
-              )}
-              <div className="border-t border-gray-200 pt-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-lg font-semibold">Total Amount</span>
-                  <span className="text-2xl font-bold text-[#FF6B9D]">
-                    {orderDetails || paymentData ? `GH₵${amountInGHS}` : "Loading..."}
+            )}
+            <div className="border-t border-gray-200 pt-4">
+              <div className="flex justify-between items-center">
+                <span className="text-lg font-semibold">Total Amount</span>
+                <span className="text-2xl font-bold text-[#FF6B9D]">
+                  {orderDetails || paymentData
+                    ? `GH₵${amountInGHS}`
+                    : "Loading..."}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Payment Method Selection */}
+          <div className="mb-6">
+            <label className="block text-sm font-semibold text-gray-700 mb-3">
+              Select Payment Method
+            </label>
+            <div className="grid grid-cols-2 gap-3">
+              <button
+                type="button"
+                onClick={() => setPaymentMethod("card")}
+                className={`p-4 border-2 rounded-lg transition-all ${
+                  paymentMethod === "card"
+                    ? "border-[#FF6B9D] bg-[#FF6B9D]/10"
+                    : "border-gray-200 hover:border-gray-300"
+                }`}
+              >
+                <div className="flex flex-col items-center gap-2">
+                  <HiCreditCard
+                    size={24}
+                    className={
+                      paymentMethod === "card"
+                        ? "text-[#FF6B9D]"
+                        : "text-gray-400"
+                    }
+                  />
+                  <span
+                    className={`text-sm font-medium ${paymentMethod === "card" ? "text-[#FF6B9D]" : "text-gray-600"}`}
+                  >
+                    Card
                   </span>
                 </div>
-              </div>
+              </button>
+              <button
+                type="button"
+                onClick={() => setPaymentMethod("mobile_money")}
+                className={`p-4 border-2 rounded-lg transition-all ${
+                  paymentMethod === "mobile_money"
+                    ? "border-[#FF6B9D] bg-[#FF6B9D]/10"
+                    : "border-gray-200 hover:border-gray-300"
+                }`}
+              >
+                <div className="flex flex-col items-center gap-2">
+                  <svg
+                    className={`w-6 h-6 ${paymentMethod === "mobile_money" ? "text-[#FF6B9D]" : "text-gray-400"}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <span
+                    className={`text-sm font-medium ${paymentMethod === "mobile_money" ? "text-[#FF6B9D]" : "text-gray-600"}`}
+                  >
+                    Mobile Money
+                  </span>
+                </div>
+              </button>
             </div>
-
-            {/* Payment Method Selection */}
-            <div className="mb-6">
-              <label className="block text-sm font-semibold text-gray-700 mb-3">
-                Select Payment Method
-              </label>
-              <div className="grid grid-cols-2 gap-3">
-                <button
-                  type="button"
-                  onClick={() => setPaymentMethod("card")}
-                  className={`p-4 border-2 rounded-lg transition-all ${
-                    paymentMethod === "card"
-                      ? "border-[#FF6B9D] bg-[#FF6B9D]/10"
-                      : "border-gray-200 hover:border-gray-300"
-                  }`}
-                >
-                  <div className="flex flex-col items-center gap-2">
-                    <HiCreditCard size={24} className={paymentMethod === "card" ? "text-[#FF6B9D]" : "text-gray-400"} />
-                    <span className={`text-sm font-medium ${paymentMethod === "card" ? "text-[#FF6B9D]" : "text-gray-600"}`}>
-                      Card
-                    </span>
-                  </div>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setPaymentMethod("mobile_money")}
-                  className={`p-4 border-2 rounded-lg transition-all ${
-                    paymentMethod === "mobile_money"
-                      ? "border-[#FF6B9D] bg-[#FF6B9D]/10"
-                      : "border-gray-200 hover:border-gray-300"
-                  }`}
-                >
-                  <div className="flex flex-col items-center gap-2">
-                    <svg 
-                      className={`w-6 h-6 ${paymentMethod === "mobile_money" ? "text-[#FF6B9D]" : "text-gray-400"}`}
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                    </svg>
-                    <span className={`text-sm font-medium ${paymentMethod === "mobile_money" ? "text-[#FF6B9D]" : "text-gray-600"}`}>
-                      Mobile Money
-                    </span>
-                  </div>
-                </button>
-              </div>
-            </div>
-
-            <div className="space-y-4 mb-6">
-              <div className="flex items-center gap-3 text-sm text-gray-600">
-                <HiLockClosed size={20} className="text-[#FF6B9D]" />
-                <span>Your payment is secured and encrypted</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm text-gray-600">
-                <HiShieldCheck size={20} className="text-[#FF6B9D]" />
-                <span>We never store your {paymentMethod === "card" ? "card" : "payment"} details</span>
-              </div>
-            </div>
-
-            <button
-              onClick={handlePayment}
-              disabled={processing || initializing}
-              className="w-full bg-[#FF6B9D] text-white py-4 rounded-lg font-semibold text-lg hover:bg-[#FF5A8A] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-            >
-              {processing || initializing ? (
-                <>
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                  {initializing ? "Initializing..." : "Processing..."}
-                </>
-              ) : (
-                <>
-                  <HiCreditCard size={20} />
-                  {paymentData ? `Pay GH₵${amountInGHS}` : "Initialize Payment"}
-                </>
-              )}
-            </button>
-
-            <p className="text-center text-xs text-gray-500 mt-4">
-              By clicking "Pay", you will be redirected to a secure payment page
-            </p>
           </div>
+
+          <div className="space-y-4 mb-6">
+            <div className="flex items-center gap-3 text-sm text-gray-600">
+              <HiLockClosed size={20} className="text-[#FF6B9D]" />
+              <span>Your payment is secured and encrypted</span>
+            </div>
+            <div className="flex items-center gap-3 text-sm text-gray-600">
+              <HiShieldCheck size={20} className="text-[#FF6B9D]" />
+              <span>
+                We never store your{" "}
+                {paymentMethod === "card" ? "card" : "payment"} details
+              </span>
+            </div>
+          </div>
+
+          <button
+            onClick={() => {
+              if (!paymentData) initializePayment();
+              else handlePayment();
+            }}
+            disabled={processing || initializing}
+            className="w-full bg-[#FF6B9D] text-white py-4 rounded-lg font-semibold text-lg hover:bg-[#FF5A8A] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          >
+            {processing || initializing ? (
+              <>
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                {initializing ? "Initializing..." : "Processing..."}
+              </>
+            ) : (
+              <>
+                <HiCreditCard size={20} />
+                {paymentData ? `Pay GH₵${amountInGHS}` : "Initialize Payment"}
+              </>
+            )}
+          </button>
+
+          <p className="text-center text-xs text-gray-500 mt-4">
+            By clicking "Pay", you will be redirected to a secure payment page
+          </p>
         </div>
       </div>
+    </div>
   );
 }
-

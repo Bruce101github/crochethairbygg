@@ -274,8 +274,7 @@ useEffect(() => {
         <div className="flex items-center justify-between">
           <span className="flex gap-10 items-center flex-1 min-w-0">
         <Link href="/" className="flex items-center flex-shrink-0">
-              <span className="text-xl font-bold text-gray-900 dark:text-white">CROCHET HAIR</span>
-              <span className="text-xl font-bold ml-1 text-gray-900 dark:text-white">by GG</span>
+              <span className="text-xl font-bold text-gray-900 dark:text-white">MUSEIRA</span>
         </Link>
             <nav className="flex gap-6 font-medium text-gray-900 dark:text-white">
           <Link 
