@@ -128,12 +128,12 @@ export default function Home() {
               // Priority: mobile_image (mobile) -> tablet_image (tablet) -> background_image (desktop)
               const getImageUrl = () => {
                 const width = windowWidth || (typeof window !== 'undefined' ? window.innerWidth : 1024);
-                if (width < 768 && slide.mobile_image) {
-                  return slide.mobile_image;
-                } else if (width >= 768 && width < 1024 && slide.tablet_image) {
-                  return slide.tablet_image;
+                if (width < 768 && slide.mobile_image_url) {
+                  return slide.mobile_image_url;
+                } else if (width >= 768 && width < 1024 && slide.tablet_image_url) {
+                  return slide.tablet_image_url;
                 }
-                return slide.background_image;
+                return slide.background_image_url;
               };
 
               const imageUrl = getImageUrl();
