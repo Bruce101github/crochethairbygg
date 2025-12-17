@@ -548,7 +548,7 @@ class HeroSlideSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'title', 'subtitle', 'description',
             'cta1_text', 'cta1_link', 'cta2_text', 'cta2_link',
-            'background_image', 'background_image_url',
+            'background_image_url',
             'mobile_image_url', 'tablet_image_url',
             'is_active', 'order',
             'created_at', 'updated_at'
