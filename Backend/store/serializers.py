@@ -543,11 +543,18 @@ class HeroSlideSerializer(serializers.ModelSerializer):
     mobile_image_url = serializers.SerializerMethodField()
     tablet_image_url = serializers.SerializerMethodField()
 
+    background_image = serializers.ImageField(write_only=True, required=False)
+    mobile_image = serializers.ImageField(write_only=True, required=False)
+    tablet_image = serializers.ImageField(write_only=True, required=False)
+
     class Meta:
         model = HeroSlide
         fields = [
             'id', 'title', 'subtitle', 'description',
             'cta1_text', 'cta1_link', 'cta2_text', 'cta2_link',
+            'background_image',
+            'mobile_image',
+            'tablet_image',
             'background_image_url',
             'mobile_image_url', 'tablet_image_url',
             'is_active', 'order',
