@@ -14,7 +14,7 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-  title: "Crochet Hair by GG | Premium Hair Extensions & Wigs",
+  title: "Museira | Premium Hair Extensions & Wigs",
   description: "Discover our collection of high-quality wigs, extensions, and hair accessories. 100% Human Hair | Free Shipping | 30-Day Returns",
 };
 

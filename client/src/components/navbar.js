@@ -469,7 +469,7 @@ useEffect(() => {
         {/* Row 2: Logo and Search Bar (Centered) */}
         <div className="w-full px-3 py-2 flex items-center gap-2 border-t border-b border-gray-200 dark:border-gray-700">
           <Link href="/" className="flex items-center flex-shrink-0">
-            <span className="text-base font-bold text-gray-900 dark:text-white">CROCHET HAIR</span>
+            <span className="text-base font-bold text-gray-900 dark:text-white">Museira</span>
           </Link>
           <div className="flex-1 relative bg-gray-100 dark:bg-gray-800 rounded-lg">
             <form

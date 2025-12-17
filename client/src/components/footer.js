@@ -199,7 +199,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row justify-between w-full text-xs gap-2">
-        <span>Copyright@2025 Crochet Hair by GG</span>
+        <span>Copyright@2025 Museira</span>
         <span>
           Website Created by <a href="https://instagram.com/brucethiombiano" target="_blank" className="text-[#FF6B9D] hover:underline">Bruce T.</a>
         </span>

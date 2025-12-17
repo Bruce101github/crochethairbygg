@@ -13,7 +13,7 @@ def send_password_reset_email(user, reset_token):
     """
     reset_url = f"{settings.FRONTEND_URL}/reset-password?token={reset_token}&email={user.email}"
     
-    subject = "Reset Your Password - Crochet Hair by GG"
+    subject = "Reset Your Password - Museira"
     
     # Plain text message
     message = f"""
@@ -28,7 +28,7 @@ def send_password_reset_email(user, reset_token):
     If you didn't request this, please ignore this email.
     
     Best regards,
-    Crochet Hair by GG Team
+    Museira Team
     """
     
     # HTML message
@@ -48,7 +48,7 @@ def send_password_reset_email(user, reset_token):
     <body>
         <div class="container">
             <div class="header">
-                <h1>Crochet Hair by GG</h1>
+                <h1>Museira</h1>
             </div>
             <div class="content">
                 <h2>Password Reset Request</h2>
@@ -61,7 +61,7 @@ def send_password_reset_email(user, reset_token):
                 <p>If you didn't request this, please ignore this email.</p>
             </div>
             <div class="footer">
-                <p>Best regards,<br>Crochet Hair by GG Team</p>
+                <p>Best regards,<br>Museira Team</p>
             </div>
         </div>
     </body>
@@ -188,7 +188,7 @@ def send_order_confirmation_email(order):
                 <p>You can track your order status by {'visiting your account or ' if not order.is_guest else ''}using the order tracking page at {settings.FRONTEND_URL}/track-order</p>
             </div>
             <div class="footer">
-                <p>Thank you for shopping with us!<br>Crochet Hair by GG Team</p>
+                <p>Thank you for shopping with us!<br>Museira Team</p>
             </div>
         </div>
     </body>
@@ -234,7 +234,7 @@ def send_order_confirmation_email(order):
     You can track your order status by {'visiting your account or ' if not order.is_guest else ''}using the order tracking page at {settings.FRONTEND_URL}/track-order
     
     Thank you for shopping with us!
-    Crochet Hair by GG Team
+    Museira Team
     """
     
     try:
@@ -306,7 +306,7 @@ def send_order_status_update_email(order):
                 <p>You can track your order status by {'visiting your account or ' if not order.is_guest else ''}using the order tracking page at {settings.FRONTEND_URL}/track-order</p>
             </div>
             <div class="footer">
-                <p>Thank you for shopping with us!<br>Crochet Hair by GG Team</p>
+                <p>Thank you for shopping with us!<br>Museira Team</p>
             </div>
         </div>
     </body>
@@ -324,7 +324,7 @@ def send_order_status_update_email(order):
     You can track your order status by {'visiting your account or ' if not order.is_guest else ''}using the order tracking page at {settings.FRONTEND_URL}/track-order
     
     Thank you for shopping with us!
-    Crochet Hair by GG Team
+    Museira Team
     """
     
     try:
