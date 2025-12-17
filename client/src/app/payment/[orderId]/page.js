@@ -26,7 +26,6 @@ export default function PaymentPage() {
   });
 
   useEffect(() => {
-    // Fetch order details first
     async function fetchOrderDetails() {
       try {
         const searchParams = new URLSearchParams(window.location.search);
@@ -42,7 +41,6 @@ export default function PaymentPage() {
 
         let url = `${process.env.NEXT_PUBLIC_API_URL}/api/orders/${orderId}/`;
         if (!accessToken && guestEmail) {
-          // Use guest order tracking endpoint
           url = `${process.env.NEXT_PUBLIC_API_URL}/api/orders/track/?order_id=${orderId}&email=${encodeURIComponent(guestEmail)}`;
         }
 
@@ -50,29 +48,28 @@ export default function PaymentPage() {
         if (res.ok) {
           const data = await res.json();
           setOrderDetails(data);
-
-          // Initialize payment right after fetching order details
-          await initializePayment(guestEmail);
         }
       } catch (error) {
         console.error("Error fetching order details:", error);
+      } finally {
+        setLoading(false);
       }
     }
 
     fetchOrderDetails();
+  }, [orderId, accessToken]);
 
-    // Load Paystack script
+  useEffect(() => {
+    // Load Paystack script once
     const script = document.createElement("script");
     script.src = "https://js.paystack.co/v1/inline.js";
     script.async = true;
     script.onload = () => {
       setPaystackReady(true);
-      setLoading(false);
     };
     document.body.appendChild(script);
 
     return () => {
-      // Cleanup script if component unmounts
       const existingScript = document.querySelector(
         'script[src="https://js.paystack.co/v1/inline.js"]'
       );
@@ -80,7 +77,14 @@ export default function PaymentPage() {
         document.body.removeChild(existingScript);
       }
     };
-  }, [orderId, accessToken]);
+  }, []);
+
+  useEffect(() => {
+    // Re-initialize payment when paymentMethod changes and orderDetails are loaded
+    if (!orderDetails || !paystackReady) return;
+
+    initializePayment();
+  }, [paymentMethod, orderDetails, paystackReady]);
 
   async function initializePayment(guestEmailParam) {
     // Prevent duplicate initialization
@@ -349,7 +353,7 @@ export default function PaymentPage() {
           </button>
 
           <p className="text-center text-xs text-gray-500 mt-4">
-            By clicking "Pay", you will be redirected to a secure payment page
+            By clicking &quot;Pay&quot;, you will be redirected to a secure payment page
           </p>
         </div>
       </div>
