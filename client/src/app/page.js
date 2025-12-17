@@ -166,7 +166,7 @@ export default function Home() {
               return (
                 <div
                   key={slide.id || index}
-                  className={`relative flex items-center justify-center transition-all duration-500 ease-in-out ${
+                  className={`relative flex items-center justify-center transition-all duration-500 ease-in-out w-full h-full ${
                     index === currentHeroIndex
                       ? "translate-x-0 opacity-100 z-10"
                       : index < currentHeroIndex
@@ -196,7 +196,7 @@ export default function Home() {
                     />
                   )}
                   <div className="relative z-10 text-center px-5 max-w-5xl w-full">
-                    <h1 className="text-2xl lg:text-5xl font-bold mb-6 text-black leading-tight drop-shadow-lg">
+                    <h1 className="hidden text-2xl lg:text-5xl font-bold mb-6 text-black leading-tight drop-shadow-lg">
                       <span className="block">{slide.title}</span>
                       {slide.subtitle && (
                         <span className="block text-[#FF6B9D]">
@@ -209,7 +209,7 @@ export default function Home() {
                         {slide.description}
                       </p>
                     )}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <div className="hidden flex-col sm:flex-row gap-4 justify-center items-center ">
                       {slide.cta1_text && slide.cta1_link && (
                         <Link
                           href={slide.cta1_link}
