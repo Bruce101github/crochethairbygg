@@ -50,6 +50,9 @@ export default function PaymentPage() {
         if (res.ok) {
           const data = await res.json();
           setOrderDetails(data);
+
+          // Initialize payment right after fetching order details
+          await initializePayment(guestEmail);
         }
       } catch (error) {
         console.error("Error fetching order details:", error);
@@ -79,7 +82,7 @@ export default function PaymentPage() {
     };
   }, [orderId, accessToken]);
 
-  async function initializePayment() {
+  async function initializePayment(guestEmailParam) {
     // Prevent duplicate initialization
     if (initializing || paymentData) {
       return;
@@ -87,9 +90,12 @@ export default function PaymentPage() {
 
     setInitializing(true);
     try {
-      // Get guest email from URL params if guest checkout
-      const searchParams = new URLSearchParams(window.location.search);
-      const guestEmail = searchParams.get("guest_email");
+      // Use guestEmailParam if passed, else get from URL params
+      const guestEmail =
+        guestEmailParam ||
+        (typeof window !== "undefined"
+          ? new URLSearchParams(window.location.search).get("guest_email")
+          : null);
 
       const headers = {
         "Content-Type": "application/json",
@@ -126,14 +132,11 @@ export default function PaymentPage() {
               duration: 5000,
             }
           );
-          // Still try to show payment data if available, or redirect
           setTimeout(() => {
             router.push("/checkout");
           }, 3000);
         } else {
-          toast.error(
-            data.error || data.message || "Failed to initialize payment"
-          );
+          toast.error(data.error || data.message || "Failed to initialize payment");
           setTimeout(() => {
             router.push("/checkout");
           }, 2000);
@@ -203,8 +206,8 @@ export default function PaymentPage() {
   const amountInGHS = paymentData
     ? (paymentData.amount / 100).toFixed(2)
     : orderDetails
-      ? parseFloat(orderDetails.total || 0).toFixed(2)
-      : "0.00";
+    ? parseFloat(orderDetails.total || 0).toFixed(2)
+    : "0.00";
 
   return (
     <div className="min-h-screen pb-20 px-5 lg:px-40">
@@ -235,9 +238,7 @@ export default function PaymentPage() {
               <div className="flex justify-between items-center">
                 <span className="text-lg font-semibold">Total Amount</span>
                 <span className="text-2xl font-bold text-[#FF6B9D]">
-                  {orderDetails || paymentData
-                    ? `GH₵${amountInGHS}`
-                    : "Loading..."}
+                  {orderDetails || paymentData ? `GH₵${amountInGHS}` : "Loading..."}
                 </span>
               </div>
             </div>
@@ -261,14 +262,12 @@ export default function PaymentPage() {
                 <div className="flex flex-col items-center gap-2">
                   <HiCreditCard
                     size={24}
-                    className={
-                      paymentMethod === "card"
-                        ? "text-[#FF6B9D]"
-                        : "text-gray-400"
-                    }
+                    className={paymentMethod === "card" ? "text-[#FF6B9D]" : "text-gray-400"}
                   />
                   <span
-                    className={`text-sm font-medium ${paymentMethod === "card" ? "text-[#FF6B9D]" : "text-gray-600"}`}
+                    className={`text-sm font-medium ${
+                      paymentMethod === "card" ? "text-[#FF6B9D]" : "text-gray-600"
+                    }`}
                   >
                     Card
                   </span>
@@ -285,7 +284,9 @@ export default function PaymentPage() {
               >
                 <div className="flex flex-col items-center gap-2">
                   <svg
-                    className={`w-6 h-6 ${paymentMethod === "mobile_money" ? "text-[#FF6B9D]" : "text-gray-400"}`}
+                    className={`w-6 h-6 ${
+                      paymentMethod === "mobile_money" ? "text-[#FF6B9D]" : "text-gray-400"
+                    }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -298,7 +299,9 @@ export default function PaymentPage() {
                     />
                   </svg>
                   <span
-                    className={`text-sm font-medium ${paymentMethod === "mobile_money" ? "text-[#FF6B9D]" : "text-gray-600"}`}
+                    className={`text-sm font-medium ${
+                      paymentMethod === "mobile_money" ? "text-[#FF6B9D]" : "text-gray-600"
+                    }`}
                   >
                     Mobile Money
                   </span>
@@ -323,8 +326,11 @@ export default function PaymentPage() {
 
           <button
             onClick={() => {
-              if (!paymentData) initializePayment();
-              else handlePayment();
+              if (!paymentData) {
+                toast.error("Payment is not ready yet. Please wait.");
+              } else {
+                handlePayment();
+              }
             }}
             disabled={processing || initializing}
             className="w-full bg-[#FF6B9D] text-white py-4 rounded-lg font-semibold text-lg hover:bg-[#FF5A8A] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
