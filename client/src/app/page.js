@@ -138,23 +138,33 @@ export default function Home() {
 
               const imageUrl = getImageUrl();
 
-              return (
               <div
-                key={slide.id || index}
-                className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ease-in-out ${
-                  index === currentHeroIndex
-                    ? "translate-x-0 opacity-100 z-10"
-                    : index < currentHeroIndex
-                    ? "-translate-x-full opacity-0 z-0"
-                    : "translate-x-full opacity-0 z-0"
-                }`}
-                style={{
-                  backgroundImage: imageUrl ? `url(${imageUrl})` : undefined,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundColor: imageUrl ? 'transparent' : undefined,
-                }}
-              >
+  key={slide.id || index}
+  className={`relative flex items-center justify-center transition-all duration-500 ease-in-out ${
+    index === currentHeroIndex
+      ? "translate-x-0 opacity-100 z-10"
+      : index < currentHeroIndex
+      ? "-translate-x-full opacity-0 z-0"
+      : "translate-x-full opacity-0 z-0"
+  }`}
+>
+  {imageUrl && imageUrl.toLowerCase().endsWith('.gif') ? (
+    <img
+      src={imageUrl}
+      alt={slide.title || 'Hero slide image'}
+      className="absolute inset-0 w-full h-full object-cover"
+    />
+  ) : (
+    <div
+      className="absolute inset-0"
+      style={{
+        backgroundImage: imageUrl ? `url(${imageUrl})` : undefined,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundColor: imageUrl ? 'transparent' : undefined,
+      }}
+    />
+  )}
                 <div className="relative z-10 text-center px-5 max-w-5xl w-full">
                   <h1 className="text-2xl lg:text-5xl font-bold mb-6 text-black leading-tight drop-shadow-lg">
                     <span className="block">{slide.title}</span>
