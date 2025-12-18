@@ -457,10 +457,10 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
         }}
         accessToken={accessToken}
       />
-    <div className="grid grid-cols-2 gap-2 md:gap-4 lg:gap-6 md:grid-cols-3 lg:grid-cols-4">
+    <div className="columns-2 md:columns-3 lg:columns-4 gap-2 md:gap-4 lg:gap-6">
       {products.map((product) => (
         <Link href={`/products/${product.id}`} key={product.id}>
-        <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-[#FF6B9D] hover:shadow-lg transition-all duration-300 bg-white dark:bg-gray-800 group">
+        <div className="break-inside-avoid mb-4 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-[#FF6B9D] hover:shadow-lg transition-all duration-300 bg-white dark:bg-gray-800 group">
           <div className="relative overflow-hidden">
             <Image
               src={product.images[0]?.image_url || "/placeholder.jpg"}
