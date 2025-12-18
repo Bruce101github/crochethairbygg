@@ -470,11 +470,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
               className="object-cover w-full lg:h-80 h-48 group-hover:scale-105 transition-transform duration-300"
               unoptimized
             />
-            {product.variants.length > 1 && (
-              <div className="absolute top-2 left-2 bg-[#FF6B9D] text-white text-sm font-semibold px-2 py-1 rounded z-10">
-                {product.variants.length} Options
-              </div>
-            )}
+            
             <button
               onClick={(e) => handleLike(e, product.id)}
               className="Wk88 absolute top-2 right-2 w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 z-10 hover:scale-110"
@@ -494,6 +490,11 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
             >
               {product.title}
             </h2>
+            {product.variants.length > 1 && (
+              <div className="bg-[#FF6B9D] text-white text-sm font-semibold px-2 py-1 rounded z-10">
+                {product.variants.length} Options
+              </div>
+            )}
             <div className="flex justify-between items-center mt-auto">
               <div>
                 <p className="font-bold text-base lg:text-xl text-gray-900 dark:text-white">
