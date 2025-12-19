@@ -133,7 +133,7 @@ export default function Home() {
     >
       {/* Hero Section - starts from top of screen */}
       <section
-        className="relative w-full h-[90vh] sm:h-[80vh] lg:h-[70vh] flex items-center justify-center bg-gradient-to-br from-pink-50 via-white to-pink-50 overflow-hidden"
+        className="relative w-full h-[80vh] lg:h-[70vh] flex items-center justify-center bg-gradient-to-br from-pink-50 via-white to-pink-50 overflow-hidden"
         style={{
           marginTop: 0,
           paddingTop: "var(--header-total-height, 100px)",
@@ -179,7 +179,7 @@ export default function Home() {
                       src={imageUrl}
                       alt={slide.title || "Hero slide image"}
                       fill
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-contain"
                       unoptimized
                     />
                   ) : (
@@ -189,8 +189,9 @@ export default function Home() {
                         backgroundImage: imageUrl
                           ? `url(${imageUrl})`
                           : undefined,
-                        backgroundSize: "cover",
+                        backgroundSize: "contain",
                         backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
                         backgroundColor: imageUrl ? "transparent" : undefined,
                       }}
                     />
