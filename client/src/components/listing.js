@@ -490,11 +490,6 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
             >
               {product.title}
             </h2>
-            {product.variants.length > 1 && (
-              <div className="bg-[#FF6B9D] text-white text-sm font-semibold px-2 py-1 rounded z-10">
-                {product.variants.length} Options
-              </div>
-            )}
             <div className="flex justify-between items-center mt-auto">
               <div>
                 <p className="font-bold text-base lg:text-xl text-gray-900 dark:text-white">
