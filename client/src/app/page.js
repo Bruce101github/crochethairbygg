@@ -133,7 +133,7 @@ export default function Home() {
     >
       {/* Hero Section - starts from top of screen */}
       <section
-        className="relative min-h-[80vh] lg:h-[70vh] flex items-center justify-center bg-gradient-to-br from-pink-50 via-white to-pink-50 overflow-hidden"
+        className="relative h-auto lg:h-[70vh] flex items-center justify-center bg-gradient-to-br from-pink-50 via-white to-pink-50 overflow-hidden"
         style={{
           marginTop: 0,
           paddingTop: "var(--header-total-height, 100px)",
