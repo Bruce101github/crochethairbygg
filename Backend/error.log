@@ -1,0 +1,1722 @@
+[2025-12-18 19:32:46,212] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-18 19:32:59,098] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-18 19:33:01,342] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-18 19:33:08,240] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-18 19:33:10,137] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-18 19:33:11,854] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-18 19:33:12,838] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-18 19:35:08,034] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-18 19:39:17,011] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-18 19:39:23,924] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-18 19:40:38,261] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 19:40:38,806] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 19:40:38,808] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 19:40:38,984] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 19:44:17,986] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-18 19:44:19,053] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-18 19:44:20,153] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-18 19:44:21,146] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-18 19:44:53,413] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-18 19:47:41,679] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 19:47:41,680] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 19:47:41,685] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 19:47:41,686] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 19:47:41,687] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 19:47:41,689] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:36:26,128] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:36:26,132] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:36:26,133] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:36:26,133] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:36:26,133] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:36:26,134] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:01,581] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:01,583] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:01,586] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:01,587] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:01,587] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:01,588] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:03,173] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:03,174] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:03,175] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:03,176] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:03,176] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:03,176] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:05,219] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:05,220] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:05,221] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:05,222] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:05,224] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:05,226] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-18 20:48:08,535] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-19 08:30:34,335] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:30:34,338] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:30:34,343] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:30:34,344] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:30:34,344] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:30:34,345] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:35:33,502] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:35:33,505] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:35:33,511] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:35:33,514] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:35:33,515] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:35:33,516] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:35:36,118] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:35:36,119] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:35:36,120] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:35:36,121] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:35:36,122] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:35:36,123] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:33,039] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:33,044] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:33,044] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:33,045] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:33,045] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:33,047] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:34,381] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:34,382] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:34,382] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:34,382] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:34,382] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:34,382] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:54,797] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:54,799] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:54,799] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:54,801] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:54,803] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:54,803] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:55,930] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:55,931] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:55,932] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:55,935] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:55,934] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:55,933] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:56,885] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:56,887] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:56,887] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:56,887] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:56,889] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:41:56,890] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:49:05,604] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-19 08:51:52,516] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-19 08:51:53,673] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-19 08:51:56,074] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-19 08:51:58,210] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-19 08:52:21,093] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-19 08:53:30,424] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-19 08:53:31,504] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-19 08:53:59,714] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[2025-12-19 08:54:29,060] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:54:29,209] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:54:32,582] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:55:47,900] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:58:19,100] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:58:21,339] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:58:22,196] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:58:38,075] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:59:17,099] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 08:59:50,603] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 09:00:51,842] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 09:00:53,067] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 09:00:53,887] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 09:01:51,767] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 09:02:05,920] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[2025-12-19 09:02:52,044] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/Mac/.local/share/virtualenvs/Backend-nQM7KEI4/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.

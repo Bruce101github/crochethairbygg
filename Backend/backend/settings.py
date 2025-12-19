@@ -235,6 +235,9 @@ REST_FRAMEWORK = {
 CSRF_TRUSTED_ORIGINS = [
     "https://crochethairbygg-production.up.railway.app",
     "https://crochethairbygg.vercel.app",
+    "http://127.0.0.1:8000"
+    "http://127.0.0.1:3000"
+    "http://127.0.0.1:3001"
     # add other trusted origins if needed
 ]
 
