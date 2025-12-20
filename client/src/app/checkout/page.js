@@ -397,6 +397,14 @@ export default function CheckoutPage() {
                 </div>
               )}
 
+            {!isGuest && addresses.length === 0 && (
+              <div className="mb-4 p-4 border border-yellow-300 bg-yellow-50 rounded-md">
+                <p className="text-sm text-yellow-800">
+                  You don’t have a delivery address yet. Please add one to continue checkout.
+                </p>
+              </div>
+            )}
+
             {!isGuest && !showNewAddress && addresses.length > 0 && (
                 <button
                   onClick={() => setShowNewAddress(true)}
@@ -406,7 +414,7 @@ export default function CheckoutPage() {
                 </button>
             )}
 
-            {(isGuest || showNewAddress) && (
+            {(isGuest || showNewAddress || (!isGuest && addresses.length === 0)) && (
                 <div className="border border-gray-200 rounded-md p-4 space-y-3">
                   <input
                     type="text"
