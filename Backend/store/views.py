@@ -22,6 +22,7 @@ from decimal import Decimal
 from .email_utils import send_password_reset_email, send_order_confirmation_email, send_order_status_update_email
 import hmac
 import hashlib
+import uuid  # add at top if not present
 
 
 class UserSerializer(ModelSerializer):
@@ -324,7 +325,7 @@ class PaystackInitializeView(APIView):
 
     def post(self, request, order_id):
         user = request.user if request.user.is_authenticated else None
-        
+
         # Get order (check if user owns it, or if it's a guest order)
         try:
             if user:
@@ -350,15 +351,16 @@ class PaystackInitializeView(APIView):
 
         # Get payment channel from request (card or mobile_money)
         payment_channel = request.data.get("payment_channel", "card")
-        
+
         # Prepare Paystack payload
         customer_email = user.email if user else order.guest_email
+        unique_ref = f"order_{order.id}_{uuid.uuid4().hex[:8]}"
         payload = {
             "email": customer_email,
-            "amount": int(order.total * 100),  # Convert to pesewas/kobo
-            "reference": f"order_{order.id}",
-            "callback_url": f"{settings.FRONTEND_URL}/payment-success?reference=order_{order.id}",
-            "channels": [payment_channel]  # Specify payment channel
+            "amount": int(order.total * 100),
+            "reference": unique_ref,
+            "callback_url": f"{settings.FRONTEND_URL}/payment-success?reference={unique_ref}",
+            "channels": [payment_channel]
         }
 
         headers = {
@@ -366,7 +368,7 @@ class PaystackInitializeView(APIView):
             "Content-Type": "application/json"
         }
 
-        url = f"{settings.PAYSTACK_BASE_URL}/transaction/initialize"
+        url = f"{settings.PAYSTACK_BASE_URL}//initialize"
 
         # Call Paystack
         try:
@@ -378,7 +380,7 @@ class PaystackInitializeView(APIView):
                 return Response({"error": f"Failed to initiate Paystack payment: {error_detail}"}, status=500)
 
             data = response.json()
-            
+
             if "data" not in data or "authorization_url" not in data["data"]:
                 print(f"Unexpected Paystack response: {data}")
                 return Response({"error": "Invalid response from Paystack"}, status=500)
