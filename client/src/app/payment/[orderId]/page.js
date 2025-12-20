@@ -83,7 +83,15 @@ export default function PaymentPage() {
     // Re-initialize payment when paymentMethod changes and orderDetails are loaded
     if (!orderDetails || !paystackReady) return;
 
-    initializePayment();
+    const params = new URLSearchParams(window.location.search);
+    const guestEmail = params.get("guest_email");
+
+    if (!accessToken && !guestEmail) {
+      toast.error("Guest email missing");
+      return;
+    }
+
+    initializePayment(guestEmail);
   }, [paymentMethod, orderDetails, paystackReady]);
 
   async function initializePayment(guestEmailParam) {
