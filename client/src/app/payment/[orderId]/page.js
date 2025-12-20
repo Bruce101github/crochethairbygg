@@ -31,6 +31,12 @@ export default function PaymentPage() {
         const searchParams = new URLSearchParams(window.location.search);
         const guestEmail = searchParams.get("guest_email");
 
+        console.log("[PaymentPage] fetchOrderDetails", {
+          orderId,
+          accessTokenPresent: !!accessToken,
+          guestEmail,
+        });
+
         const headers = {
           "Content-Type": "application/json",
         };
@@ -47,6 +53,9 @@ export default function PaymentPage() {
         const res = await fetch(url, { headers });
         if (res.ok) {
           const data = await res.json();
+
+          console.log("[PaymentPage] order details response", data);
+
           setOrderDetails(data);
         }
       } catch (error) {
@@ -91,10 +100,24 @@ export default function PaymentPage() {
       return;
     }
 
+    console.log("[PaymentPage] attempting initializePayment", {
+      orderId,
+      paymentMethod,
+      accessTokenPresent: !!accessToken,
+      guestEmail,
+      paystackReady,
+    });
+
     initializePayment(guestEmail);
   }, [paymentMethod, orderDetails, paystackReady]);
 
   async function initializePayment(guestEmailParam) {
+    console.log("[PaymentPage] initializePayment called", {
+      orderId,
+      initializing,
+      paymentDataExists: !!paymentData,
+    });
+
     // Prevent duplicate initialization
     if (initializing || paymentData) {
       return;
@@ -121,6 +144,12 @@ export default function PaymentPage() {
         ? { guest_email: guestEmail, payment_channel: paymentMethod }
         : { payment_channel: paymentMethod };
 
+      console.log("[PaymentPage] initializePayment request", {
+        url: `${process.env.NEXT_PUBLIC_API_URL}/api/paystack/initiate/${orderId}/`,
+        headers,
+        body,
+      });
+
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_API_URL}/api/paystack/initiate/${orderId}/`,
         {
@@ -131,6 +160,11 @@ export default function PaymentPage() {
       );
 
       const data = await res.json();
+
+      console.log("[PaymentPage] initializePayment response", {
+        status: res.status,
+        data,
+      });
 
       if (res.ok && data.access_code && data.public_key) {
         setPaymentData(data);
@@ -167,6 +201,11 @@ export default function PaymentPage() {
 
   function handlePayment() {
     if (!paymentData || typeof window === "undefined" || !window.PaystackPop) {
+      console.warn("[PaymentPage] Paystack not ready", {
+        paymentData,
+        hasWindow: typeof window !== "undefined",
+        hasPaystack: typeof window !== "undefined" && !!window.PaystackPop,
+      })
       toast.error("Payment system not ready. Please try again.");
       return;
     }
