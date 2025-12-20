@@ -305,6 +305,7 @@ class CheckoutView(APIView):
 
         # 11. Send order confirmation email
         try:
+            print(f"Sending order confirmation email for order id {order.id}, user: {order.user}")
             send_order_confirmation_email(order)
         except Exception as e:
             print(f"Error sending order confirmation email: {e}")
@@ -372,7 +373,11 @@ class PaystackInitializeView(APIView):
 
         # Call Paystack
         try:
+            print(f"Initializing Paystack payment for order id {order.id}, user: {user}, guest_email: {order.guest_email if not user else 'N/A'}")
+            print(f"Paystack payload: {payload}")
             response = requests.post(url, json=payload, headers=headers)
+            print(f"Paystack response status code: {response.status_code}")
+            print(f"Paystack response text: {response.text}")
 
             if response.status_code != 200:
                 error_detail = response.text
