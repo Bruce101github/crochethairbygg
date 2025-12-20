@@ -504,25 +504,41 @@ class OrderDetailView(generics.RetrieveAPIView):
         return context
 
 
+
 class GuestOrderTrackView(APIView):
     """
     Allow guests to track their order using order ID and email
     """
     permission_classes = []
-    
-    def post(self, request):
-        order_id = request.data.get("order_id")
-        email = request.data.get("email")
-        
+
+    def get(self, request):
+        order_id = request.query_params.get("order_id")
+        email = request.query_params.get("email")
+
         if not order_id or not email:
-            return Response({"error": "Order ID and email are required"}, status=400)
-        
+            return Response(
+                {"error": "Order ID and email are required"},
+                status=400
+            )
+
         try:
-            order = Order.objects.get(id=order_id, is_guest=True, guest_email__iexact=email)
-            serializer = OrderDetailSerializer(order, context={'request': request})
+            order = Order.objects.get(
+                id=order_id,
+                is_guest=True,
+                guest_email__iexact=email
+            )
+            serializer = OrderDetailSerializer(order, context={"request": request})
             return Response(serializer.data, status=200)
         except Order.DoesNotExist:
-            return Response({"error": "Order not found. Please check your order ID and email."}, status=404)
+            return Response(
+                {"error": "Order not found. Please check your order ID and email."},
+                status=404
+            )
+
+    def post(self, request):
+        # Support POST by delegating to GET logic
+        request._request.GET = request.data
+        return self.get(request)
 
 
 class AddressViewSet(viewsets.ModelViewSet):
