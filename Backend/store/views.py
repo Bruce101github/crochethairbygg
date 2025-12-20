@@ -369,7 +369,7 @@ class PaystackInitializeView(APIView):
             "Content-Type": "application/json"
         }
 
-        url = f"{settings.PAYSTACK_BASE_URL}/initialize"
+        url = f"{settings.PAYSTACK_BASE_URL}/transaction/initialize"
 
         # Call Paystack
         try:
