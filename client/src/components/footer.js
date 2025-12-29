@@ -151,7 +151,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="h-px w-full bg-white/10 my-5"></div>
-      <div className="flex gap-2 justify-center">
+      <div className="flex gap-2 justify-center mb-5">
         <div className="w-10 h-6 rounded-sm bg-white/20 overflow-hidden">
           <Image
             src="payment-icons/visa.svg"
