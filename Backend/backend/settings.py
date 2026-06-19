@@ -245,8 +245,18 @@ CSRF_TRUSTED_ORIGINS = [
 DJANGO_FILTER_BACKEND_TEMPLATE = None
 PAYSTACK_SECRET_KEY = os.getenv("PAYSTACK_SECRET_KEY", "sk_test_b5f17c18f2d824b1adf063c7fc7c2ccabd75947c")
 PAYSTACK_PUBLIC_KEY = os.getenv("PAYSTACK_PUBLIC_KEY", "pk_test_e3c8e876ce967dad9beddf5b292d2f97f5a9e142")
-PAYSTACK_BASE_URL = os.getenv("PAYSTACK_BASE_URL", "https://api.paystack.co") 
-FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000") 
+PAYSTACK_BASE_URL = os.getenv("PAYSTACK_BASE_URL", "https://api.paystack.co")
+FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000")
+
+# Mckot Merchant Delivery API (server-side only — never expose the key to the client)
+MCKOT_BASE_URL = os.getenv("MCKOT_BASE_URL", "https://api.mckot.com/merchant/v1")
+MCKOT_MERCHANT_API_KEY = os.getenv("MCKOT_MERCHANT_API_KEY", "")
+MCKOT_WEBHOOK_SECRET = os.getenv("MCKOT_WEBHOOK_SECRET", "")
+# Store pickup base [lat, lng]; optional, Mckot also holds the registered base
+MCKOT_PICKUP_LAT = os.getenv("MCKOT_PICKUP_LAT", "")
+MCKOT_PICKUP_LNG = os.getenv("MCKOT_PICKUP_LNG", "")
+# Default delivery payment posture: prepaid orders pay online; merchant pays the fee
+MCKOT_DEFAULT_FEE_PAYER = os.getenv("MCKOT_DEFAULT_FEE_PAYER", "merchant_wallet")
 
 # Email Configuration
 EMAIL_BACKEND = os.getenv("EMAIL_BACKEND", "django.core.mail.backends.smtp.EmailBackend")
