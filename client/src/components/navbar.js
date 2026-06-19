@@ -274,7 +274,14 @@ useEffect(() => {
         <div className="flex items-center justify-between">
           <span className="flex gap-10 items-center flex-1 min-w-0">
         <Link href="/" className="flex items-center flex-shrink-0">
-              <span className="text-xl font-bold text-gray-900 dark:text-white">MUSEIRA</span>
+              <Image
+                src="/CrochetHairbyGG-logo.png"
+                alt="Crochet Hair by GG"
+                width={180}
+                height={72}
+                priority
+                className="h-14 w-auto object-contain dark:brightness-0 dark:invert"
+              />
         </Link>
             <nav className="flex gap-6 font-medium text-gray-900 dark:text-white">
           <Link 
@@ -469,7 +476,14 @@ useEffect(() => {
         {/* Row 2: Logo and Search Bar (Centered) */}
         <div className="w-full px-3 py-2 flex items-center gap-2 border-t border-b border-gray-200 dark:border-gray-700">
           <Link href="/" className="flex items-center flex-shrink-0">
-            <span className="text-base font-bold text-gray-900 dark:text-white">Museira</span>
+            <Image
+              src="/CrochetHairbyGG-logo.png"
+              alt="Crochet Hair by GG"
+              width={130}
+              height={52}
+              priority
+              className="h-10 w-auto object-contain dark:brightness-0 dark:invert"
+            />
           </Link>
           <div className="flex-1 relative bg-gray-100 dark:bg-gray-800 rounded-lg">
             <form

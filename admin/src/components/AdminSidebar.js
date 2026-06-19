@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   HiShoppingBag,
@@ -25,9 +26,16 @@ export default function AdminSidebar({ sidebarOpen, setSidebarOpen, onLogout }) 
         } lg:translate-x-0 transition-transform duration-300 ease-in-out shadow-2xl`}
       >
         <div className="flex items-center justify-between h-16 px-6 border-b border-gray-800">
-          <h1 className="text-xl font-bold bg-gradient-to-r from-[#FF6B9D] to-[#FF5A8A] bg-clip-text text-transparent">
-            Admin Panel
-          </h1>
+          <Link href="/admin/dashboard" className="flex items-center">
+            <Image
+              src="/CrochetHairbyGG-logo.png"
+              alt="Crochet Hair by GG"
+              width={150}
+              height={48}
+              priority
+              className="h-9 w-auto object-contain brightness-0 invert"
+            />
+          </Link>
           <button
             onClick={() => setSidebarOpen(false)}
             className="lg:hidden text-gray-400 hover:text-white transition"

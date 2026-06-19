@@ -40,6 +40,15 @@ export default function Footer() {
 
   return (
     <div className="w-full h-auto bg-black px-5 lg:px-20 py-10 flex flex-col  justify-between text-white lg:gap-5">
+      <Link href="/" className="flex items-center">
+        <Image
+          src="/CrochetHairbyGG-logo.png"
+          alt="Crochet Hair by GG"
+          width={200}
+          height={80}
+          className="h-16 w-auto object-contain brightness-0 invert"
+        />
+      </Link>
       <div className="h-px w-full bg-white/10 my-5"></div>
       <div className="flex w-full justify-between lg:flex-row flex-col  gap-5">
         <div className="flex flex-col gap-3">
@@ -114,7 +123,7 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             <label className="font-bold">Contact Us</label>
             <div  className="text-sm">
-              <p>Email: inf@museira.com</p>
+              <p>Email: info@crochethairbygg.com</p>
               <p>Phone: 123-456-7890</p>
             </div>
           </div>
@@ -199,7 +208,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex lg:flex-row justify-between w-full text-xs gap-2">
-        <span>Copyright@2025 Museira</span>
+        <span>Copyright@2025 Crochet Hair by GG</span>
         <span>
           Website Created by <a href="https://instagram.com/brucethiombiano" target="_blank" className="text-[#FF6B9D] hover:underline">Bruce T.</a>
         </span>

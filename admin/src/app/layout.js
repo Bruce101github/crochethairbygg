@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Admin Dashboard - Museira",
+  title: "Admin Dashboard - Crochet Hair by GG",
   description: "Admin dashboard for managing products, orders, and inventory",
 };
 
