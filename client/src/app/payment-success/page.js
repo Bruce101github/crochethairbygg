@@ -4,6 +4,7 @@ import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { HiCheckCircle, HiShoppingBag, HiHome } from "react-icons/hi";
+import DeliveryTracking from "@/components/DeliveryTracking";
 
 function PaymentSuccessContent() {
   const router = useRouter();
@@ -43,6 +44,14 @@ function PaymentSuccessContent() {
           <div className="bg-gray-50 rounded-md p-4 mb-6">
             <p className="text-sm text-gray-600">Order ID</p>
             <p className="font-semibold">#{orderId}</p>
+          </div>
+        )}
+        {orderId && (
+          <div className="mb-6 text-left">
+            <DeliveryTracking
+              orderId={orderId}
+              authToken={typeof window !== "undefined" ? localStorage.getItem("access") : null}
+            />
           </div>
         )}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

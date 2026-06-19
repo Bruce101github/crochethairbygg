@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { HiShoppingBag, HiCalendar, HiLocationMarker, HiTruck } from "react-icons/hi";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import DeliveryTracking from "@/components/DeliveryTracking";
 
 export default function OrderDetailPage() {
   const params = useParams();
@@ -153,6 +154,7 @@ export default function OrderDetailPage() {
 
           {/* Order Summary */}
           <div className="space-y-6">
+            <DeliveryTracking orderId={params.id} authToken={accessToken} />
             <div className="border border-gray-200 rounded-md p-6">
               <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
               <div className="space-y-3">
