@@ -201,7 +201,7 @@ export default function OrderDetailPage() {
                   <div className="mt-4 pt-4 border-t border-gray-200">
                     <Link
                       href={`/returns/new?order=${order.id}`}
-                      className="block w-full text-center bg-[#C8961F] hover:bg-[#A87814] text-white font-semibold py-3 px-4 rounded-lg transition"
+                      className="block w-full text-center bg-[#C8961F] hover:bg-[#A87814] text-[#231F20] font-semibold py-3 px-4 rounded-lg transition"
                     >
                       Request Return
                     </Link>

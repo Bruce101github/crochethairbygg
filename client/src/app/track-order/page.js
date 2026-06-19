@@ -112,7 +112,7 @@ export default function TrackOrderPage() {
             <button
               onClick={handleTrack}
               disabled={loading || !orderId || !email}
-              className="w-full bg-[#C8961F] hover:bg-[#A87814] text-white font-semibold py-3 px-6 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-[#C8961F] hover:bg-[#A87814] text-[#231F20] font-semibold py-3 px-6 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? "Tracking..." : "Track Order"}
             </button>

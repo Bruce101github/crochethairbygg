@@ -108,7 +108,7 @@ export default function Reviews({ productId, canReview, onReviewSubmitted }) {
         {canReview && accessToken && !showForm && (
           <button
             onClick={() => setShowForm(!showForm)}
-            className="px-4 py-2 bg-[#C8961F] text-white rounded-lg hover:bg-[#A87814] transition font-semibold"
+            className="px-4 py-2 bg-[#C8961F] text-[#231F20] rounded-lg hover:bg-[#A87814] transition font-semibold"
           >
             Write a Review
           </button>
@@ -136,7 +136,7 @@ export default function Reviews({ productId, canReview, onReviewSubmitted }) {
             </div>
             <button
               onClick={() => setShowForm(true)}
-              className="px-4 py-2 bg-[#C8961F] text-white rounded-lg hover:bg-[#A87814] transition font-semibold"
+              className="px-4 py-2 bg-[#C8961F] text-[#231F20] rounded-lg hover:bg-[#A87814] transition font-semibold"
             >
               Write a Review
             </button>
@@ -188,7 +188,7 @@ export default function Reviews({ productId, canReview, onReviewSubmitted }) {
             <button
               type="submit"
               disabled={submitting}
-              className="px-6 py-2 bg-[#C8961F] text-white rounded-lg hover:bg-[#A87814] transition font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-6 py-2 bg-[#C8961F] text-[#231F20] rounded-lg hover:bg-[#A87814] transition font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {submitting ? "Submitting..." : "Submit Review"}
             </button>

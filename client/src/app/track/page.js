@@ -140,7 +140,7 @@ export default function TrackOrderPage() {
               <button
                 onClick={handleTrack}
                 disabled={loading}
-                className="px-6 py-3 bg-[#C8961F] text-white rounded-lg font-semibold hover:bg-[#A87814] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                className="px-6 py-3 bg-[#C8961F] text-[#231F20] rounded-lg font-semibold hover:bg-[#A87814] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
               >
                 <HiSearch size={20} />
                 {loading ? "Tracking..." : "Track Order"}
@@ -199,7 +199,7 @@ export default function TrackOrderPage() {
                             step.isCancelled
                               ? "bg-red-100 border-red-300"
                               : step.completed
-                              ? "bg-[#C8961F] border-[#C8961F] text-white"
+                              ? "bg-[#C8961F] border-[#C8961F] text-[#231F20]"
                               : "bg-gray-100 border-gray-300 text-gray-400"
                           }`}
                         >
@@ -320,7 +320,7 @@ export default function TrackOrderPage() {
             <div className="flex gap-4">
               <button
                 onClick={() => router.push(`/orders/${order.id}`)}
-                className="flex-1 px-6 py-3 bg-[#C8961F] text-white rounded-lg font-semibold hover:bg-[#A87814] transition"
+                className="flex-1 px-6 py-3 bg-[#C8961F] text-[#231F20] rounded-lg font-semibold hover:bg-[#A87814] transition"
               >
                 View Full Order Details
               </button>

@@ -368,7 +368,7 @@ useEffect(() => {
                   }, 0);
                   if (totalItems > 0) {
                     return (
-                      <span className="absolute -top-1.5 -right-1.5 h-5 w-5 bg-[#C8961F] text-white text-sm rounded-full flex items-center justify-center font-semibold">
+                      <span className="absolute -top-1.5 -right-1.5 h-5 w-5 bg-[#C8961F] text-[#231F20] text-sm rounded-full flex items-center justify-center font-semibold">
                         {totalItems > 99 ? '99+' : totalItems}
           </span>
                     );
@@ -458,7 +458,7 @@ useEffect(() => {
                   }, 0);
                   if (totalItems > 0) {
                     return (
-                      <span className="absolute -top-1.5 -right-1.5 h-4 w-4 bg-[#C8961F] text-white text-xs rounded-full flex items-center justify-center font-semibold">
+                      <span className="absolute -top-1.5 -right-1.5 h-4 w-4 bg-[#C8961F] text-[#231F20] text-xs rounded-full flex items-center justify-center font-semibold">
                         {totalItems > 99 ? '99+' : totalItems}
                       </span>
                     );

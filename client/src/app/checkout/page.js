@@ -290,7 +290,7 @@ export default function CheckoutPage() {
             <p className="text-xl mb-4">Your cart is empty</p>
             <button
               onClick={() => router.push("/products")}
-              className="bg-[#C8961F] text-white px-6 py-2 rounded-md hover:bg-[#A87814]"
+              className="bg-[#C8961F] text-[#231F20] px-6 py-2 rounded-md hover:bg-[#A87814]"
             >
               Continue Shopping
             </button>
@@ -486,7 +486,7 @@ export default function CheckoutPage() {
                     <div className="flex gap-2 mt-4">
                     <button
                       onClick={createAddress}
-                      className="bg-[#C8961F] text-white px-4 py-2 rounded-md text-sm hover:bg-[#A87814]"
+                      className="bg-[#C8961F] text-[#231F20] px-4 py-2 rounded-md text-sm hover:bg-[#A87814]"
                     >
                       Save Address
                     </button>
@@ -617,7 +617,7 @@ export default function CheckoutPage() {
                 <button
                   onClick={handleCheckout}
                   disabled={processing || !isValid}
-                  className="w-full bg-[#C8961F] text-white py-3 rounded-md font-semibold mt-6 hover:bg-[#A87814] disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-[#C8961F] text-[#231F20] py-3 rounded-md font-semibold mt-6 hover:bg-[#A87814] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {processing ? "Processing..." : "Proceed to Payment"}
                 </button>

@@ -577,7 +577,7 @@ export default function Page() {
                   sessionStorage.setItem('discountCode', appliedDiscount.code);
                 }
               }}>
-                <button className="bg-[#C8961F] rounded-md w-full py-3 font-bold text-white mt-6 hover:bg-[#A87814]">
+                <button className="bg-[#C8961F] rounded-md w-full py-3 font-bold text-[#231F20] mt-6 hover:bg-[#A87814]">
                   Proceed to Checkout
                 </button>
               </Link>

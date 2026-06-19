@@ -297,7 +297,7 @@ export default function FavoritesPage() {
                         </p>
                         <button
                           onClick={(e) => handleAddToCart(e, product)}
-                          className="bg-[#C8961F]/10 text-[#C8961F] p-1.5 rounded-full hover:bg-[#C8961F] hover:text-white transition"
+                          className="bg-[#C8961F]/10 text-[#C8961F] p-1.5 rounded-full hover:bg-[#C8961F] hover:text-[#231F20] transition"
                         >
                           <HiShoppingBag size={16} />
                         </button>

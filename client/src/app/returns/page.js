@@ -124,7 +124,7 @@ export default function ReturnsPage() {
             </p>
             <Link
               href="/orders"
-              className="inline-block bg-[#C8961F] hover:bg-[#A87814] text-white px-6 py-3 rounded-lg font-semibold transition"
+              className="inline-block bg-[#C8961F] hover:bg-[#A87814] text-[#231F20] px-6 py-3 rounded-lg font-semibold transition"
             >
               View Orders
             </Link>

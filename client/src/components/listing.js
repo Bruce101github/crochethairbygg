@@ -499,7 +499,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
               </div>
               <button
                 onClick={(e) => handleAddToCart(e, product)}
-                className="w-fit bg-[#C8961F]/10 text-[#C8961F] p-2 rounded-full flex items-center justify-center hover:bg-[#C8961F] hover:text-white transition-all duration-300 z-10"
+                className="w-fit bg-[#C8961F]/10 text-[#C8961F] p-2 rounded-full flex items-center justify-center hover:bg-[#C8961F] hover:text-[#231F20] transition-all duration-300 z-10"
               >
                 <HiShoppingBag size={18} />
               </button>

@@ -384,7 +384,7 @@ export default function PaymentPage() {
               }
             }}
             disabled={processing || initializing}
-            className="w-full bg-[#C8961F] text-white py-4 rounded-lg font-semibold text-lg hover:bg-[#A87814] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            className="w-full bg-[#C8961F] text-[#231F20] py-4 rounded-lg font-semibold text-lg hover:bg-[#A87814] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             {processing || initializing ? (
               <>

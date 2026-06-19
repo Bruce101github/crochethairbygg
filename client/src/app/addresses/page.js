@@ -163,7 +163,7 @@ export default function AddressesPage() {
           <h1 className="text-2xl font-bold">My Addresses</h1>
           <button
             onClick={() => setShowForm(!showForm)}
-            className="flex items-center gap-2 bg-[#C8961F] text-white px-4 py-2 rounded-md hover:bg-[#A87814]"
+            className="flex items-center gap-2 bg-[#C8961F] text-[#231F20] px-4 py-2 rounded-md hover:bg-[#A87814]"
           >
             <HiPlus size={20} />
             Add Address
@@ -241,7 +241,7 @@ export default function AddressesPage() {
               <div className="flex gap-2">
                 <button
                   type="submit"
-                  className="bg-[#C8961F] text-white px-6 py-2 rounded-md hover:bg-[#A87814]"
+                  className="bg-[#C8961F] text-[#231F20] px-6 py-2 rounded-md hover:bg-[#A87814]"
                 >
                   {editingId ? "Update" : "Save"}
                 </button>

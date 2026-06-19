@@ -214,7 +214,7 @@ export default function Home() {
                       {slide.cta1_text && slide.cta1_link && (
                         <Link
                           href={slide.cta1_link}
-                          className="inline-flex items-center justify-center gap-2 bg-[#C8961F] text-white px-10 py-4 rounded-lg font-bold text-base lg:text-lg hover:bg-[#A87814] transition shadow-lg hover:shadow-xl"
+                          className="inline-flex items-center justify-center gap-2 bg-[#C8961F] text-[#231F20] px-10 py-4 rounded-lg font-bold text-base lg:text-lg hover:bg-[#A87814] transition shadow-lg hover:shadow-xl"
                         >
                           {slide.cta1_text}
                           <HiArrowRight size={20} />
@@ -248,7 +248,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   href="/products"
-                  className="inline-flex items-center justify-center gap-2 bg-[#C8961F] text-white px-10 py-4 rounded-lg font-bold text-base lg:text-lg hover:bg-[#A87814] transition shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center justify-center gap-2 bg-[#C8961F] text-[#231F20] px-10 py-4 rounded-lg font-bold text-base lg:text-lg hover:bg-[#A87814] transition shadow-lg hover:shadow-xl"
                 >
                   Shop Now
                   <HiArrowRight size={20} />
@@ -500,7 +500,7 @@ export default function Home() {
                     <p className="font-bold text-base lg:text-xl text-gray-900 dark:text-white">
                       {priceRange(product.variants)}
                     </p>
-                    <button className="w-fit bg-[#C8961F]/10 text-[#C8961F] p-1.5 rounded-full flex items-center justify-center gap-2 hover:bg-[#C8961F] hover:text-white transition">
+                    <button className="w-fit bg-[#C8961F]/10 text-[#C8961F] p-1.5 rounded-full flex items-center justify-center gap-2 hover:bg-[#C8961F] hover:text-[#231F20] transition">
                       <HiShoppingBag size={16} />
                     </button>
                   </div>

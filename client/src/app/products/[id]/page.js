@@ -785,13 +785,13 @@ export default function ProductPage() {
         )}
       </div>
       <div className="relative px-2 py-10 lg:px-4 lg:pt-0 lg:pb-40 lg:max-w-[40vw] lg:h-screen overflow-y-scroll scrollbar-hide">
-        <div className="lg:hidden absolute right-0 left-0 top-0 w-full py-1 px-2 bg-[#C8961F] text-sm text-white text-semibold">
+        <div className="lg:hidden absolute right-0 left-0 top-0 w-full py-1 px-2 bg-[#C8961F] text-sm text-[#231F20] text-semibold">
           Free Delivery for orders in Accra.
         </div>
         <div className="flex items-start justify-between mb-2">
           <h1 className="text-black text-base font-semibold flex-1">
           {
-              <span className="bg-[#C8961F] rounded-tl-xl rounded-br-xl py-1 px-2 text-sm text-white font-medium mr-2">
+              <span className="bg-[#C8961F] rounded-tl-xl rounded-br-xl py-1 px-2 text-sm text-[#231F20] font-medium mr-2">
               Free Delivery
             </span>
           }
@@ -1003,7 +1003,7 @@ export default function ProductPage() {
                 // Error already handled in addCart
               }
             }}
-            className="py-3 px-4 bg-[#C8961F] w-full text-base rounded-lg font-bold text-white hover:bg-[#A87814] transition shadow-lg"
+            className="py-3 px-4 bg-[#C8961F] w-full text-base rounded-lg font-bold text-[#231F20] hover:bg-[#A87814] transition shadow-lg"
           >
             Buy now
           </button>
@@ -1281,7 +1281,7 @@ export default function ProductPage() {
                 // Error already handled in addCart
               }
             }}
-            className="bg-[#C8961F] py-2 rounded-lg text-white font-bold hover:bg-[#A87814] transition"
+            className="bg-[#C8961F] py-2 rounded-lg text-[#231F20] font-bold hover:bg-[#A87814] transition"
           >
             Buy Now
           </button>
