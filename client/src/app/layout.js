@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import PromoBanner from "@/components/PromoBanner";
 import { Toaster } from "react-hot-toast";
+import { MotionConfig } from "framer-motion";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -24,17 +25,19 @@ export default function RootLayout({ children }) {
       <body
         className={`${outfit.variable} antialiased`}
       >
-        <ThemeProvider>
-          <AuthProvider>
-            <PromoBanner />
-            <Navbar />
-            <Toaster position="top-right" reverseOrder={false} />
-            <main className="bg-white dark:bg-gray-900 min-h-screen transition-colors" style={{ paddingTop: 'var(--header-total-height, 100px)' }}>
-              {children}
-            </main>
-            <Footer />
-          </AuthProvider>
-        </ThemeProvider>
+        <MotionConfig reducedMotion="user">
+          <ThemeProvider>
+            <AuthProvider>
+              <PromoBanner />
+              <Navbar />
+              <Toaster position="top-right" reverseOrder={false} />
+              <main className="bg-white dark:bg-gray-900 min-h-screen transition-colors" style={{ paddingTop: 'var(--header-total-height, 100px)' }}>
+                {children}
+              </main>
+              <Footer />
+            </AuthProvider>
+          </ThemeProvider>
+        </MotionConfig>
       </body>
     </html>
   );
