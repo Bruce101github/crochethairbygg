@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import CategoryViewSet, ProductViewSet, OrderViewSet, RegisterUserView, CartViewSet, CheckoutView, PaystackInitializeView, PaystackWebhookView, OrderHistoryView, OrderDetailView, GuestOrderTrackView, AddressViewSet, ShippingMethodViewSet, OrderStatusUpdateView, FavoriteViewSet, UserInfoView, ProductLikeView, HeroSlideViewSet, PromoBannerViewSet, UsersStatsView, ProductVariantViewSet, ProductImageViewSet, ReviewViewSet, PasswordResetRequestView, PasswordResetConfirmView, ValidateDiscountCodeView, DiscountCodeViewSet, SalesAnalyticsView, ReturnRequestViewSet, ProcessRefundView
+from .views import CategoryViewSet, ProductViewSet, OrderViewSet, RegisterUserView, CartViewSet, CheckoutView, PaystackInitializeView, PaystackWebhookView, OrderHistoryView, OrderDetailView, GuestOrderTrackView, AddressViewSet, ShippingMethodViewSet, OrderStatusUpdateView, FavoriteViewSet, UserInfoView, ProductLikeView, HeroSlideViewSet, PromoBannerViewSet, UsersStatsView, ProductVariantViewSet, ProductImageViewSet, ReviewViewSet, PasswordResetRequestView, PasswordResetConfirmView, ValidateDiscountCodeView, DiscountCodeViewSet, SalesAnalyticsView, ReturnRequestViewSet, ProcessRefundView, DeliveryQuoteView, OrderDeliveryView, OrderDeliveryBookView, MckotWebhookView
 
 
 router = DefaultRouter()
@@ -39,6 +39,11 @@ urlpatterns = [
     path('orders/<int:pk>/', OrderDetailView.as_view(), name='order-detail'),
     path('orders/track/', GuestOrderTrackView.as_view(), name='guest-order-track'),
     path('orders/<int:pk>/status/', OrderStatusUpdateView.as_view(), name='order-status-update'), 
-    path('return-requests/<int:return_request_id>/process-refund/', ProcessRefundView.as_view(), name='process-refund'), 
+    path('return-requests/<int:return_request_id>/process-refund/', ProcessRefundView.as_view(), name='process-refund'),
+    # Mckot delivery
+    path('delivery/quote/', DeliveryQuoteView.as_view(), name='delivery-quote'),
+    path('orders/<int:order_id>/delivery/', OrderDeliveryView.as_view(), name='order-delivery'),
+    path('orders/<int:order_id>/delivery/book/', OrderDeliveryBookView.as_view(), name='order-delivery-book'),
+    path('mckot/webhook/', MckotWebhookView.as_view(), name='mckot-webhook'),
     path('', include(router.urls)),
 ]

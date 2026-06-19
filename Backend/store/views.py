@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from .models import Category, Product, Order, Cart, OrderItem, Address, ShippingMethod, Favorite, ProductLike, HeroSlide, PromoBanner, ProductVariant, ProductImage, Review, DiscountCode, ReturnRequest
-from .serializers import CategorySerializer, ProductSerializer, OrderSerializer, CartSerializer, OrderDetailSerializer, AddressSerializer, ShippingMethodSerializer, OrderStatusUpdateSerializer, FavoriteSerializer, HeroSlideSerializer, PromoBannerSerializer, ProductVariantSerializer, ProductImageSerializer, ReviewSerializer, DiscountCodeSerializer, ReturnRequestSerializer, ReturnRequestCreateSerializer
+from .models import Category, Product, Order, Cart, OrderItem, Address, ShippingMethod, Favorite, ProductLike, HeroSlide, PromoBanner, ProductVariant, ProductImage, Review, DiscountCode, ReturnRequest, Delivery
+from .serializers import CategorySerializer, ProductSerializer, OrderSerializer, CartSerializer, OrderDetailSerializer, AddressSerializer, ShippingMethodSerializer, OrderStatusUpdateSerializer, FavoriteSerializer, HeroSlideSerializer, PromoBannerSerializer, ProductVariantSerializer, ProductImageSerializer, ReviewSerializer, DiscountCodeSerializer, ReturnRequestSerializer, ReturnRequestCreateSerializer, DeliverySerializer
+from . import mckot
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated, AllowAny
 from rest_framework import generics, filters, viewsets, permissions, parsers
 from django.contrib.auth.models import User
@@ -470,6 +471,13 @@ class PaystackWebhookView(APIView):
                 send_order_status_update_email(order)
             except Exception as e:
                 print(f"Error sending order status update email: {e}")
+
+            # Auto-create the Mckot delivery now that payment has succeeded.
+            # No-op if no drop-off was selected or delivery isn't configured.
+            try:
+                book_delivery_for_order(order)
+            except Exception as e:
+                print(f"Error booking delivery for order {order.id}: {e}")
         except Order.DoesNotExist:
             pass
 
@@ -1148,3 +1156,248 @@ class PasswordResetConfirmView(APIView):
         user.save()
         
         return Response({"message": "Password reset successfully"}, status=200)
+
+
+# ============================================================
+# MCKOT DELIVERY
+# ============================================================
+
+def _parse_coords(value):
+    """Normalise a coordinate input to [lat, lng] floats, or None."""
+    if isinstance(value, dict):
+        lat = value.get("lat", value.get("latitude"))
+        lng = value.get("lng", value.get("lon", value.get("longitude")))
+        value = [lat, lng] if lat is not None and lng is not None else None
+    if isinstance(value, (list, tuple)) and len(value) == 2:
+        try:
+            return [float(value[0]), float(value[1])]
+        except (TypeError, ValueError):
+            return None
+    return None
+
+
+def _pickup_from_settings():
+    """Optional store pickup base [lat, lng] from settings, else None."""
+    lat = getattr(settings, "MCKOT_PICKUP_LAT", "")
+    lng = getattr(settings, "MCKOT_PICKUP_LNG", "")
+    return _parse_coords([lat, lng]) if lat and lng else None
+
+
+def _dropoff_from_request(request):
+    """Pull drop-off coords from a request body in a few accepted shapes."""
+    return (
+        _parse_coords(request.data.get("dropoff"))
+        or _parse_coords({"lat": request.data.get("lat"), "lng": request.data.get("lng")})
+    )
+
+
+def _apply_delivery_data(delivery, data):
+    """Map a Mckot delivery object onto our Delivery row (partial-safe)."""
+    if not isinstance(data, dict):
+        return
+    if data.get("id"):
+        delivery.mckot_delivery_id = data["id"]
+    if data.get("status"):
+        delivery.status = data["status"]
+    if data.get("collection_status"):
+        delivery.collection_status = data["collection_status"]
+    courier = data.get("courier") or {}
+    if courier.get("name"):
+        delivery.courier_name = courier["name"]
+    if courier.get("phone"):
+        delivery.courier_phone = courier["phone"]
+    if data.get("tracking_url"):
+        delivery.tracking_url = data["tracking_url"]
+    fee = data.get("delivery_fee") or {}
+    if isinstance(fee, dict) and fee.get("amount") is not None:
+        delivery.delivery_fee = fee["amount"]
+    if data.get("distance_km") is not None:
+        delivery.distance_km = data["distance_km"]
+    if data.get("duration_minutes") is not None:
+        delivery.duration_minutes = data["duration_minutes"]
+    delivery.raw_response = data
+
+
+def _customer_from_order(order):
+    if order.user:
+        name = order.user.get_full_name() or order.user.username
+    else:
+        name = order.guest_name or order.guest_address_full_name or "Customer"
+    phone = order.guest_address_phone or ""
+    if not phone and order.address:
+        phone = order.address.phone_number
+    return {"name": name, "phone": phone}
+
+
+def book_delivery_for_order(order):
+    """
+    Re-quote for a fresh quote_id (the checkout quote may have expired after
+    15 min) and create the Mckot delivery. Idempotent: order_ref = order.id,
+    and we skip if already booked. Returns the Delivery or None if no drop-off
+    was selected. Raises mckot.MckotError on API failure.
+    """
+    delivery = getattr(order, "delivery", None)
+    if not delivery or delivery.dropoff_lat is None or delivery.dropoff_lng is None:
+        return None
+    if delivery.mckot_delivery_id:
+        return delivery
+
+    coords = [float(delivery.dropoff_lat), float(delivery.dropoff_lng)]
+    fresh = mckot.quote(
+        coords,
+        pickup_coordinates=_pickup_from_settings(),
+        ride_type_id=delivery.ride_type_id,
+    )
+    quote_id = fresh.get("quote_id")
+    data = mckot.create_delivery(
+        quote_id=quote_id,
+        order_ref=order.id,
+        customer=_customer_from_order(order),
+        goods={"payment": "prepaid"},  # order was paid online
+        fee_payer=getattr(settings, "MCKOT_DEFAULT_FEE_PAYER", "merchant_wallet"),
+    )
+    _apply_delivery_data(delivery, data)
+    if quote_id:
+        delivery.quote_id = quote_id
+    delivery.save()
+    return delivery
+
+
+def _get_order_for_request(request, order_id):
+    """Resolve an order for an authenticated user or a guest (by email)."""
+    user = request.user if request.user.is_authenticated else None
+    if user:
+        return Order.objects.filter(id=order_id, user=user).first()
+    email = request.data.get("guest_email") or request.query_params.get("guest_email")
+    if email:
+        return Order.objects.filter(id=order_id, is_guest=True, guest_email=email).first()
+    return None
+
+
+class DeliveryQuoteView(APIView):
+    """POST /api/delivery/quote — fee + ETA + ride options for a drop-off."""
+    permission_classes = []  # available to guests during checkout
+
+    def post(self, request):
+        coords = _dropoff_from_request(request)
+        if not coords:
+            return Response({"error": "dropoff coordinates [lat, lng] are required"}, status=400)
+        ride_type_id = request.data.get("ride_type_id")
+        try:
+            data = mckot.quote(coords, pickup_coordinates=_pickup_from_settings(), ride_type_id=ride_type_id)
+        except mckot.MckotConfigError:
+            return Response({"error": "Delivery is not configured"}, status=503)
+        except mckot.MckotError as e:
+            return Response({"error": e.message, "code": e.code}, status=e.status_code or 502)
+        return Response(data)
+
+
+class OrderDeliveryView(APIView):
+    """
+    GET  /api/orders/<id>/delivery — current delivery/tracking (refreshes from Mckot).
+    POST /api/orders/<id>/delivery — record the chosen drop-off + ride type (checkout step).
+    """
+    permission_classes = []
+
+    def get(self, request, order_id):
+        order = _get_order_for_request(request, order_id)
+        if not order:
+            return Response({"error": "Order not found"}, status=404)
+        delivery = getattr(order, "delivery", None)
+        if not delivery:
+            return Response({"error": "No delivery for this order"}, status=404)
+        if delivery.mckot_delivery_id and delivery.status not in ("delivered", "cancelled"):
+            try:
+                _apply_delivery_data(delivery, mckot.get_delivery(delivery.mckot_delivery_id))
+                delivery.save()
+            except mckot.MckotError:
+                pass  # serve last-known status
+        return Response(DeliverySerializer(delivery).data)
+
+    def post(self, request, order_id):
+        order = _get_order_for_request(request, order_id)
+        if not order:
+            return Response({"error": "Order not found"}, status=404)
+        coords = _dropoff_from_request(request)
+        if not coords:
+            return Response({"error": "dropoff coordinates [lat, lng] are required"}, status=400)
+        ride_type_id = request.data.get("ride_type_id")
+
+        delivery, _ = Delivery.objects.get_or_create(order=order)
+        delivery.dropoff_lat, delivery.dropoff_lng = coords
+        if ride_type_id is not None:
+            delivery.ride_type_id = ride_type_id
+        try:
+            data = mckot.quote(coords, pickup_coordinates=_pickup_from_settings(), ride_type_id=ride_type_id)
+        except mckot.MckotConfigError:
+            return Response({"error": "Delivery is not configured"}, status=503)
+        except mckot.MckotError as e:
+            delivery.save()
+            return Response({"error": e.message, "code": e.code}, status=e.status_code or 502)
+
+        delivery.quote_id = data.get("quote_id")
+        fee = (data.get("delivery_fee") or {}).get("amount")
+        if fee is not None:
+            delivery.delivery_fee = fee
+        delivery.distance_km = data.get("distance_km")
+        delivery.duration_minutes = data.get("duration_minutes")
+        for opt in data.get("options", []) or []:
+            if ride_type_id is not None and opt.get("ride_type_id") == ride_type_id:
+                delivery.ride_type_label = opt.get("label")
+        delivery.raw_response = data
+        delivery.save()
+        return Response(DeliverySerializer(delivery).data, status=201)
+
+
+class OrderDeliveryBookView(APIView):
+    """POST /api/orders/<id>/delivery/book — manually book/retry (staff)."""
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request, order_id):
+        if not request.user.is_staff:
+            return Response({"error": "Admin privileges required"}, status=403)
+        order = Order.objects.filter(id=order_id).first()
+        if not order:
+            return Response({"error": "Order not found"}, status=404)
+        try:
+            delivery = book_delivery_for_order(order)
+        except mckot.MckotConfigError:
+            return Response({"error": "Delivery is not configured"}, status=503)
+        except mckot.MckotError as e:
+            return Response({"error": e.message, "code": e.code}, status=e.status_code or 502)
+        if not delivery:
+            return Response({"error": "No drop-off selected for this order"}, status=400)
+        return Response(DeliverySerializer(delivery).data)
+
+
+class MckotWebhookView(APIView):
+    """POST /api/mckot/webhook/ — Mckot delivery status events (signed)."""
+    authentication_classes = []
+    permission_classes = []
+
+    @method_decorator(csrf_exempt)
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def post(self, request):
+        signature = request.headers.get("X-Mckot-Signature")
+        if not mckot.verify_webhook_signature(request.body, signature):
+            return Response({"error": "Invalid signature"}, status=400)
+
+        delivery_id = request.headers.get("X-Mckot-Delivery-Id")
+        payload = request.data if isinstance(request.data, dict) else {}
+        data = payload.get("data") or payload
+
+        delivery = None
+        if delivery_id:
+            delivery = Delivery.objects.filter(mckot_delivery_id=delivery_id).first()
+        if not delivery and isinstance(data, dict):
+            if data.get("id"):
+                delivery = Delivery.objects.filter(mckot_delivery_id=data["id"]).first()
+            if not delivery and data.get("order_ref"):
+                delivery = Delivery.objects.filter(order_id=data["order_ref"]).first()
+
+        if delivery:
+            _apply_delivery_data(delivery, data)
+            delivery.save()
+        return Response({"status": "ok"})
