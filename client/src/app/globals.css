@@ -48,6 +48,15 @@
   --text-4xl--line-height: 1.1;
   --text-5xl--line-height: 1.05;
   --text-6xl--line-height: 1.02;
+
+  /* Softer, layered shadows — refine every shadow-* utility at once */
+  --shadow-2xs: 0 1px 2px 0 oklch(0.2 0.02 80 / 0.04);
+  --shadow-xs:  0 1px 3px 0 oklch(0.2 0.02 80 / 0.05);
+  --shadow-sm:  0 1px 2px -1px oklch(0.2 0.02 80 / 0.06), 0 2px 6px 0 oklch(0.2 0.02 80 / 0.05);
+  --shadow:     0 1px 2px -1px oklch(0.2 0.02 80 / 0.06), 0 4px 12px -2px oklch(0.2 0.02 80 / 0.07);
+  --shadow-md:  0 2px 4px -2px oklch(0.2 0.02 80 / 0.06), 0 8px 20px -4px oklch(0.2 0.02 80 / 0.08);
+  --shadow-lg:  0 4px 8px -4px oklch(0.2 0.02 80 / 0.07), 0 14px 32px -6px oklch(0.2 0.02 80 / 0.10);
+  --shadow-xl:  0 8px 16px -8px oklch(0.2 0.02 80 / 0.08), 0 28px 56px -12px oklch(0.2 0.02 80 / 0.12);
 }
 
 :root {
