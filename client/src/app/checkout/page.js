@@ -536,44 +536,46 @@ export default function CheckoutPage() {
               )}
             </div>
 
-            {/* Shipping Method */}
-            <div className="border border-gray-200 rounded-md p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <HiTruck size={20} />
-                <h2 className="text-xl font-semibold">Shipping Method</h2>
-              </div>
-
-              <div className="space-y-3">
-                {shippingMethods.map((method) => (
-                  <label
-                    key={method.id}
-                    className={`block border rounded-md p-4 cursor-pointer ${
-                      selectedShipping === method.id
-                        ? "border-[#C8961F] bg-[#C8961F]/10"
-                        : "border-gray-200"
-                    }`}
-                  >
-                    <input
-                      type="radio"
-                      name="shipping"
-                      value={method.id}
-                      checked={selectedShipping === method.id}
-                      onChange={(e) => setSelectedShipping(Number(e.target.value))}
-                      className="mr-3"
-                    />
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium">{method.name}</span>
-                      <span className="font-bold">GH₵{method.price}</span>
-                    </div>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            {/* Delivery quote (Mckot) */}
+            {/* Delivery address + location (drives the delivery quote) */}
             <div className="border border-gray-200 rounded-md p-6">
               <DeliveryQuote onChange={setDelivery} />
             </div>
+
+            {/* Delivery Method — only once a valid delivery address is set */}
+            {delivery?.coordinates && (
+              <div className="border border-gray-200 rounded-md p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <HiTruck size={20} />
+                  <h2 className="text-xl font-semibold">Delivery Method</h2>
+                </div>
+
+                <div className="space-y-3">
+                  {shippingMethods.map((method) => (
+                    <label
+                      key={method.id}
+                      className={`block border rounded-md p-4 cursor-pointer ${
+                        selectedShipping === method.id
+                          ? "border-[#C8961F] bg-[#C8961F]/10"
+                          : "border-gray-200"
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="shipping"
+                        value={method.id}
+                        checked={selectedShipping === method.id}
+                        onChange={(e) => setSelectedShipping(Number(e.target.value))}
+                        className="mr-3"
+                      />
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium">{method.name}</span>
+                        <span className="font-bold">GH₵{method.price}</span>
+                      </div>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Right Column - Order Summary */}

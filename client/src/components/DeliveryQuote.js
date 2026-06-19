@@ -55,6 +55,9 @@ export default function DeliveryQuote({ onChange }) {
       const c = [lat, lng];
       setCoords(c);
       setAddressText(formatted || "");
+      // Surface the chosen location immediately so the rest of checkout can
+      // react even if the quote call is slow or unavailable.
+      onChange?.({ coordinates: c, ride_type_id: null, fee: null, eta: null, address: formatted || "" });
       fetchQuote(c);
     }
 
@@ -164,7 +167,7 @@ export default function DeliveryQuote({ onChange }) {
   return (
     <div className="flex flex-col gap-3">
       <label className="flex items-center gap-2 font-semibold text-gray-900 dark:text-white">
-        <HiLocationMarker className="text-[#C8961F]" /> Delivery location
+        <HiLocationMarker className="text-[#C8961F]" /> Delivery address
       </label>
       <div ref={containerRef} className="w-full" />
 
