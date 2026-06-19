@@ -274,8 +274,8 @@ export default function FavoritesPage() {
                         alt={product.title}
                         width={300}
                         height={300}
+                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                         className="object-cover w-full h-64"
-                        unoptimized
                       />
                       <button
                         onClick={(e) => {

@@ -434,7 +434,6 @@ export default function Page() {
                         height={120}
                       alt={product.title}
                         className="w-24 h-24 object-cover rounded-md border border-gray-300"
-                      unoptimized
                     />
                     </Link>
                     <div className="flex flex-col justify-between flex-1">

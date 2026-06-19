@@ -372,7 +372,6 @@ export default function Home() {
                                     width={120}
                                     height={120}
                                     className="w-full h-full object-cover"
-                                    unoptimized
                                   />
                                 ) : (
                                   <HiShoppingBag
@@ -429,7 +428,6 @@ export default function Home() {
                           width={128}
                           height={128}
                           className="w-full h-full object-cover"
-                          unoptimized
                         />
                       ) : (
                         <HiShoppingBag size={64} className="text-[#C8961F]" />
@@ -486,8 +484,8 @@ export default function Home() {
                     alt={product.title}
                     width={300}
                     height={300}
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover w-full lg:h-80 h-50 rounded"
-                    unoptimized
                   />
                 </div>
                 <div className="p-2 flex flex-col">

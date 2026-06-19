@@ -679,8 +679,7 @@ export default function ProductPage() {
                         priority={isFirstImage}
                         width={1000}
                         height={675}
-                        sizes="100vw max-w-full lg:max-w-[60vw]"
-                        unoptimized
+                        sizes="(max-width: 1024px) 100vw, 60vw"
                       />
                     ) : (
                       <div
@@ -752,14 +751,13 @@ export default function ProductPage() {
                 <NextImage
                   src={p.image_url}
                   alt={`Thumbnail ${index + 1}`}
-                  width={60}
-                  height={60}
+                  width={200}
+                  height={160}
                   className={`object-cover w-50 h-40 rounded-sm border-2 ${
                     current - 1 === index
                       ? "border-[#C8961F]"
                       : "border-gray-300"
                   }`}
-                  unoptimized
                 />
               </button>
             ))}

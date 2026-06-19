@@ -467,8 +467,8 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
               alt={product.title}
               width={300}
               height={300}
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
               className="object-cover w-full lg:h-80 h-48 group-hover:scale-105 transition-transform duration-300"
-              unoptimized
             />
             
             <button

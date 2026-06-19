@@ -123,7 +123,6 @@ export default function OrderDetailPage() {
                           width={96}
                           height={96}
                           className="object-cover rounded-md"
-                          unoptimized
                         />
                       ) : (
                         <HiShoppingBag size={32} className="text-gray-400" />
