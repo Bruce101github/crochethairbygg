@@ -25,18 +25,21 @@ function loadGoogleMaps() {
 }
 
 /**
- * Captures a drop-off address via Google Places, fetches a Mckot delivery
- * quote from our backend, and lets the customer pick a ride type.
- *
- * Uses the new PlaceAutocompleteElement (required for keys created after
- * 1 Mar 2025) and falls back to the legacy Autocomplete for older keys.
+ * Drop-off address search with a self-rendered suggestion dropdown (Places
+ * Autocomplete Data API — no full-screen takeover), then a Mckot delivery
+ * quote with selectable ride types.
  * Calls onChange({ coordinates, ride_type_id, fee, eta, address }).
  */
 export default function DeliveryQuote({ onChange }) {
-  const containerRef = useRef(null);
-  const startedRef = useRef(false);
+  const placesRef = useRef(null);
+  const tokenRef = useRef(null);
+  const debounceRef = useRef(null);
+  const boxRef = useRef(null);
+
+  const [ready, setReady] = useState(false);
+  const [query, setQuery] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
   const [coords, setCoords] = useState(null);
-  const [addressText, setAddressText] = useState("");
   const [quote, setQuote] = useState(null);
   const [options, setOptions] = useState([]);
   const [rideTypeId, setRideTypeId] = useState(null);
@@ -44,84 +47,86 @@ export default function DeliveryQuote({ onChange }) {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    if (!GOOGLE_KEY || startedRef.current) return;
-    startedRef.current = true;
-
-    function usePlace(place, formatted) {
-      const loc = place?.location;
-      const lat = typeof loc?.lat === "function" ? loc.lat() : loc?.lat;
-      const lng = typeof loc?.lng === "function" ? loc.lng() : loc?.lng;
-      if (lat == null || lng == null) return;
-      const c = [lat, lng];
-      setCoords(c);
-      setAddressText(formatted || "");
-      // Surface the chosen location immediately so the rest of checkout can
-      // react even if the quote call is slow or unavailable.
-      onChange?.({ coordinates: c, ride_type_id: null, fee: null, eta: null, address: formatted || "" });
-      fetchQuote(c);
-    }
-
+    if (!GOOGLE_KEY) return;
     loadGoogleMaps()
       .then(async (google) => {
-        const places = await google.maps.importLibrary("places");
-        const container = containerRef.current;
-        if (!container) return;
-
-        if (places.PlaceAutocompleteElement) {
-          // New API (required for keys created after 1 Mar 2025)
-          const el = new places.PlaceAutocompleteElement({
-            includedRegionCodes: ["gh"],
-          });
-          el.style.width = "100%";
-          container.appendChild(el);
-          el.addEventListener("gmp-select", async (event) => {
-            try {
-              const prediction = event.placePrediction;
-              if (!prediction) return;
-              const place = prediction.toPlace();
-              await place.fetchFields({ fields: ["location", "formattedAddress"] });
-              usePlace(place, place.formattedAddress);
-            } catch {
-              setError("Could not read that address. Please try another.");
-            }
-          });
-        } else if (places.Autocomplete) {
-          // Legacy fallback for older keys
-          const input = document.createElement("input");
-          input.type = "text";
-          input.placeholder = "Search your delivery address…";
-          input.className =
-            "w-full rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 px-4 py-3";
-          container.appendChild(input);
-          const ac = new places.Autocomplete(input, {
-            fields: ["geometry", "formatted_address"],
-            componentRestrictions: { country: "gh" },
-          });
-          ac.addListener("place_changed", () => {
-            const place = ac.getPlace();
-            const loc = place.geometry?.location;
-            if (loc) usePlace({ location: loc }, place.formatted_address);
-          });
-        } else {
-          setError("Address search is unavailable. Enable the Places API on your key.");
-        }
+        placesRef.current = await google.maps.importLibrary("places");
+        setReady(true);
       })
       .catch(() => setError("Could not load the address search."));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  function emit(c, rt, data) {
+  // Close the dropdown on outside click
+  useEffect(() => {
+    function onDocClick(e) {
+      if (boxRef.current && !boxRef.current.contains(e.target)) setSuggestions([]);
+    }
+    document.addEventListener("mousedown", onDocClick);
+    return () => document.removeEventListener("mousedown", onDocClick);
+  }, []);
+
+  function onInput(value) {
+    setQuery(value);
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    if (!value || value.length < 3 || !placesRef.current) {
+      setSuggestions([]);
+      return;
+    }
+    debounceRef.current = setTimeout(() => fetchSuggestions(value), 250);
+  }
+
+  async function fetchSuggestions(value) {
+    try {
+      const places = placesRef.current;
+      if (!tokenRef.current) tokenRef.current = new places.AutocompleteSessionToken();
+      const { suggestions: list } =
+        await places.AutocompleteSuggestion.fetchAutocompleteSuggestions({
+          input: value,
+          sessionToken: tokenRef.current,
+          includedRegionCodes: ["gh"],
+        });
+      setSuggestions(list || []);
+    } catch {
+      setSuggestions([]);
+    }
+  }
+
+  async function selectSuggestion(s) {
+    try {
+      const pred = s.placePrediction;
+      const place = pred.toPlace();
+      await place.fetchFields({ fields: ["location", "formattedAddress"] });
+      const loc = place.location;
+      const lat = typeof loc?.lat === "function" ? loc.lat() : loc?.lat;
+      const lng = typeof loc?.lng === "function" ? loc.lng() : loc?.lng;
+      const formatted = place.formattedAddress || pred.text?.text || "";
+      setQuery(formatted);
+      setSuggestions([]);
+      tokenRef.current = null; // end the autocomplete session
+      if (lat != null && lng != null) {
+        const c = [lat, lng];
+        setCoords(c);
+        // surface the location immediately, even before the quote returns
+        onChange?.({ coordinates: c, ride_type_id: null, fee: null, eta: null, address: formatted });
+        fetchQuote(c, formatted);
+      }
+    } catch {
+      setError("Could not read that address. Please try another.");
+    }
+  }
+
+  function emit(c, rt, data, address) {
     const opt = (data?.options || options).find((o) => o.ride_type_id === rt);
     onChange?.({
       coordinates: c,
       ride_type_id: rt ?? null,
       fee: opt?.amount ?? data?.delivery_fee?.amount ?? null,
       eta: data?.duration_minutes ?? null,
-      address: addressText,
+      address: address ?? query,
     });
   }
 
-  async function fetchQuote(c) {
+  async function fetchQuote(c, address) {
     setLoading(true);
     setError("");
     try {
@@ -143,7 +148,7 @@ export default function DeliveryQuote({ onChange }) {
       const defRt =
         opts.find((o) => o.available)?.ride_type_id ?? opts[0]?.ride_type_id ?? null;
       setRideTypeId(defRt);
-      emit(c, defRt, data);
+      emit(c, defRt, data, address);
     } catch {
       setError("Could not reach the delivery service.");
     } finally {
@@ -169,7 +174,35 @@ export default function DeliveryQuote({ onChange }) {
       <label className="flex items-center gap-2 font-semibold text-gray-900 dark:text-white">
         <HiLocationMarker className="text-[#C8961F]" /> Delivery address
       </label>
-      <div ref={containerRef} className="w-full" />
+
+      <div ref={boxRef} className="relative">
+        <input
+          type="text"
+          value={query}
+          disabled={!ready && !error}
+          onChange={(e) => onInput(e.target.value)}
+          placeholder={ready ? "Search your delivery address…" : "Loading address search…"}
+          className="w-full rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 px-4 py-3 focus-visible:outline-2 focus-visible:outline-[#C8961F]"
+          autoComplete="off"
+        />
+        {suggestions.length > 0 && (
+          <ul className="absolute z-30 mt-1 w-full overflow-auto rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg max-h-64">
+            {suggestions.map((s, i) => (
+              <li key={i}>
+                <button
+                  type="button"
+                  onClick={() => selectSuggestion(s)}
+                  className="w-full px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  {s.placePrediction?.text?.text ||
+                    s.placePrediction?.mainText?.text ||
+                    "Address"}
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
 
       {loading && (
         <p className="text-sm text-gray-500" role="status">

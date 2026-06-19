@@ -384,6 +384,18 @@ export default function CheckoutPage() {
                 <h2 className="text-xl font-semibold">Delivery Address</h2>
               </div>
 
+              {/* Delivery location search (sets coordinates + fills the address) */}
+              <div className="mb-5">
+                <DeliveryQuote
+                  onChange={(d) => {
+                    setDelivery(d);
+                    if (d?.address) {
+                      setNewAddress((p) => ({ ...p, address_line: d.address }));
+                    }
+                  }}
+                />
+              </div>
+
             {!isGuest && addresses.length > 0 && (
                 <div className="space-y-3 mb-4">
                   {addresses.map((address) => (
@@ -534,11 +546,6 @@ export default function CheckoutPage() {
                   )}
                 </div>
               )}
-            </div>
-
-            {/* Delivery address + location (drives the delivery quote) */}
-            <div className="border border-gray-200 rounded-md p-6">
-              <DeliveryQuote onChange={setDelivery} />
             </div>
 
             {/* Delivery Method — only once a valid delivery address is set */}
