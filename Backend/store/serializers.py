@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Category, Product, ProductVariant, ProductImage, Order, OrderItem, Cart, CartItem, Address, ShippingMethod, Favorite, ProductLike, HeroSlide, PromoBanner, Review, DiscountCode, ReturnRequest
+from .models import Category, Product, ProductVariant, ProductImage, Order, OrderItem, Cart, CartItem, Address, ShippingMethod, Favorite, ProductLike, HeroSlide, PromoBanner, Review, DiscountCode, ReturnRequest, Delivery
 from django.conf import settings
 from urllib.parse import urljoin
 
@@ -592,3 +592,16 @@ class PromoBannerSerializer(serializers.ModelSerializer):
             'is_active', 'order', 'created_at', 'updated_at'
         ]
         read_only_fields = ('created_at', 'updated_at')
+
+
+class DeliverySerializer(serializers.ModelSerializer):
+    """Customer-facing delivery/tracking view (no internal ids or raw payload)."""
+    class Meta:
+        model = Delivery
+        fields = [
+            'id', 'status', 'collection_status', 'ride_type_label',
+            'delivery_fee', 'distance_km', 'duration_minutes',
+            'courier_name', 'courier_phone', 'tracking_url',
+            'created_at', 'updated_at'
+        ]
+        read_only_fields = fields

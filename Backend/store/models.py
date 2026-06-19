@@ -414,3 +414,43 @@ class Review(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.product.title} - {self.rating} stars"
+
+
+# ============================
+# DELIVERY (Mckot)
+# ============================
+class Delivery(models.Model):
+    STATUS_CHOICES = [
+        ("scheduled", "Scheduled"),
+        ("pending", "Pending"),
+        ("assigned", "Assigned"),
+        ("in_transit", "In Transit"),
+        ("delivered", "Delivered"),
+        ("cancelled", "Cancelled"),
+    ]
+
+    order = models.OneToOneField(Order, on_delete=models.CASCADE, related_name="delivery")
+    mckot_delivery_id = models.CharField(max_length=100, blank=True, null=True, help_text="Mckot delivery id")
+    quote_id = models.CharField(max_length=100, blank=True, null=True, help_text="Locked Mckot quote (valid 15 min)")
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default="pending")
+    collection_status = models.CharField(max_length=20, blank=True, null=True, help_text="not_required | pending | remitted")
+    ride_type_id = models.IntegerField(null=True, blank=True)
+    ride_type_label = models.CharField(max_length=100, blank=True, null=True)
+    delivery_fee = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    distance_km = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True)
+    duration_minutes = models.IntegerField(null=True, blank=True)
+    courier_name = models.CharField(max_length=255, blank=True, null=True)
+    courier_phone = models.CharField(max_length=50, blank=True, null=True)
+    tracking_url = models.URLField(blank=True, null=True)
+    dropoff_lat = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    dropoff_lng = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    raw_response = models.JSONField(null=True, blank=True, help_text="Last Mckot payload, for debugging")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name_plural = "Deliveries"
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f"Delivery for Order #{self.order_id} - {self.status}"

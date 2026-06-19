@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from .models import Category, Product, ProductVariant, ProductImage, Order, OrderItem, Cart, CartItem, Address, ShippingMethod, Favorite, ProductLike, HeroSlide, PromoBanner, Review, DiscountCode, ReturnRequest
+from .models import Category, Product, ProductVariant, ProductImage, Order, OrderItem, Cart, CartItem, Address, ShippingMethod, Favorite, ProductLike, HeroSlide, PromoBanner, Review, DiscountCode, ReturnRequest, Delivery
 
 
 @admin.register(Category)
@@ -162,3 +162,11 @@ class ReturnRequestAdmin(admin.ModelAdmin):
             'classes': ('collapse',)
         }),
     )
+
+
+@admin.register(Delivery)
+class DeliveryAdmin(admin.ModelAdmin):
+    list_display = ['id', 'order', 'status', 'collection_status', 'ride_type_label', 'delivery_fee', 'courier_name', 'created_at']
+    list_filter = ['status', 'collection_status', 'created_at']
+    search_fields = ['order__id', 'mckot_delivery_id', 'quote_id', 'courier_name', 'courier_phone']
+    readonly_fields = ['created_at', 'updated_at', 'raw_response']
