@@ -251,8 +251,8 @@ export default function VariationPopup({ product, isOpen, onClose, onAddToCart, 
                               onClick={() => handleVariantSelection(attr.key, value)}
                               className={`px-4 py-2 rounded-md border transition ${
                                 selectedVariants[attr.key] === value
-                                  ? "bg-[#FF6B9D] text-white border-[#FF6B9D]"
-                                  : "bg-white text-gray-700 border-gray-300 hover:border-[#FF6B9D]"
+                                  ? "bg-[#C8961F] text-white border-[#C8961F]"
+                                  : "bg-white text-gray-700 border-gray-300 hover:border-[#C8961F]"
                               }`}
                             >
                               {value}
@@ -322,7 +322,7 @@ export default function VariationPopup({ product, isOpen, onClose, onAddToCart, 
                     className={`w-full py-3 px-6 rounded-md font-semibold transition ${
                       !isVariantSelected || maxStock === 0
                         ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                        : "bg-[#FF6B9D] text-white hover:bg-[#FF5A8A]"
+                        : "bg-[#C8961F] text-white hover:bg-[#A87814]"
                     }`}
                   >
                     {!isVariantSelected

@@ -247,7 +247,7 @@ export default function PaymentPage() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <p className="text-lg mb-4">Initializing payment...</p>
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#FF6B9D] mx-auto"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#C8961F] mx-auto"></div>
         </div>
       </div>
     );
@@ -266,8 +266,8 @@ export default function PaymentPage() {
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
-              <div className="bg-[#FF6B9D]/10 p-4 rounded-full">
-                <HiCreditCard size={48} className="text-[#FF6B9D]" />
+              <div className="bg-[#C8961F]/10 p-4 rounded-full">
+                <HiCreditCard size={48} className="text-[#C8961F]" />
               </div>
             </div>
             <h1 className="text-3xl font-bold mb-2">Complete Your Payment</h1>
@@ -288,7 +288,7 @@ export default function PaymentPage() {
             <div className="border-t border-gray-200 pt-4">
               <div className="flex justify-between items-center">
                 <span className="text-lg font-semibold">Total Amount</span>
-                <span className="text-2xl font-bold text-[#FF6B9D]">
+                <span className="text-2xl font-bold text-[#C8961F]">
                   {orderDetails || paymentData ? `GH₵${amountInGHS}` : "Loading..."}
                 </span>
               </div>
@@ -306,18 +306,18 @@ export default function PaymentPage() {
                 onClick={() => setPaymentMethod("card")}
                 className={`p-4 border-2 rounded-lg transition-all ${
                   paymentMethod === "card"
-                    ? "border-[#FF6B9D] bg-[#FF6B9D]/10"
+                    ? "border-[#C8961F] bg-[#C8961F]/10"
                     : "border-gray-200 hover:border-gray-300"
                 }`}
               >
                 <div className="flex flex-col items-center gap-2">
                   <HiCreditCard
                     size={24}
-                    className={paymentMethod === "card" ? "text-[#FF6B9D]" : "text-gray-400"}
+                    className={paymentMethod === "card" ? "text-[#C8961F]" : "text-gray-400"}
                   />
                   <span
                     className={`text-sm font-medium ${
-                      paymentMethod === "card" ? "text-[#FF6B9D]" : "text-gray-600"
+                      paymentMethod === "card" ? "text-[#C8961F]" : "text-gray-600"
                     }`}
                   >
                     Card
@@ -329,14 +329,14 @@ export default function PaymentPage() {
                 onClick={() => setPaymentMethod("mobile_money")}
                 className={`p-4 border-2 rounded-lg transition-all ${
                   paymentMethod === "mobile_money"
-                    ? "border-[#FF6B9D] bg-[#FF6B9D]/10"
+                    ? "border-[#C8961F] bg-[#C8961F]/10"
                     : "border-gray-200 hover:border-gray-300"
                 }`}
               >
                 <div className="flex flex-col items-center gap-2">
                   <svg
                     className={`w-6 h-6 ${
-                      paymentMethod === "mobile_money" ? "text-[#FF6B9D]" : "text-gray-400"
+                      paymentMethod === "mobile_money" ? "text-[#C8961F]" : "text-gray-400"
                     }`}
                     fill="none"
                     stroke="currentColor"
@@ -351,7 +351,7 @@ export default function PaymentPage() {
                   </svg>
                   <span
                     className={`text-sm font-medium ${
-                      paymentMethod === "mobile_money" ? "text-[#FF6B9D]" : "text-gray-600"
+                      paymentMethod === "mobile_money" ? "text-[#C8961F]" : "text-gray-600"
                     }`}
                   >
                     Mobile Money
@@ -363,11 +363,11 @@ export default function PaymentPage() {
 
           <div className="space-y-4 mb-6">
             <div className="flex items-center gap-3 text-sm text-gray-600">
-              <HiLockClosed size={20} className="text-[#FF6B9D]" />
+              <HiLockClosed size={20} className="text-[#C8961F]" />
               <span>Your payment is secured and encrypted</span>
             </div>
             <div className="flex items-center gap-3 text-sm text-gray-600">
-              <HiShieldCheck size={20} className="text-[#FF6B9D]" />
+              <HiShieldCheck size={20} className="text-[#C8961F]" />
               <span>
                 We never store your{" "}
                 {paymentMethod === "card" ? "card" : "payment"} details
@@ -384,7 +384,7 @@ export default function PaymentPage() {
               }
             }}
             disabled={processing || initializing}
-            className="w-full bg-[#FF6B9D] text-white py-4 rounded-lg font-semibold text-lg hover:bg-[#FF5A8A] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            className="w-full bg-[#C8961F] text-white py-4 rounded-lg font-semibold text-lg hover:bg-[#A87814] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             {processing || initializing ? (
               <>

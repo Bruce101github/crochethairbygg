@@ -163,7 +163,7 @@ export default function AddressesPage() {
           <h1 className="text-2xl font-bold">My Addresses</h1>
           <button
             onClick={() => setShowForm(!showForm)}
-            className="flex items-center gap-2 bg-[#FF6B9D] text-white px-4 py-2 rounded-md hover:bg-[#FF5A8A]"
+            className="flex items-center gap-2 bg-[#C8961F] text-white px-4 py-2 rounded-md hover:bg-[#A87814]"
           >
             <HiPlus size={20} />
             Add Address
@@ -241,7 +241,7 @@ export default function AddressesPage() {
               <div className="flex gap-2">
                 <button
                   type="submit"
-                  className="bg-[#FF6B9D] text-white px-6 py-2 rounded-md hover:bg-[#FF5A8A]"
+                  className="bg-[#C8961F] text-white px-6 py-2 rounded-md hover:bg-[#A87814]"
                 >
                   {editingId ? "Update" : "Save"}
                 </button>
@@ -264,13 +264,13 @@ export default function AddressesPage() {
               className="border border-gray-200 rounded-md p-6 relative"
             >
               <div className="flex items-start gap-2 mb-4">
-                <HiLocationMarker size={20} className="text-[#FF6B9D]" />
+                <HiLocationMarker size={20} className="text-[#C8961F]" />
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
                     <div>
                       <p className="font-semibold">{address.full_name}</p>
                       {address.is_default && (
-                        <span className="text-xs bg-[#FF6B9D]/10 text-[#FF6B9D] px-2 py-1 rounded mt-1 inline-block">
+                        <span className="text-xs bg-[#C8961F]/10 text-[#C8961F] px-2 py-1 rounded mt-1 inline-block">
                           Default
                         </span>
                       )}
@@ -278,13 +278,13 @@ export default function AddressesPage() {
                     <div className="flex gap-2">
                       <button
                         onClick={() => handleEdit(address)}
-                        className="text-gray-600 hover:text-[#FF6B9D]"
+                        className="text-gray-600 hover:text-[#C8961F]"
                       >
                         <HiPencil size={18} />
                       </button>
                       <button
                         onClick={() => handleDelete(address.id)}
-                        className="text-gray-600 hover:text-[#FF6B9D]"
+                        className="text-gray-600 hover:text-[#C8961F]"
                       >
                         <HiTrash size={18} />
                       </button>
@@ -309,7 +309,7 @@ export default function AddressesPage() {
             <p className="text-lg text-gray-600 mb-4">No addresses saved</p>
             <button
               onClick={() => setShowForm(true)}
-              className="text-[#FF6B9D] hover:underline font-semibold"
+              className="text-[#C8961F] hover:underline font-semibold"
             >
               Add your first address
             </button>

@@ -397,7 +397,7 @@ export default function Page() {
             <p className="text-base lg:text-lg text-gray-600 mb-4">Your cart is empty</p>
             <Link
               href="/products"
-              className="text-[#FF6B9D] hover:underline font-semibold"
+              className="text-[#C8961F] hover:underline font-semibold"
             >
               Continue Shopping
             </Link>
@@ -577,7 +577,7 @@ export default function Page() {
                   sessionStorage.setItem('discountCode', appliedDiscount.code);
                 }
               }}>
-                <button className="bg-[#FF6B9D] rounded-md w-full py-3 font-bold text-white mt-6 hover:bg-[#FF5A8A]">
+                <button className="bg-[#C8961F] rounded-md w-full py-3 font-bold text-white mt-6 hover:bg-[#A87814]">
                   Proceed to Checkout
                 </button>
               </Link>

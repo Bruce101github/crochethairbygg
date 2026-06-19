@@ -108,7 +108,7 @@ export default function ResetPasswordClient() {
             </p>
             <Link
               href="/signin"
-              className="inline-block bg-[#FF6B9D] hover:bg-[#FF5A8A] text-white font-semibold py-3 px-6 rounded-md transition"
+              className="inline-block bg-[#C8961F] hover:bg-[#A87814] text-white font-semibold py-3 px-6 rounded-md transition"
             >
               Go to Sign In
             </Link>
@@ -155,7 +155,7 @@ export default function ResetPasswordClient() {
                   }
                   required
                   minLength={8}
-                  className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md h-12 pl-10 pr-12 text-base focus:outline-none focus:ring-2 focus:ring-[#FF6B9D] focus:border-[#FF6B9D] transition"
+                  className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md h-12 pl-10 pr-12 text-base focus:outline-none focus:ring-2 focus:ring-[#C8961F] focus:border-[#C8961F] transition"
                   placeholder="Enter new password"
                 />
                 <button
@@ -193,7 +193,7 @@ export default function ResetPasswordClient() {
                   }
                   required
                   minLength={8}
-                  className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md h-12 pl-10 pr-12 text-base focus:outline-none focus:ring-2 focus:ring-[#FF6B9D] focus:border-[#FF6B9D] transition"
+                  className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md h-12 pl-10 pr-12 text-base focus:outline-none focus:ring-2 focus:ring-[#C8961F] focus:border-[#C8961F] transition"
                   placeholder="Confirm new password"
                 />
                 <button
@@ -217,7 +217,7 @@ export default function ResetPasswordClient() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#FF6B9D] hover:bg-[#FF5A8A] text-white font-semibold py-3 px-4 rounded-md transition disabled:opacity-50 disabled:cursor-not-allowed text-base"
+              className="w-full bg-[#C8961F] hover:bg-[#A87814] text-white font-semibold py-3 px-4 rounded-md transition disabled:opacity-50 disabled:cursor-not-allowed text-base"
             >
               {loading ? "Resetting Password..." : "Reset Password"}
             </button>

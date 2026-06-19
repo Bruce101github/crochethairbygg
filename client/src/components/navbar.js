@@ -286,40 +286,40 @@ useEffect(() => {
             <nav className="flex gap-6 font-medium text-gray-900 dark:text-white">
           <Link 
             href="/" 
-            className={`relative hover:text-[#FF6B9D] transition ${
-              pathname === "/" ? "text-[#FF6B9D]" : ""
+            className={`relative hover:text-[#C8961F] transition ${
+              pathname === "/" ? "text-[#C8961F]" : ""
             }`}
             >
             Home
           </Link>
           <Link 
             href="/products" 
-            className={`relative hover:text-[#FF6B9D] transition ${
-              pathname === "/products" ? "text-[#FF6B9D]" : ""
+            className={`relative hover:text-[#C8961F] transition ${
+              pathname === "/products" ? "text-[#C8961F]" : ""
             }`}
           >
             Products
           </Link>
           <Link 
             href="/about" 
-            className={`relative hover:text-[#FF6B9D] transition ${
-              pathname === "/about" ? "text-[#FF6B9D]" : ""
+            className={`relative hover:text-[#C8961F] transition ${
+              pathname === "/about" ? "text-[#C8961F]" : ""
             }`}
           >
             About
           </Link>
           <Link 
             href="/contact" 
-            className={`relative hover:text-[#FF6B9D] transition ${
-              pathname === "/contact" ? "text-[#FF6B9D]" : ""
+            className={`relative hover:text-[#C8961F] transition ${
+              pathname === "/contact" ? "text-[#C8961F]" : ""
             }`}
           >
             Contact
           </Link>
           <Link 
             href="/track" 
-            className={`relative hover:text-[#FF6B9D] transition ${
-              pathname === "/track" ? "text-[#FF6B9D]" : ""
+            className={`relative hover:text-[#C8961F] transition ${
+              pathname === "/track" ? "text-[#C8961F]" : ""
             }`}
             >
             Track Order
@@ -351,12 +351,12 @@ useEffect(() => {
           </form>
         </div>
             <Link href="/favorites">
-              <button className="text-gray-900 dark:text-white hover:text-[#FF6B9D] transition">
+              <button className="text-gray-900 dark:text-white hover:text-[#C8961F] transition">
                 <FaHeart size={22} />
         </button>
             </Link>
         <Link href="/cart">
-              <button className="relative text-gray-900 dark:text-white hover:text-[#FF6B9D] transition">
+              <button className="relative text-gray-900 dark:text-white hover:text-[#C8961F] transition">
                 <FaShoppingBag size={22} />
                 {(() => {
                   if (!cartItems || !Array.isArray(cartItems) || cartItems.length === 0) {
@@ -368,7 +368,7 @@ useEffect(() => {
                   }, 0);
                   if (totalItems > 0) {
                     return (
-                      <span className="absolute -top-1.5 -right-1.5 h-5 w-5 bg-[#FF6B9D] text-white text-sm rounded-full flex items-center justify-center font-semibold">
+                      <span className="absolute -top-1.5 -right-1.5 h-5 w-5 bg-[#C8961F] text-white text-sm rounded-full flex items-center justify-center font-semibold">
                         {totalItems > 99 ? '99+' : totalItems}
           </span>
                     );
@@ -379,9 +379,9 @@ useEffect(() => {
             </Link>
         {user ? (
           <div className="relative group">
-            <Link href="/settings" className="flex items-center gap-2 text-gray-900 dark:text-white hover:text-[#FF6B9D] transition">
+            <Link href="/settings" className="flex items-center gap-2 text-gray-900 dark:text-white hover:text-[#C8961F] transition">
               <span className="text-base font-medium">Hi, {user?.username || user?.email?.split('@')[0] || 'User'}</span>
-            <FaUser size={22} className="text-[#FF6B9D]" />
+            <FaUser size={22} className="text-[#C8961F]" />
           </Link>
             <div className="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
@@ -402,7 +402,7 @@ useEffect(() => {
             </div>
           </div>
         ) : (
-          <Link href="/signin" className="text-gray-900 dark:text-white hover:text-[#FF6B9D] transition">
+          <Link href="/signin" className="text-gray-900 dark:text-white hover:text-[#C8961F] transition">
             <FaUser size={22} />
           </Link>
         )}
@@ -419,19 +419,19 @@ useEffect(() => {
         <div className="w-full px-3 py-2 flex items-center justify-between">
           <div className="flex items-center gap-4 flex-1">
             {user ? (
-              <Link href="/settings" className="flex items-center gap-1.5 text-gray-900 dark:text-white hover:text-[#FF6B9D] transition text-sm">
+              <Link href="/settings" className="flex items-center gap-1.5 text-gray-900 dark:text-white hover:text-[#C8961F] transition text-sm">
                 <FaUser size={18} />
                 <span className="text-xs">Hi, {user?.username || user?.email?.split('@')[0] || 'User'}</span>
               </Link>
             ) : (
-              <Link href="/signin" className="flex items-center gap-1.5 text-gray-900 dark:text-white hover:text-[#FF6B9D] transition text-sm">
+              <Link href="/signin" className="flex items-center gap-1.5 text-gray-900 dark:text-white hover:text-[#C8961F] transition text-sm">
                 <FaUser size={18} />
                 <span className="text-xs">Sign in</span>
               </Link>
             )}
             <button 
               onClick={()=>setCurrencyMenu(prev => !prev)} 
-              className="flex items-center gap-1.5 text-gray-900 dark:text-white hover:text-[#FF6B9D] transition text-sm"
+              className="flex items-center gap-1.5 text-gray-900 dark:text-white hover:text-[#C8961F] transition text-sm"
             >
               <div className="w-4 h-4 rounded-full overflow-hidden">
                 {currencyOptions.find(option => option.code === currency)?.flag}
@@ -441,12 +441,12 @@ useEffect(() => {
           </div>
           <div className="flex items-center gap-4">
             <Link href="/favorites">
-              <button className="text-gray-900 dark:text-white hover:text-[#FF6B9D] transition">
+              <button className="text-gray-900 dark:text-white hover:text-[#C8961F] transition">
                 <FaHeart size={18} />
               </button>
             </Link>
             <Link href="/cart">
-              <button className="relative text-gray-900 dark:text-white hover:text-[#FF6B9D] transition">
+              <button className="relative text-gray-900 dark:text-white hover:text-[#C8961F] transition">
                 <FaShoppingBag size={18} />
                 {(() => {
                   if (!cartItems || !Array.isArray(cartItems) || cartItems.length === 0) {
@@ -458,7 +458,7 @@ useEffect(() => {
                   }, 0);
                   if (totalItems > 0) {
                     return (
-                      <span className="absolute -top-1.5 -right-1.5 h-4 w-4 bg-[#FF6B9D] text-white text-xs rounded-full flex items-center justify-center font-semibold">
+                      <span className="absolute -top-1.5 -right-1.5 h-4 w-4 bg-[#C8961F] text-white text-xs rounded-full flex items-center justify-center font-semibold">
                         {totalItems > 99 ? '99+' : totalItems}
                       </span>
                     );
@@ -467,7 +467,7 @@ useEffect(() => {
                 })()}
               </button>
             </Link>
-            <button onClick={() => setSideMenuOpen(prev => !prev)} className="text-gray-900 dark:text-white hover:text-[#FF6B9D] transition">
+            <button onClick={() => setSideMenuOpen(prev => !prev)} className="text-gray-900 dark:text-white hover:text-[#C8961F] transition">
               <FaBars size={18} />
             </button>
           </div>
@@ -504,7 +504,7 @@ useEffect(() => {
               />
               <button
                 type="submit"
-                className="px-2 text-[#FF6B9D] hover:text-[#FF5A8A] transition"
+                className="px-2 text-[#C8961F] hover:text-[#A87814] transition"
               >
                 <FaSearch size={16} />
               </button>
@@ -515,22 +515,22 @@ useEffect(() => {
         {/* Row 3: Category Navigation */}
         <div className="w-full px-3 py-2 overflow-x-auto scrollbar-hide">
           <div className="flex items-center gap-4 text-sm min-w-max">
-            <Link href="/products?deal=today" className="hover:text-[#FF6B9D] transition font-medium whitespace-nowrap text-gray-900 dark:text-white">
+            <Link href="/products?deal=today" className="hover:text-[#C8961F] transition font-medium whitespace-nowrap text-gray-900 dark:text-white">
               Today's Deals
             </Link>
             {navCategories.map((category) => (
               <Link 
                 key={category.id}
                 href={`/products?category=${category.slug}`}
-                className="hover:text-[#FF6B9D] transition font-medium whitespace-nowrap text-gray-900 dark:text-white"
+                className="hover:text-[#C8961F] transition font-medium whitespace-nowrap text-gray-900 dark:text-white"
               >
                 {category.name}
               </Link>
             ))}
-            <Link href="/track" className="hover:text-[#FF6B9D] transition font-medium whitespace-nowrap text-gray-900 dark:text-white">
+            <Link href="/track" className="hover:text-[#C8961F] transition font-medium whitespace-nowrap text-gray-900 dark:text-white">
               Track Order
             </Link>
-            <Link href="/contact" className="hover:text-[#FF6B9D] transition font-medium whitespace-nowrap text-gray-900 dark:text-white">
+            <Link href="/contact" className="hover:text-[#C8961F] transition font-medium whitespace-nowrap text-gray-900 dark:text-white">
               Help
             </Link>
           </div>
@@ -541,28 +541,28 @@ useEffect(() => {
       <div className={currencyMenu === true ? "absolute flex flex-col gap-2 top-20 right-4 lg:right-10 p-4 bg-white dark:bg-gray-800 rounded-b-xl shadow-lg border border-gray-200 dark:border-gray-700 z-50" : "hidden"}> 
         <label htmlFor="currency" className="text-gray-900 dark:text-white">Currency</label>
         <div id="currency" className="flex flex-col gap-2 mb-2">
-          <button onClick={(e) => { setCurrency(e.currentTarget.value); setCurrencyMenu(false); }} className="flex gap-1 text-gray-900 dark:text-white hover:text-[#FF6B9D]" value="GH"><GH className="w-8 h-5"/> <p>GHS</p></button>
-          <button onClick={(e) => { setCurrency(e.currentTarget.value); setCurrencyMenu(false); }} className="flex gap-1 text-gray-900 dark:text-white hover:text-[#FF6B9D]" value="NG"><NG className="w-8 h-5"/> <p>NGN</p></button>
-          <button onClick={(e) => { setCurrency(e.currentTarget.value); setCurrencyMenu(false); }} className="flex gap-1 text-gray-900 dark:text-white hover:text-[#FF6B9D]" value="ZA"><ZA className="w-8 h-5"/> <p>ZAR</p></button>
-          <button onClick={(e) => { setCurrency(e.currentTarget.value); setCurrencyMenu(false); }} className="flex gap-1 text-gray-900 dark:text-white hover:text-[#FF6B9D]" value="US"><US className="w-8 h-5"/> <p>USD</p></button>
-          <button onClick={(e) => { setCurrency(e.currentTarget.value); setCurrencyMenu(false); }} className="flex gap-1 text-gray-900 dark:text-white hover:text-[#FF6B9D]" value="GB"><GB className="w-8 h-5"/> <p>GBP</p></button>
-          <button onClick={(e) => { setCurrency(e.currentTarget.value); setCurrencyMenu(false); }} className="flex gap-1 text-gray-900 dark:text-white hover:text-[#FF6B9D]" value="EU"><EU className="w-8 h-5"/> <p>EUR</p></button>
-          <button onClick={(e) => { setCurrency(e.currentTarget.value); setCurrencyMenu(false); }} className="flex gap-1 text-gray-900 dark:text-white hover:text-[#FF6B9D]" value="AE"><AE className="w-8 h-5"/> <p>AED</p></button>
-          <button onClick={(e) => { setCurrency(e.currentTarget.value); setCurrencyMenu(false); }} className="flex gap-1 text-gray-900 dark:text-white hover:text-[#FF6B9D]" value="CA"><CA className="w-8 h-5"/> <p>CAD</p></button>
+          <button onClick={(e) => { setCurrency(e.currentTarget.value); setCurrencyMenu(false); }} className="flex gap-1 text-gray-900 dark:text-white hover:text-[#C8961F]" value="GH"><GH className="w-8 h-5"/> <p>GHS</p></button>
+          <button onClick={(e) => { setCurrency(e.currentTarget.value); setCurrencyMenu(false); }} className="flex gap-1 text-gray-900 dark:text-white hover:text-[#C8961F]" value="NG"><NG className="w-8 h-5"/> <p>NGN</p></button>
+          <button onClick={(e) => { setCurrency(e.currentTarget.value); setCurrencyMenu(false); }} className="flex gap-1 text-gray-900 dark:text-white hover:text-[#C8961F]" value="ZA"><ZA className="w-8 h-5"/> <p>ZAR</p></button>
+          <button onClick={(e) => { setCurrency(e.currentTarget.value); setCurrencyMenu(false); }} className="flex gap-1 text-gray-900 dark:text-white hover:text-[#C8961F]" value="US"><US className="w-8 h-5"/> <p>USD</p></button>
+          <button onClick={(e) => { setCurrency(e.currentTarget.value); setCurrencyMenu(false); }} className="flex gap-1 text-gray-900 dark:text-white hover:text-[#C8961F]" value="GB"><GB className="w-8 h-5"/> <p>GBP</p></button>
+          <button onClick={(e) => { setCurrency(e.currentTarget.value); setCurrencyMenu(false); }} className="flex gap-1 text-gray-900 dark:text-white hover:text-[#C8961F]" value="EU"><EU className="w-8 h-5"/> <p>EUR</p></button>
+          <button onClick={(e) => { setCurrency(e.currentTarget.value); setCurrencyMenu(false); }} className="flex gap-1 text-gray-900 dark:text-white hover:text-[#C8961F]" value="AE"><AE className="w-8 h-5"/> <p>AED</p></button>
+          <button onClick={(e) => { setCurrency(e.currentTarget.value); setCurrencyMenu(false); }} className="flex gap-1 text-gray-900 dark:text-white hover:text-[#C8961F]" value="CA"><CA className="w-8 h-5"/> <p>CAD</p></button>
         </div>
       </div>
       
       {/* Desktop Navigation Links Bar */}
       <div className="w-full px-20 py-2 hidden lg:block bg-white/95 dark:bg-black/95 text-gray-900 dark:text-white">
         <div id="nav-xshop" className="nav-progressive-content flex items-center gap-6 text-sm">
-          <Link href="/products?deal=today" className="hover:text-[#FF6B9D] transition font-medium">
+          <Link href="/products?deal=today" className="hover:text-[#C8961F] transition font-medium">
             Today's Deals
           </Link>
           {navCategories.map((category) => (
             <div key={category.id} className="relative group">
               <Link 
                 href={`/products?category=${category.slug}`}
-                className="hover:text-[#FF6B9D] transition font-medium"
+                className="hover:text-[#C8961F] transition font-medium"
               >
                 {category.name}
               </Link>
@@ -572,7 +572,7 @@ useEffect(() => {
                     <Link
                       key={subcat.id}
                       href={`/products?category=${subcat.slug}`}
-                      className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-[#FF6B9D]/10 hover:text-[#FF6B9D] transition text-sm"
+                      className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-[#C8961F]/10 hover:text-[#C8961F] transition text-sm"
                     >
                       {subcat.name}
                     </Link>
@@ -581,14 +581,14 @@ useEffect(() => {
               )}
             </div>
           ))}
-          <Link href="/track" className="hover:text-[#FF6B9D] transition font-medium">
+          <Link href="/track" className="hover:text-[#C8961F] transition font-medium">
             Track Order
           </Link>
-          <Link href="/contact" className="hover:text-[#FF6B9D] transition font-medium">
+          <Link href="/contact" className="hover:text-[#C8961F] transition font-medium">
             Customer Service
           </Link>
           {user && (
-            <Link href="/orders" className="hover:text-[#FF6B9D] transition font-medium">
+            <Link href="/orders" className="hover:text-[#C8961F] transition font-medium">
               My Orders
             </Link>
           )}
@@ -637,7 +637,7 @@ useEffect(() => {
                   />
                   <button
                     type="submit"
-                    className="absolute right-2 top-1/2 -translate-y-1/2 text-[#FF6B9D] hover:text-[#FF5A8A] transition"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 text-[#C8961F] hover:text-[#A87814] transition"
                   >
                     <FaSearch size={20} />
                   </button>
@@ -673,16 +673,16 @@ useEffect(() => {
           className="fixed right-0 top-0 bg-white w-[85%] max-w-sm h-full z-[9999] shadow-2xl overflow-y-auto"
         >
           <div className="flex items-center justify-between p-4 border-b border-gray-200">
-            <h2 className="text-lg font-bold text-[#FF6B9D]">Menu</h2>
-            <button onClick={() => setSideMenuOpen(false)} className="text-black hover:text-[#FF6B9D]">
+            <h2 className="text-lg font-bold text-[#C8961F]">Menu</h2>
+            <button onClick={() => setSideMenuOpen(false)} className="text-black hover:text-[#C8961F]">
               <FaTimes size={24} />
             </button>
           </div>
           {user ? (
             <Link href="/settings" onClick={() => setSideMenuOpen(false)}>
-              <div className="px-4 py-3 border-b border-gray-100 hover:bg-[#FF6B9D]/10 transition">
+              <div className="px-4 py-3 border-b border-gray-100 hover:bg-[#C8961F]/10 transition">
                 <div className="flex gap-2 items-center text-black">
-                  <FaUser size={20} className="text-[#FF6B9D]" /> 
+                  <FaUser size={20} className="text-[#C8961F]" /> 
                   <div>
                     <p className="font-medium">Hi, {user?.username || user?.email?.split('@')[0] || 'User'}</p>
                     <p className="text-sm text-gray-500">Signed in</p>
@@ -692,7 +692,7 @@ useEffect(() => {
             </Link>
           ) : (
             <Link href="/signin" onClick={() => setSideMenuOpen(false)}>
-              <button className="flex gap-2 items-center text-black hover:text-[#FF6B9D] w-full px-4 py-3 border-b border-gray-100">
+              <button className="flex gap-2 items-center text-black hover:text-[#C8961F] w-full px-4 py-3 border-b border-gray-100">
                 <FaUser size={20} /> 
                 <span>Sign in</span>
               </button>
@@ -701,8 +701,8 @@ useEffect(() => {
           <nav className="flex flex-col text-black">
             <Link 
               href="/" 
-              className={`px-4 py-4 border-b border-gray-100 hover:bg-[#FF6B9D]/10 hover:text-[#FF6B9D] transition ${
-                pathname === "/" ? "text-[#FF6B9D] bg-[#FF6B9D]/5" : ""
+              className={`px-4 py-4 border-b border-gray-100 hover:bg-[#C8961F]/10 hover:text-[#C8961F] transition ${
+                pathname === "/" ? "text-[#C8961F] bg-[#C8961F]/5" : ""
               }`}
               onClick={() => setSideMenuOpen(false)}
             >
@@ -710,8 +710,8 @@ useEffect(() => {
           </Link>
             <Link 
               href="/products" 
-              className={`px-4 py-4 border-b border-gray-100 hover:bg-[#FF6B9D]/10 hover:text-[#FF6B9D] transition ${
-                pathname === "/products" ? "text-[#FF6B9D] bg-[#FF6B9D]/5" : ""
+              className={`px-4 py-4 border-b border-gray-100 hover:bg-[#C8961F]/10 hover:text-[#C8961F] transition ${
+                pathname === "/products" ? "text-[#C8961F] bg-[#C8961F]/5" : ""
               }`}
               onClick={() => setSideMenuOpen(false)}
             >
@@ -720,8 +720,8 @@ useEffect(() => {
             {user && (
               <Link 
                 href="/orders" 
-                className={`px-4 py-4 border-b border-gray-100 hover:bg-[#FF6B9D]/10 hover:text-[#FF6B9D] transition ${
-                  pathname === "/orders" ? "text-[#FF6B9D] bg-[#FF6B9D]/5" : ""
+                className={`px-4 py-4 border-b border-gray-100 hover:bg-[#C8961F]/10 hover:text-[#C8961F] transition ${
+                  pathname === "/orders" ? "text-[#C8961F] bg-[#C8961F]/5" : ""
                 }`}
                 onClick={() => setSideMenuOpen(false)}
               >
@@ -730,8 +730,8 @@ useEffect(() => {
             )}
             <Link 
               href="/track" 
-              className={`px-4 py-4 border-b border-gray-100 hover:bg-[#FF6B9D]/10 hover:text-[#FF6B9D] transition ${
-                pathname === "/track" ? "text-[#FF6B9D] bg-[#FF6B9D]/5" : ""
+              className={`px-4 py-4 border-b border-gray-100 hover:bg-[#C8961F]/10 hover:text-[#C8961F] transition ${
+                pathname === "/track" ? "text-[#C8961F] bg-[#C8961F]/5" : ""
               }`}
               onClick={() => setSideMenuOpen(false)}
             >
@@ -739,8 +739,8 @@ useEffect(() => {
             </Link>
             <Link 
               href="/about" 
-              className={`px-4 py-4 border-b border-gray-100 hover:bg-[#FF6B9D]/10 hover:text-[#FF6B9D] transition ${
-                pathname === "/about" ? "text-[#FF6B9D] bg-[#FF6B9D]/5" : ""
+              className={`px-4 py-4 border-b border-gray-100 hover:bg-[#C8961F]/10 hover:text-[#C8961F] transition ${
+                pathname === "/about" ? "text-[#C8961F] bg-[#C8961F]/5" : ""
               }`}
               onClick={() => setSideMenuOpen(false)}
             >
@@ -748,8 +748,8 @@ useEffect(() => {
           </Link>
             <Link 
               href="/contact" 
-              className={`px-4 py-4 border-b border-gray-100 hover:bg-[#FF6B9D]/10 hover:text-[#FF6B9D] transition ${
-                pathname === "/contact" ? "text-[#FF6B9D] bg-[#FF6B9D]/5" : ""
+              className={`px-4 py-4 border-b border-gray-100 hover:bg-[#C8961F]/10 hover:text-[#C8961F] transition ${
+                pathname === "/contact" ? "text-[#C8961F] bg-[#C8961F]/5" : ""
               }`}
               onClick={() => setSideMenuOpen(false)}
             >
@@ -757,14 +757,14 @@ useEffect(() => {
           </Link>
             <Link 
               href="/cart" 
-              className="px-4 py-4 border-b border-gray-100 hover:bg-[#FF6B9D]/10 hover:text-[#FF6B9D] transition"
+              className="px-4 py-4 border-b border-gray-100 hover:bg-[#C8961F]/10 hover:text-[#C8961F] transition"
               onClick={() => setSideMenuOpen(false)}
             >
               Cart
           </Link>
             <Link 
               href="/favorites" 
-              className="px-4 py-4 border-b border-gray-100 hover:bg-[#FF6B9D]/10 hover:text-[#FF6B9D] transition"
+              className="px-4 py-4 border-b border-gray-100 hover:bg-[#C8961F]/10 hover:text-[#C8961F] transition"
               onClick={() => setSideMenuOpen(false)}
             >
               Favorites

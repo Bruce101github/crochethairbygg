@@ -95,7 +95,7 @@ export default function RegisterPage() {
                   setFormData({ ...formData, username: e.target.value })
                 }
                 required
-                className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md h-12 px-4 text-base focus:outline-none focus:ring-2 focus:ring-[#FF6B9D] focus:border-[#FF6B9D] transition"
+                className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md h-12 px-4 text-base focus:outline-none focus:ring-2 focus:ring-[#C8961F] focus:border-[#C8961F] transition"
               />
             </div>
 
@@ -113,7 +113,7 @@ export default function RegisterPage() {
                   setFormData({ ...formData, email: e.target.value })
                 }
                 required
-                className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md h-12 px-4 text-base focus:outline-none focus:ring-2 focus:ring-[#FF6B9D] focus:border-[#FF6B9D] transition"
+                className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md h-12 px-4 text-base focus:outline-none focus:ring-2 focus:ring-[#C8961F] focus:border-[#C8961F] transition"
               />
             </div>
 
@@ -133,7 +133,7 @@ export default function RegisterPage() {
                   }
                   required
                   minLength={8}
-                  className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md h-12 px-4 pr-12 text-base focus:outline-none focus:ring-2 focus:ring-[#FF6B9D] focus:border-[#FF6B9D] transition"
+                  className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md h-12 px-4 pr-12 text-base focus:outline-none focus:ring-2 focus:ring-[#C8961F] focus:border-[#C8961F] transition"
                 />
                 <button
                   type="button"
@@ -164,7 +164,7 @@ export default function RegisterPage() {
                     setFormData({ ...formData, confirmPassword: e.target.value })
                   }
                   required
-                  className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md h-12 px-4 pr-12 text-base focus:outline-none focus:ring-2 focus:ring-[#FF6B9D] focus:border-[#FF6B9D] transition"
+                  className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md h-12 px-4 pr-12 text-base focus:outline-none focus:ring-2 focus:ring-[#C8961F] focus:border-[#C8961F] transition"
                 />
                 <button
                   type="button"
@@ -181,7 +181,7 @@ export default function RegisterPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#FF6B9D] hover:bg-[#FF5A8A] text-white font-semibold py-3 px-4 rounded-md transition disabled:opacity-50 disabled:cursor-not-allowed text-base"
+              className="w-full bg-[#C8961F] hover:bg-[#A87814] text-white font-semibold py-3 px-4 rounded-md transition disabled:opacity-50 disabled:cursor-not-allowed text-base"
             >
               {loading ? "Creating account..." : "Create account"}
             </button>
@@ -203,7 +203,7 @@ export default function RegisterPage() {
               Already have an account?{" "}
               <Link
                 href="/signin"
-                className="text-[#FF6B9D] hover:text-[#FF5A8A] hover:underline font-medium"
+                className="text-[#C8961F] hover:text-[#A87814] hover:underline font-medium"
               >
                 Sign in
               </Link>
@@ -215,11 +215,11 @@ export default function RegisterPage() {
         <div className="mt-6 text-center">
           <p className="text-xs text-gray-500 dark:text-gray-400">
             By creating an account, you agree to our{" "}
-            <Link href="#" className="text-[#FF6B9D] hover:underline">
+            <Link href="#" className="text-[#C8961F] hover:underline">
               Terms of Service
             </Link>{" "}
             and{" "}
-            <Link href="#" className="text-[#FF6B9D] hover:underline">
+            <Link href="#" className="text-[#C8961F] hover:underline">
               Privacy Policy
             </Link>
           </p>

@@ -54,16 +54,16 @@ export default function Footer() {
         <div className="flex flex-col gap-3">
           <div className="flex justify-between lg:block"><label className="font-bold flex justify-between lg:block">Products</label> <button onClick={() => handleNav("productsOpen")} className="block lg:hidden">{navOpen.productsOpen ? <HiMinus /> : <HiPlus />}</button></div>
           { navOpen.productsOpen || windowWidth > 768 ? (<nav className="flex flex-col gap-2 text-sm">
-            <Link href="/products" className="hover:text-[#FF6B9D] transition">
+            <Link href="/products" className="hover:text-[#C8961F] transition">
               Hair Extensions
             </Link>
-            <Link href="/products" className="hover:text-[#FF6B9D] transition">
+            <Link href="/products" className="hover:text-[#C8961F] transition">
               Braided Wig Caps
             </Link>
-            <Link href="/products" className="hover:text-[#FF6B9D] transition">
+            <Link href="/products" className="hover:text-[#C8961F] transition">
               Wig Bundles
             </Link>
-            <Link href="/products" className="hover:text-[#FF6B9D] transition">
+            <Link href="/products" className="hover:text-[#C8961F] transition">
               Closure
             </Link>
           </nav>) : null}
@@ -71,16 +71,16 @@ export default function Footer() {
         <div className="flex flex-col gap-3">
           <div className="flex justify-between lg:block"><label className="font-bold">About Us</label><button onClick={() => handleNav("aboutOpen")} className="block lg:hidden">{navOpen.aboutOpen ? <HiMinus /> : <HiPlus />}</button></div>
           {navOpen.aboutOpen || windowWidth > 768 ? (<nav className="flex flex-col gap-2 text-sm">
-            <Link href="/about" className="hover:text-[#FF6B9D] transition">
+            <Link href="/about" className="hover:text-[#C8961F] transition">
               About
             </Link>
-            <Link href="/blog" className="hover:text-[#FF6B9D] transition">
+            <Link href="/blog" className="hover:text-[#C8961F] transition">
               Blog
             </Link>
-            <Link href="/contact" className="hover:text-[#FF6B9D] transition">
+            <Link href="/contact" className="hover:text-[#C8961F] transition">
               FAQ
             </Link>
-            <Link href="/products" className="hover:text-[#FF6B9D] transition">
+            <Link href="/products" className="hover:text-[#C8961F] transition">
               Reviews
             </Link>
           </nav>) : null}
@@ -88,16 +88,16 @@ export default function Footer() {
         <div className="flex flex-col gap-3">
           <div className="flex justify-between lg:block"><label className="font-bold">Help</label> <button onClick={() => handleNav("helpOpen")} className="block lg:hidden">{navOpen.helpOpen ? <HiMinus /> : <HiPlus />}</button></div>
           {navOpen.helpOpen || windowWidth > 768 ? (<nav className="flex flex-col gap-2 text-sm">
-            <Link href="/track" className="hover:text-[#FF6B9D] transition">
+            <Link href="/track" className="hover:text-[#C8961F] transition">
               Track Order
             </Link>
-            <Link href="/contact" className="hover:text-[#FF6B9D] transition">
+            <Link href="/contact" className="hover:text-[#C8961F] transition">
               Find Hairstylist
             </Link>
-            <Link href="/contact" className="hover:text-[#FF6B9D] transition">
+            <Link href="/contact" className="hover:text-[#C8961F] transition">
               Shipping & Returns
             </Link>
-            <Link href="/about" className="hover:text-[#FF6B9D] transition">
+            <Link href="/about" className="hover:text-[#C8961F] transition">
               Safety and Quality
             </Link>
           </nav>) : null}
@@ -105,16 +105,16 @@ export default function Footer() {
         <div className="flex flex-col gap-3">
           <div className="flex justify-between lg:block"><label className="font-bold flex justify-between lg:block">Links</label><button onClick={() => handleNav("linksOpen")} className="block lg:hidden">{navOpen.linksOpen ? <HiMinus /> : <HiPlus />}</button></div>
           { navOpen.linksOpen || windowWidth > 768 ? (<nav className="flex flex-col gap-2 text-sm">
-            <Link href="/contact" className="hover:text-[#FF6B9D] transition">
+            <Link href="/contact" className="hover:text-[#C8961F] transition">
               Privacy Policy
             </Link>
-            <Link href="/contact" className="hover:text-[#FF6B9D] transition">
+            <Link href="/contact" className="hover:text-[#C8961F] transition">
               Return
             </Link>
-            <Link href="/contact" className="hover:text-[#FF6B9D] transition">
+            <Link href="/contact" className="hover:text-[#C8961F] transition">
               Terms & Conditions
             </Link>
-            <Link href="/products" className="hover:text-[#FF6B9D] transition">
+            <Link href="/products" className="hover:text-[#C8961F] transition">
               Our Site Map
             </Link>
           </nav>) : null}
@@ -141,7 +141,7 @@ export default function Footer() {
             <label className="font-bold">Settings</label>
             <button
               onClick={toggleTheme}
-              className="flex items-center gap-2 text-sm hover:text-[#FF6B9D] transition text-left"
+              className="flex items-center gap-2 text-sm hover:text-[#C8961F] transition text-left"
               aria-label="Toggle theme"
             >
               {theme === "dark" ? (
@@ -210,7 +210,7 @@ export default function Footer() {
       <div className="flex lg:flex-row justify-between w-full text-xs gap-2">
         <span>Copyright@2025 Crochet Hair by GG</span>
         <span>
-          Website Created by <a href="https://instagram.com/brucethiombiano" target="_blank" className="text-[#FF6B9D] hover:underline">Bruce T.</a>
+          Website Created by <a href="https://instagram.com/brucethiombiano" target="_blank" className="text-[#C8961F] hover:underline">Bruce T.</a>
         </span>
       </div>
     </div>

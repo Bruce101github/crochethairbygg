@@ -87,7 +87,7 @@ export default function ProductFilters({
     <div className="border-b border-gray-200 pb-4 mb-4 last:border-0 last:mb-0">
       <button
         onClick={() => toggleSection(sectionKey)}
-        className="w-full flex items-center justify-between text-sm lg:text-base font-semibold text-gray-900 mb-3 hover:text-[#FF6B9D] transition"
+        className="w-full flex items-center justify-between text-sm lg:text-base font-semibold text-gray-900 mb-3 hover:text-[#C8961F] transition"
       >
         <span>{title}</span>
         {openSections[sectionKey] ? (
@@ -120,7 +120,7 @@ export default function ProductFilters({
         <div className="flex items-center gap-2">
           <button
             onClick={clearFilters}
-            className="text-sm text-[#FF6B9D] hover:underline font-medium"
+            className="text-sm text-[#C8961F] hover:underline font-medium"
           >
             Clear all
           </button>
@@ -141,13 +141,13 @@ export default function ProductFilters({
           {categories.map((category) => (
             <label
               key={category.id}
-              className="flex items-center gap-2 cursor-pointer hover:text-[#FF6B9D] transition"
+              className="flex items-center gap-2 cursor-pointer hover:text-[#C8961F] transition"
             >
               <input
                 type="checkbox"
                 checked={filters.category?.includes(category.slug) || false}
                 onChange={() => handleCheckboxChange("category", category.slug)}
-                className="w-4 h-4 text-[#FF6B9D] border-gray-300 rounded focus:ring-[#FF6B9D]"
+                className="w-4 h-4 text-[#C8961F] border-gray-300 rounded focus:ring-[#C8961F]"
               />
               <span className="text-sm text-gray-700">{category.name}</span>
             </label>
@@ -161,7 +161,7 @@ export default function ProductFilters({
           {priceRanges.map((range, index) => (
             <label
               key={index}
-              className="flex items-center gap-2 cursor-pointer hover:text-[#FF6B9D] transition"
+              className="flex items-center gap-2 cursor-pointer hover:text-[#C8961F] transition"
             >
               <input
                 type="radio"
@@ -170,7 +170,7 @@ export default function ProductFilters({
                   filters.priceMin === range.min && filters.priceMax === range.max
                 }
                 onChange={() => handlePriceRangeChange(range)}
-                className="w-4 h-4 text-[#FF6B9D] border-gray-300 focus:ring-[#FF6B9D]"
+                className="w-4 h-4 text-[#C8961F] border-gray-300 focus:ring-[#C8961F]"
               />
               <span className="text-sm text-gray-700">{range.label}</span>
             </label>
@@ -184,13 +184,13 @@ export default function ProductFilters({
           {lengths.map((length) => (
             <label
               key={length}
-              className="flex items-center gap-2 cursor-pointer hover:text-[#FF6B9D] transition"
+              className="flex items-center gap-2 cursor-pointer hover:text-[#C8961F] transition"
             >
               <input
                 type="checkbox"
                 checked={filters.length?.includes(length) || false}
                 onChange={() => handleCheckboxChange("length", length)}
-                className="w-4 h-4 text-[#FF6B9D] border-gray-300 rounded focus:ring-[#FF6B9D]"
+                className="w-4 h-4 text-[#C8961F] border-gray-300 rounded focus:ring-[#C8961F]"
               />
               <span className="text-sm text-gray-700">{length}</span>
             </label>
@@ -204,13 +204,13 @@ export default function ProductFilters({
           {colors.map((color) => (
             <label
               key={color}
-              className="flex items-center gap-2 cursor-pointer hover:text-[#FF6B9D] transition"
+              className="flex items-center gap-2 cursor-pointer hover:text-[#C8961F] transition"
             >
               <input
                 type="checkbox"
                 checked={filters.color?.includes(color) || false}
                 onChange={() => handleCheckboxChange("color", color)}
-                className="w-4 h-4 text-[#FF6B9D] border-gray-300 rounded focus:ring-[#FF6B9D]"
+                className="w-4 h-4 text-[#C8961F] border-gray-300 rounded focus:ring-[#C8961F]"
               />
               <span className="text-sm text-gray-700">{color}</span>
             </label>
@@ -224,13 +224,13 @@ export default function ProductFilters({
           {textures.map((texture) => (
             <label
               key={texture}
-              className="flex items-center gap-2 cursor-pointer hover:text-[#FF6B9D] transition"
+              className="flex items-center gap-2 cursor-pointer hover:text-[#C8961F] transition"
             >
               <input
                 type="checkbox"
                 checked={filters.texture?.includes(texture) || false}
                 onChange={() => handleCheckboxChange("texture", texture)}
-                className="w-4 h-4 text-[#FF6B9D] border-gray-300 rounded focus:ring-[#FF6B9D]"
+                className="w-4 h-4 text-[#C8961F] border-gray-300 rounded focus:ring-[#C8961F]"
               />
               <span className="text-sm text-gray-700">{texture}</span>
             </label>

@@ -290,7 +290,7 @@ export default function CheckoutPage() {
             <p className="text-xl mb-4">Your cart is empty</p>
             <button
               onClick={() => router.push("/products")}
-              className="bg-[#FF6B9D] text-white px-6 py-2 rounded-md hover:bg-[#FF5A8A]"
+              className="bg-[#C8961F] text-white px-6 py-2 rounded-md hover:bg-[#A87814]"
             >
               Continue Shopping
             </button>
@@ -313,14 +313,14 @@ export default function CheckoutPage() {
           <div className="flex items-center justify-between mb-2">
             <h1 className="text-2xl font-bold">Checkout</h1>
             {isGuest && (
-              <Link href="/signin" className="text-[#FF6B9D] hover:underline text-sm">
+              <Link href="/signin" className="text-[#C8961F] hover:underline text-sm">
                 Already have an account? Sign in
               </Link>
             )}
           </div>
           {isGuest && (
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Checkout as a guest. <Link href="/signin" className="text-[#FF6B9D] hover:underline font-semibold">Sign in</Link> to save addresses and view order history.
+              Checkout as a guest. <Link href="/signin" className="text-[#C8961F] hover:underline font-semibold">Sign in</Link> to save addresses and view order history.
             </p>
           )}
         </div>
@@ -367,7 +367,7 @@ export default function CheckoutPage() {
                       key={address.id}
                       className={`block border rounded-md p-4 cursor-pointer ${
                         selectedAddress === address.id
-                          ? "border-[#FF6B9D] bg-[#FF6B9D]/10"
+                          ? "border-[#C8961F] bg-[#C8961F]/10"
                           : "border-gray-200"
                       }`}
                     >
@@ -387,7 +387,7 @@ export default function CheckoutPage() {
                         </p>
                         <p className="text-sm text-gray-600">{address.phone_number}</p>
                         {address.is_default && (
-                          <span className="text-xs bg-[#FF6B9D]/10 text-[#FF6B9D] px-2 py-1 rounded mt-1 inline-block">
+                          <span className="text-xs bg-[#C8961F]/10 text-[#C8961F] px-2 py-1 rounded mt-1 inline-block">
                             Default
                           </span>
                         )}
@@ -408,7 +408,7 @@ export default function CheckoutPage() {
             {!isGuest && !showNewAddress && addresses.length > 0 && (
                 <button
                   onClick={() => setShowNewAddress(true)}
-                  className="text-[#FF6B9D] hover:underline text-sm"
+                  className="text-[#C8961F] hover:underline text-sm"
                 >
                   + Add New Address
                 </button>
@@ -486,7 +486,7 @@ export default function CheckoutPage() {
                     <div className="flex gap-2 mt-4">
                     <button
                       onClick={createAddress}
-                      className="bg-[#FF6B9D] text-white px-4 py-2 rounded-md text-sm hover:bg-[#FF5A8A]"
+                      className="bg-[#C8961F] text-white px-4 py-2 rounded-md text-sm hover:bg-[#A87814]"
                     >
                       Save Address
                     </button>
@@ -525,7 +525,7 @@ export default function CheckoutPage() {
                     key={method.id}
                     className={`block border rounded-md p-4 cursor-pointer ${
                       selectedShipping === method.id
-                        ? "border-[#FF6B9D] bg-[#FF6B9D]/10"
+                        ? "border-[#C8961F] bg-[#C8961F]/10"
                         : "border-gray-200"
                     }`}
                   >
@@ -617,7 +617,7 @@ export default function CheckoutPage() {
                 <button
                   onClick={handleCheckout}
                   disabled={processing || !isValid}
-                  className="w-full bg-[#FF6B9D] text-white py-3 rounded-md font-semibold mt-6 hover:bg-[#FF5A8A] disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-[#C8961F] text-white py-3 rounded-md font-semibold mt-6 hover:bg-[#A87814] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {processing ? "Processing..." : "Proceed to Payment"}
                 </button>

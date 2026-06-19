@@ -240,7 +240,7 @@ export default function FavoritesPage() {
           ]}
         />
         <div className="flex items-center gap-2 mb-6">
-          <HiHeart size={28} className="text-[#FF6B9D]" />
+          <HiHeart size={28} className="text-[#C8961F]" />
           <h1 className="text-2xl font-bold">My Favorites</h1>
         </div>
 
@@ -250,7 +250,7 @@ export default function FavoritesPage() {
             <p className="text-lg text-gray-600 mb-4">No favorites yet</p>
             <Link
               href="/products"
-              className="text-[#FF6B9D] hover:underline font-semibold"
+              className="text-[#C8961F] hover:underline font-semibold"
             >
               Browse Products
             </Link>
@@ -284,7 +284,7 @@ export default function FavoritesPage() {
                         }}
                         className="absolute top-2 right-2 bg-white/90 hover:bg-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
                       >
-                        <HiTrash size={18} className="text-[#FF6B9D]" />
+                        <HiTrash size={18} className="text-[#C8961F]" />
                       </button>
                     </div>
                     <div className="p-4">
@@ -297,7 +297,7 @@ export default function FavoritesPage() {
                         </p>
                         <button
                           onClick={(e) => handleAddToCart(e, product)}
-                          className="bg-[#FF6B9D]/10 text-[#FF6B9D] p-1.5 rounded-full hover:bg-[#FF6B9D] hover:text-white transition"
+                          className="bg-[#C8961F]/10 text-[#C8961F] p-1.5 rounded-full hover:bg-[#C8961F] hover:text-white transition"
                         >
                           <HiShoppingBag size={16} />
                         </button>

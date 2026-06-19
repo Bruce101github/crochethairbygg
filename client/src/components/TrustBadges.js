@@ -17,8 +17,8 @@ export default function TrustBadges() {
             const Icon = badge.icon;
             return (
               <div key={index} className="flex flex-col items-center gap-1 sm:flex-row sm:items-center sm:gap-2">
-                <div className="bg-[#FF6B9D]/10 dark:bg-[#FF6B9D]/20 p-1 sm:p-1.5 rounded-full flex-shrink-0">
-                  <Icon size={14} className="sm:w-4 sm:h-4 text-[#FF6B9D]" />
+                <div className="bg-[#C8961F]/10 dark:bg-[#C8961F]/20 p-1 sm:p-1.5 rounded-full flex-shrink-0">
+                  <Icon size={14} className="sm:w-4 sm:h-4 text-[#C8961F]" />
                 </div>
                 <div className="text-center sm:text-left">
                   <p className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white leading-tight">

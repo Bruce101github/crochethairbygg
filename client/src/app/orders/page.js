@@ -144,7 +144,7 @@ export default function OrdersPage() {
           <h1 className="text-2xl font-bold">My Orders</h1>
           <Link
             href="/returns"
-            className="text-[#FF6B9D] hover:text-[#FF5A8A] font-semibold hover:underline"
+            className="text-[#C8961F] hover:text-[#A87814] font-semibold hover:underline"
           >
             View Returns
           </Link>
@@ -156,7 +156,7 @@ export default function OrdersPage() {
             <p className="text-lg text-gray-600 mb-4">No orders yet</p>
             <Link
               href="/products"
-              className="text-[#FF6B9D] hover:underline font-semibold"
+              className="text-[#C8961F] hover:underline font-semibold"
             >
               Start Shopping
             </Link>

@@ -59,7 +59,7 @@ export default function SignInPage() {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 required
-                className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md h-12 px-4 text-base focus:outline-none focus:ring-2 focus:ring-[#FF6B9D] focus:border-[#FF6B9D] transition"
+                className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md h-12 px-4 text-base focus:outline-none focus:ring-2 focus:ring-[#C8961F] focus:border-[#C8961F] transition"
                 placeholder="Enter your email or username"
               />
             </div>
@@ -76,7 +76,7 @@ export default function SignInPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md h-12 px-4 pr-12 text-base focus:outline-none focus:ring-2 focus:ring-[#FF6B9D] focus:border-[#FF6B9D] transition"
+                  className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md h-12 px-4 pr-12 text-base focus:outline-none focus:ring-2 focus:ring-[#C8961F] focus:border-[#C8961F] transition"
                   placeholder="Enter your password"
                 />
                 <button
@@ -101,7 +101,7 @@ export default function SignInPage() {
             <div className="flex items-center justify-between text-sm">
               <Link
                 href="/forgot-password"
-                className="text-[#FF6B9D] hover:text-[#FF5A8A] hover:underline"
+                className="text-[#C8961F] hover:text-[#A87814] hover:underline"
               >
                 Forgot your password?
               </Link>
@@ -111,7 +111,7 @@ export default function SignInPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#FF6B9D] hover:bg-[#FF5A8A] text-white font-semibold py-3 px-4 rounded-md transition disabled:opacity-50 disabled:cursor-not-allowed text-base"
+              className="w-full bg-[#C8961F] hover:bg-[#A87814] text-white font-semibold py-3 px-4 rounded-md transition disabled:opacity-50 disabled:cursor-not-allowed text-base"
             >
               {loading ? "Signing in..." : "Sign in"}
             </button>
@@ -133,7 +133,7 @@ export default function SignInPage() {
               Don't have an account?{" "}
               <Link
                 href="/register"
-                className="text-[#FF6B9D] hover:text-[#FF5A8A] hover:underline font-medium"
+                className="text-[#C8961F] hover:text-[#A87814] hover:underline font-medium"
               >
                 Create one
               </Link>

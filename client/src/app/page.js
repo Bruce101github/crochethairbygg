@@ -200,7 +200,7 @@ export default function Home() {
                     <h1 className="hidden text-2xl lg:text-5xl font-bold mb-6 text-black leading-tight drop-shadow-lg">
                       <span className="block">{slide.title}</span>
                       {slide.subtitle && (
-                        <span className="block text-[#FF6B9D]">
+                        <span className="block text-[#C8961F]">
                           {slide.subtitle}
                         </span>
                       )}
@@ -214,7 +214,7 @@ export default function Home() {
                       {slide.cta1_text && slide.cta1_link && (
                         <Link
                           href={slide.cta1_link}
-                          className="inline-flex items-center justify-center gap-2 bg-[#FF6B9D] text-white px-10 py-4 rounded-lg font-bold text-base lg:text-lg hover:bg-[#FF5A8A] transition shadow-lg hover:shadow-xl"
+                          className="inline-flex items-center justify-center gap-2 bg-[#C8961F] text-white px-10 py-4 rounded-lg font-bold text-base lg:text-lg hover:bg-[#A87814] transition shadow-lg hover:shadow-xl"
                         >
                           {slide.cta1_text}
                           <HiArrowRight size={20} />
@@ -223,7 +223,7 @@ export default function Home() {
                       {slide.cta2_text && slide.cta2_link && (
                         <Link
                           href={slide.cta2_link}
-                          className="inline-flex items-center justify-center gap-2 border-2 border-[#FF6B9D] text-[#FF6B9D] px-10 py-4 rounded-lg font-bold text-base lg:text-lg hover:bg-[#FF6B9D]/10 transition"
+                          className="inline-flex items-center justify-center gap-2 border-2 border-[#C8961F] text-[#C8961F] px-10 py-4 rounded-lg font-bold text-base lg:text-lg hover:bg-[#C8961F]/10 transition"
                         >
                           {slide.cta2_text}
                         </Link>
@@ -239,7 +239,7 @@ export default function Home() {
             <div className="text-center px-5 max-w-5xl w-full">
               <h1 className="text-2xl lg:text-5xl font-bold mb-6 text-black leading-tight">
                 <span className="block">Premium Hair Extensions</span>
-                <span className="block text-[#FF6B9D]">For Every Style</span>
+                <span className="block text-[#C8961F]">For Every Style</span>
               </h1>
               <p className="text-base lg:text-lg text-gray-700 mb-10 max-w-2xl mx-auto">
                 Discover our collection of high-quality wigs, extensions, and
@@ -248,7 +248,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   href="/products"
-                  className="inline-flex items-center justify-center gap-2 bg-[#FF6B9D] text-white px-10 py-4 rounded-lg font-bold text-base lg:text-lg hover:bg-[#FF5A8A] transition shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center justify-center gap-2 bg-[#C8961F] text-white px-10 py-4 rounded-lg font-bold text-base lg:text-lg hover:bg-[#A87814] transition shadow-lg hover:shadow-xl"
                 >
                   Shop Now
                   <HiArrowRight size={20} />
@@ -266,14 +266,14 @@ export default function Home() {
               className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition hover:scale-110"
               aria-label="Previous slide"
             >
-              <HiChevronLeft size={24} className="text-[#FF6B9D]" />
+              <HiChevronLeft size={24} className="text-[#C8961F]" />
             </button>
             <button
               onClick={nextSlide}
               className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition hover:scale-110"
               aria-label="Next slide"
             >
-              <HiChevronRight size={24} className="text-[#FF6B9D]" />
+              <HiChevronRight size={24} className="text-[#C8961F]" />
             </button>
           </>
         )}
@@ -287,7 +287,7 @@ export default function Home() {
                 onClick={() => goToSlide(index)}
                 className={`h-2 rounded-full transition-all ${
                   index === currentHeroIndex
-                    ? "w-8 bg-[#FF6B9D]"
+                    ? "w-8 bg-[#C8961F]"
                     : "w-2 bg-gray-300 hover:bg-gray-400"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
@@ -323,7 +323,7 @@ export default function Home() {
                 </div>
                 <Link
                   href="/products"
-                  className="text-[#FF6B9D] hover:underline font-semibold flex items-center gap-1 text-xs lg:text-base"
+                  className="text-[#C8961F] hover:underline font-semibold flex items-center gap-1 text-xs lg:text-base"
                 >
                   View All
                   <HiArrowRight size={14} className="lg:w-4 lg:h-4" />
@@ -374,12 +374,12 @@ export default function Home() {
                                 ) : (
                                   <HiShoppingBag
                                     size={48}
-                                    className="text-[#FF6B9D]"
+                                    className="text-[#C8961F]"
                                   />
                                 )}
                               </div>
                               {/* Category Name - Bigger */}
-                              <h3 className="text-xs text-gray-900 dark:text-white text-center leading-tight group-hover:text-[#FF6B9D] transition font-medium px-1">
+                              <h3 className="text-xs text-gray-900 dark:text-white text-center leading-tight group-hover:text-[#C8961F] transition font-medium px-1">
                                 {category.name}
                               </h3>
                             </Link>
@@ -399,7 +399,7 @@ export default function Home() {
                         onClick={() => setCurrentCategoryPage(index)}
                         className={`h-1.5 rounded-full transition-all ${
                           index === currentCategoryPage
-                            ? "w-6 bg-[#FF6B9D]"
+                            ? "w-6 bg-[#C8961F]"
                             : "w-1.5 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
                         }`}
                         aria-label={`Go to category page ${index + 1}`}
@@ -429,11 +429,11 @@ export default function Home() {
                           unoptimized
                         />
                       ) : (
-                        <HiShoppingBag size={64} className="text-[#FF6B9D]" />
+                        <HiShoppingBag size={64} className="text-[#C8961F]" />
                       )}
                     </div>
                     {/* Category Name - Bigger */}
-                    <h3 className="text-base font-medium text-gray-900 dark:text-white text-center group-hover:text-[#FF6B9D] transition">
+                    <h3 className="text-base font-medium text-gray-900 dark:text-white text-center group-hover:text-[#C8961F] transition">
                       {category.name}
                     </h3>
                   </Link>
@@ -453,7 +453,7 @@ export default function Home() {
           </div>
           <Link
             href="/products"
-            className="text-[#FF6B9D] hover:underline font-semibold flex items-center gap-1 text-xs lg:text-base"
+            className="text-[#C8961F] hover:underline font-semibold flex items-center gap-1 text-xs lg:text-base"
           >
             View All
             <HiArrowRight size={14} className="lg:w-4 lg:h-4" />
@@ -491,7 +491,7 @@ export default function Home() {
                   {product.variants.length > 1 && (
                     <p className="text-sm lg:text-base text-gray-600 dark:text-gray-400">
                       options:{" "}
-                      <span className="text-[#FF6B9D] font-semibold">
+                      <span className="text-[#C8961F] font-semibold">
                         {product.variants.length} sizes
                       </span>
                     </p>
@@ -500,7 +500,7 @@ export default function Home() {
                     <p className="font-bold text-base lg:text-xl text-gray-900 dark:text-white">
                       {priceRange(product.variants)}
                     </p>
-                    <button className="w-fit bg-[#FF6B9D]/10 text-[#FF6B9D] p-1.5 rounded-full flex items-center justify-center gap-2 hover:bg-[#FF6B9D] hover:text-white transition">
+                    <button className="w-fit bg-[#C8961F]/10 text-[#C8961F] p-1.5 rounded-full flex items-center justify-center gap-2 hover:bg-[#C8961F] hover:text-white transition">
                       <HiShoppingBag size={16} />
                     </button>
                   </div>
@@ -523,8 +523,8 @@ export default function Home() {
       <section className="py-16 px-5 lg:px-40 bg-white dark:bg-gray-900 transition-colors">
         <div className="grid md:grid-cols-3 gap-8">
           <div className="text-center">
-            <div className="bg-[#FF6B9D]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <HiShoppingBag size={32} className="text-[#FF6B9D]" />
+            <div className="bg-[#C8961F]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <HiShoppingBag size={32} className="text-[#C8961F]" />
             </div>
             <h3 className="font-bold text-base lg:text-lg mb-2 text-gray-900 dark:text-white">
               Free Shipping
@@ -534,8 +534,8 @@ export default function Home() {
             </p>
           </div>
           <div className="text-center">
-            <div className="bg-[#FF6B9D]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <HiStar size={32} className="text-[#FF6B9D]" />
+            <div className="bg-[#C8961F]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <HiStar size={32} className="text-[#C8961F]" />
             </div>
             <h3 className="font-bold text-base lg:text-lg mb-2 text-gray-900 dark:text-white">
               Premium Quality
@@ -545,8 +545,8 @@ export default function Home() {
             </p>
           </div>
           <div className="text-center">
-            <div className="bg-[#FF6B9D]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <HiArrowRight size={32} className="text-[#FF6B9D]" />
+            <div className="bg-[#C8961F]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <HiArrowRight size={32} className="text-[#C8961F]" />
             </div>
             <h3 className="font-bold text-base lg:text-lg mb-2 text-gray-900 dark:text-white">
               Easy Returns

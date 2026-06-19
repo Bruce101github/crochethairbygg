@@ -98,7 +98,7 @@ export default function SettingsPage() {
           {/* User Info Section */}
           <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 mb-6">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 bg-[#FF6B9D] rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 bg-[#C8961F] rounded-full flex items-center justify-center">
                 <HiUser size={32} className="text-white" />
                   </div>
                   <div>
@@ -110,9 +110,9 @@ export default function SettingsPage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-[#FF6B9D] transition">
+              <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-[#C8961F] transition">
                 <Link href="/orders" className="flex items-center gap-3">
-                  <HiShoppingBag size={24} className="text-[#FF6B9D]" />
+                  <HiShoppingBag size={24} className="text-[#C8961F]" />
                   <div>
                     <p className="font-semibold text-gray-900 dark:text-white">My Orders</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">View order history</p>
@@ -120,9 +120,9 @@ export default function SettingsPage() {
                 </Link>
             </div>
 
-              <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-[#FF6B9D] transition">
+              <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-[#C8961F] transition">
                 <Link href="/returns" className="flex items-center gap-3">
-                  <HiHeart size={24} className="text-[#FF6B9D]" />
+                  <HiHeart size={24} className="text-[#C8961F]" />
             <div>
                     <p className="font-semibold text-gray-900 dark:text-white">Returns</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Manage returns & refunds</p>

@@ -733,8 +733,8 @@ export default function ProductPage() {
         >
           <HiHeart
             size={18}
-            fill={isLiked ? "#FF6B9D" : "none"}
-            stroke="#FF6B9D"
+            fill={isLiked ? "#C8961F" : "none"}
+            stroke="#C8961F"
             strokeWidth={2}
             className="transition-all duration-300"
           />
@@ -756,7 +756,7 @@ export default function ProductPage() {
                   height={60}
                   className={`object-cover w-50 h-40 rounded-sm border-2 ${
                     current - 1 === index
-                      ? "border-[#FF6B9D]"
+                      ? "border-[#C8961F]"
                       : "border-gray-300"
                   }`}
                   unoptimized
@@ -785,13 +785,13 @@ export default function ProductPage() {
         )}
       </div>
       <div className="relative px-2 py-10 lg:px-4 lg:pt-0 lg:pb-40 lg:max-w-[40vw] lg:h-screen overflow-y-scroll scrollbar-hide">
-        <div className="lg:hidden absolute right-0 left-0 top-0 w-full py-1 px-2 bg-[#FF6B9D] text-sm text-white text-semibold">
+        <div className="lg:hidden absolute right-0 left-0 top-0 w-full py-1 px-2 bg-[#C8961F] text-sm text-white text-semibold">
           Free Delivery for orders in Accra.
         </div>
         <div className="flex items-start justify-between mb-2">
           <h1 className="text-black text-base font-semibold flex-1">
           {
-              <span className="bg-[#FF6B9D] rounded-tl-xl rounded-br-xl py-1 px-2 text-sm text-white font-medium mr-2">
+              <span className="bg-[#C8961F] rounded-tl-xl rounded-br-xl py-1 px-2 text-sm text-white font-medium mr-2">
               Free Delivery
             </span>
           }
@@ -814,20 +814,20 @@ export default function ProductPage() {
           </div>
         )}
         <div className="flex gap-2 flex-wrap">
-          <p className="text-2xl font-bold mb-2 text-[#FF6B9D]">
+          <p className="text-2xl font-bold mb-2 text-[#C8961F]">
             <span className="text-sm">GH₵</span>
             {variantMatches.length > 0
               ? priceRange(variantMatches)
               : product.base_price}
           </p>
           {maxStockLimit !== undefined && maxStockLimit <= 10 && (
-            <div className="text-sm border border-[#FF6B9D] rounded-sm p-1 text-[#FF6B9D] h-fit font-semibold">
+            <div className="text-sm border border-[#C8961F] rounded-sm p-1 text-[#C8961F] h-fit font-semibold">
               only {maxStockLimit} left
         </div>
           )}
         </div>
-        <div className="bg-[#FF6B9D]/10 rounded-md py-1 pl-2 pr-6 w-full text-sm flex gap-2 items-center relative mb-2">
-          <div className="flex gap-1 bg-[#FF6B9D] py-1 px-1.5 rounded-sm">
+        <div className="bg-[#C8961F]/10 rounded-md py-1 pl-2 pr-6 w-full text-sm flex gap-2 items-center relative mb-2">
+          <div className="flex gap-1 bg-[#C8961F] py-1 px-1.5 rounded-sm">
             <HiStar size={16} className="text-white" />
             <span className="text-white font-semibold">#1 Best Seller</span>
           </div>
@@ -844,8 +844,8 @@ export default function ProductPage() {
           </span>
           <HiChevronRight size={16} className="absolute right-2" />
         </div>
-        <div className="bg-[#FF6B9D]/10 rounded-md py-2 pl-2 pr-6 w-full text-xs flex gap-2 items-center relative mb-2">
-          <HiTag size={16} className="text-[#FF6B9D]" />
+        <div className="bg-[#C8961F]/10 rounded-md py-2 pl-2 pr-6 w-full text-xs flex gap-2 items-center relative mb-2">
+          <HiTag size={16} className="text-[#C8961F]" />
           <span
             className="whitespace-nowrap 
                 overflow-hidden 
@@ -857,7 +857,7 @@ export default function ProductPage() {
           >
             Get 10% off your first order! Use code: WELCOME10
           </span>
-          <HiClipboardCopy size={16} className="absolute right-2 text-[#FF6B9D]" />
+          <HiClipboardCopy size={16} className="absolute right-2 text-[#C8961F]" />
         </div>
         {/* DYNAMIC VARIANT SYSTEM */}
         {(() => {
@@ -920,8 +920,8 @@ export default function ProductPage() {
                             }}
                             className={`
                               border py-2 px-3 rounded-md text-sm w-fit transition
-                              ${isSelected ? "border-[#FF6B9D] bg-[#FF6B9D]/10 text-[#FF6B9D] font-semibold" : "border-gray-300"}
-                              ${available ? "hover:border-[#FF6B9D]" : "text-gray-300 opacity-40 cursor-not-allowed"}
+                              ${isSelected ? "border-[#C8961F] bg-[#C8961F]/10 text-[#C8961F] font-semibold" : "border-gray-300"}
+                              ${available ? "hover:border-[#C8961F]" : "text-gray-300 opacity-40 cursor-not-allowed"}
                             `}
                           >
                             {value}
@@ -974,7 +974,7 @@ export default function ProductPage() {
               e.preventDefault();
               addCart();
             }}
-            className="py-3 px-4 border-2 border-[#FF6B9D] w-full text-base rounded-lg font-bold text-[#FF6B9D] hover:bg-[#FF6B9D]/10 transition"
+            className="py-3 px-4 border-2 border-[#C8961F] w-full text-base rounded-lg font-bold text-[#C8961F] hover:bg-[#C8961F]/10 transition"
           >
             Add to bag
           </button>
@@ -1003,7 +1003,7 @@ export default function ProductPage() {
                 // Error already handled in addCart
               }
             }}
-            className="py-3 px-4 bg-[#FF6B9D] w-full text-base rounded-lg font-bold text-white hover:bg-[#FF5A8A] transition shadow-lg"
+            className="py-3 px-4 bg-[#C8961F] w-full text-base rounded-lg font-bold text-white hover:bg-[#A87814] transition shadow-lg"
           >
             Buy now
           </button>
@@ -1056,17 +1056,17 @@ export default function ProductPage() {
             />
           </div>
         </div>
-        <div className="bg-[#FF6B9D]/10 p-3 flex flex-col lg:flex-row gap-3 text-xs my-2 rounded-md">
+        <div className="bg-[#C8961F]/10 p-3 flex flex-col lg:flex-row gap-3 text-xs my-2 rounded-md">
           <div className="flex gap-2 items-center">
-            <HiShoppingBag size={16} className="text-[#FF6B9D]" />{" "}
+            <HiShoppingBag size={16} className="text-[#C8961F]" />{" "}
             <span className="font-medium">Nationwide Delivery</span>
           </div>
           <div className="flex gap-2 items-center">
-            <MdLocalShipping size={16} className="text-[#FF6B9D]" />{" "}
+            <MdLocalShipping size={16} className="text-[#C8961F]" />{" "}
             <span className="font-medium">International Shipping</span>
           </div>
           <div className="flex gap-2 items-center">
-            <HiBadgeCheck size={16} className="text-[#FF6B9D]" />{" "}
+            <HiBadgeCheck size={16} className="text-[#C8961F]" />{" "}
             <span className="font-medium">Top Quality</span>
           </div>
         </div>
@@ -1221,7 +1221,7 @@ export default function ProductPage() {
       <div className="lg:hidden fixed w-full bottom-0 flex flex-col gap-2 bg-white backdrop-blur-sm border-t border-gray-300/20 px-2 lg:px-40 py-4 shadow-lg">
         <div className="flex justify-between">
           <span></span>
-          <span className="text-lg text-[#FF6B9D] font-bold">
+          <span className="text-lg text-[#C8961F] font-bold">
             <span className=" text-xs lg:text-sm">GH₵</span>
             {variantMatches.length > 0
               ? priceRange(variantMatches)
@@ -1230,7 +1230,7 @@ export default function ProductPage() {
         </div>
         <div className="grid grid-cols-2 gap-2">
           <button
-            className="border-2 border-[#FF6B9D] py-2 rounded-lg font-bold text-[#FF6B9D]"
+            className="border-2 border-[#C8961F] py-2 rounded-lg font-bold text-[#C8961F]"
             onClick={(e) => {
               e.preventDefault();
               if (!accessToken) {
@@ -1281,7 +1281,7 @@ export default function ProductPage() {
                 // Error already handled in addCart
               }
             }}
-            className="bg-[#FF6B9D] py-2 rounded-lg text-white font-bold hover:bg-[#FF5A8A] transition"
+            className="bg-[#C8961F] py-2 rounded-lg text-white font-bold hover:bg-[#A87814] transition"
           >
             Buy Now
           </button>

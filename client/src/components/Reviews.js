@@ -108,7 +108,7 @@ export default function Reviews({ productId, canReview, onReviewSubmitted }) {
         {canReview && accessToken && !showForm && (
           <button
             onClick={() => setShowForm(!showForm)}
-            className="px-4 py-2 bg-[#FF6B9D] text-white rounded-lg hover:bg-[#FF5A8A] transition font-semibold"
+            className="px-4 py-2 bg-[#C8961F] text-white rounded-lg hover:bg-[#A87814] transition font-semibold"
           >
             Write a Review
           </button>
@@ -125,10 +125,10 @@ export default function Reviews({ productId, canReview, onReviewSubmitted }) {
 
       {/* Prompt for users who can review but haven't shown the form */}
       {canReview && accessToken && !showForm && (
-        <div className="mb-6 p-4 bg-[#FF6B9D]/10 dark:bg-[#FF6B9D]/20 border border-[#FF6B9D]/30 rounded-lg">
+        <div className="mb-6 p-4 bg-[#C8961F]/10 dark:bg-[#C8961F]/20 border border-[#C8961F]/30 rounded-lg">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <HiStar size={24} className="text-[#FF6B9D] fill-[#FF6B9D]" />
+              <HiStar size={24} className="text-[#C8961F] fill-[#C8961F]" />
               <div>
                 <p className="font-semibold text-gray-900 dark:text-white">You purchased this product!</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">Share your experience and help other customers.</p>
@@ -136,7 +136,7 @@ export default function Reviews({ productId, canReview, onReviewSubmitted }) {
             </div>
             <button
               onClick={() => setShowForm(true)}
-              className="px-4 py-2 bg-[#FF6B9D] text-white rounded-lg hover:bg-[#FF5A8A] transition font-semibold"
+              className="px-4 py-2 bg-[#C8961F] text-white rounded-lg hover:bg-[#A87814] transition font-semibold"
             >
               Write a Review
             </button>
@@ -181,14 +181,14 @@ export default function Reviews({ productId, canReview, onReviewSubmitted }) {
                 value={formData.comment}
                 onChange={(e) => setFormData({ ...formData, comment: e.target.value })}
                 rows="4"
-                className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#FF6B9D] focus:border-transparent"
+                className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#C8961F] focus:border-transparent"
                 placeholder="Share your experience with this product..."
               />
             </div>
             <button
               type="submit"
               disabled={submitting}
-              className="px-6 py-2 bg-[#FF6B9D] text-white rounded-lg hover:bg-[#FF5A8A] transition font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-6 py-2 bg-[#C8961F] text-white rounded-lg hover:bg-[#A87814] transition font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {submitting ? "Submitting..." : "Submit Review"}
             </button>

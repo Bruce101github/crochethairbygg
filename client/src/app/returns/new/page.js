@@ -195,7 +195,7 @@ function NewReturnPage() {
         <div className="mb-6">
           <Link
             href={`/orders/${order.id}`}
-            className="text-[#FF6B9D] hover:text-[#FF5A8A] flex items-center gap-2 mb-4"
+            className="text-[#C8961F] hover:text-[#A87814] flex items-center gap-2 mb-4"
           >
             <HiArrowLeft size={20} />
             Back to Order
@@ -231,7 +231,7 @@ function NewReturnPage() {
                 value={formData.reason}
                 onChange={(e) => setFormData({ ...formData, reason: e.target.value })}
                 required
-                className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#FF6B9D]"
+                className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#C8961F]"
               >
                 <option value="">Select a reason</option>
                 {reasonOptions.map((option) => (
@@ -251,7 +251,7 @@ function NewReturnPage() {
                 onChange={(e) => setFormData({ ...formData, reason_description: e.target.value })}
                 required
                 rows={4}
-                className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#FF6B9D]"
+                className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#C8961F]"
                 placeholder="Please provide additional details about why you're returning this item..."
               />
             </div>
@@ -267,7 +267,7 @@ function NewReturnPage() {
                   step="0.01"
                   value={formData.requested_refund_amount}
                   onChange={(e) => setFormData({ ...formData, requested_refund_amount: e.target.value })}
-                  className="w-full border border-gray-300 dark:border-gray-600 rounded-lg pl-8 pr-4 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#FF6B9D]"
+                  className="w-full border border-gray-300 dark:border-gray-600 rounded-lg pl-8 pr-4 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#C8961F]"
                   placeholder="0.00"
                 />
               </div>
@@ -280,7 +280,7 @@ function NewReturnPage() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="flex-1 bg-[#FF6B9D] hover:bg-[#FF5A8A] text-white font-semibold py-3 px-6 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 bg-[#C8961F] hover:bg-[#A87814] text-white font-semibold py-3 px-6 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {submitting ? "Submitting..." : "Submit Return Request"}
               </button>

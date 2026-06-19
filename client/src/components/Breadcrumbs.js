@@ -30,7 +30,7 @@ export default function Breadcrumbs({ items = [] }) {
               ) : (
                 <Link
                   href={item.href}
-                  className="hover:text-[#FF6B9D] transition-colors flex items-center gap-1"
+                  className="hover:text-[#C8961F] transition-colors flex items-center gap-1"
                 >
                   {isHome && <HiHome size={18} />}
                   {item.label}

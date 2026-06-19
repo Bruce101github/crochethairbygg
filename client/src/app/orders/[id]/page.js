@@ -140,7 +140,7 @@ export default function OrderDetailPage() {
                       {order.status && ['paid', 'processing', 'shipped', 'delivered'].includes(order.status) && (
                         <Link
                           href={`/returns/new?order=${order.id}&item=${item.id}`}
-                          className="inline-block mt-2 text-sm text-[#FF6B9D] hover:text-[#FF5A8A] hover:underline"
+                          className="inline-block mt-2 text-sm text-[#C8961F] hover:text-[#A87814] hover:underline"
                         >
                           Request Return for this item
                         </Link>
@@ -201,7 +201,7 @@ export default function OrderDetailPage() {
                   <div className="mt-4 pt-4 border-t border-gray-200">
                     <Link
                       href={`/returns/new?order=${order.id}`}
-                      className="block w-full text-center bg-[#FF6B9D] hover:bg-[#FF5A8A] text-white font-semibold py-3 px-4 rounded-lg transition"
+                      className="block w-full text-center bg-[#C8961F] hover:bg-[#A87814] text-white font-semibold py-3 px-4 rounded-lg transition"
                     >
                       Request Return
                     </Link>

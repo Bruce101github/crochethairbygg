@@ -106,7 +106,7 @@ export default function ReturnsPage() {
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Return Requests</h1>
           <Link
             href="/orders"
-            className="text-[#FF6B9D] hover:text-[#FF5A8A] flex items-center gap-2"
+            className="text-[#C8961F] hover:text-[#A87814] flex items-center gap-2"
           >
             <HiArrowLeft size={20} />
             Back to Orders
@@ -124,7 +124,7 @@ export default function ReturnsPage() {
             </p>
             <Link
               href="/orders"
-              className="inline-block bg-[#FF6B9D] hover:bg-[#FF5A8A] text-white px-6 py-3 rounded-lg font-semibold transition"
+              className="inline-block bg-[#C8961F] hover:bg-[#A87814] text-white px-6 py-3 rounded-lg font-semibold transition"
             >
               View Orders
             </Link>
@@ -201,7 +201,7 @@ export default function ReturnsPage() {
 
                 <Link
                   href={`/orders/${returnReq.order_id}`}
-                  className="inline-block mt-4 text-[#FF6B9D] hover:text-[#FF5A8A] text-sm font-semibold"
+                  className="inline-block mt-4 text-[#C8961F] hover:text-[#A87814] text-sm font-semibold"
                 >
                   View Order Details →
                 </Link>

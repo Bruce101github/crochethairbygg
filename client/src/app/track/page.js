@@ -133,14 +133,14 @@ export default function TrackOrderPage() {
                 onChange={(e) => setOrderId(e.target.value)}
                 onKeyPress={(e) => e.key === "Enter" && handleTrack()}
                 placeholder="Enter order ID (e.g., 123)"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6B9D] focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8961F] focus:border-transparent"
               />
             </div>
             <div className="flex items-end">
               <button
                 onClick={handleTrack}
                 disabled={loading}
-                className="px-6 py-3 bg-[#FF6B9D] text-white rounded-lg font-semibold hover:bg-[#FF5A8A] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                className="px-6 py-3 bg-[#C8961F] text-white rounded-lg font-semibold hover:bg-[#A87814] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
               >
                 <HiSearch size={20} />
                 {loading ? "Tracking..." : "Track Order"}
@@ -151,7 +151,7 @@ export default function TrackOrderPage() {
             <p className="mt-3 text-sm text-gray-600">
               <button
                 onClick={() => router.push("/signin")}
-                className="text-[#FF6B9D] hover:underline"
+                className="text-[#C8961F] hover:underline"
               >
                 Sign in
               </button>{" "}
@@ -199,7 +199,7 @@ export default function TrackOrderPage() {
                             step.isCancelled
                               ? "bg-red-100 border-red-300"
                               : step.completed
-                              ? "bg-[#FF6B9D] border-[#FF6B9D] text-white"
+                              ? "bg-[#C8961F] border-[#C8961F] text-white"
                               : "bg-gray-100 border-gray-300 text-gray-400"
                           }`}
                         >
@@ -215,7 +215,7 @@ export default function TrackOrderPage() {
                           <div
                             className={`w-0.5 h-12 mt-2 ${
                               step.completed && !step.isCancelled
-                                ? "bg-[#FF6B9D]"
+                                ? "bg-[#C8961F]"
                                 : "bg-gray-200"
                             }`}
                           />
@@ -291,7 +291,7 @@ export default function TrackOrderPage() {
               <div className="mt-6 pt-4 border-t border-gray-200">
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-semibold">Total</span>
-                  <span className="text-2xl font-bold text-[#FF6B9D]">GH₵{order.total}</span>
+                  <span className="text-2xl font-bold text-[#C8961F]">GH₵{order.total}</span>
                 </div>
               </div>
             </div>
@@ -320,13 +320,13 @@ export default function TrackOrderPage() {
             <div className="flex gap-4">
               <button
                 onClick={() => router.push(`/orders/${order.id}`)}
-                className="flex-1 px-6 py-3 bg-[#FF6B9D] text-white rounded-lg font-semibold hover:bg-[#FF5A8A] transition"
+                className="flex-1 px-6 py-3 bg-[#C8961F] text-white rounded-lg font-semibold hover:bg-[#A87814] transition"
               >
                 View Full Order Details
               </button>
               <button
                 onClick={() => router.push("/orders")}
-                className="px-6 py-3 border-2 border-[#FF6B9D] text-[#FF6B9D] rounded-lg font-semibold hover:bg-[#FF6B9D]/10 transition"
+                className="px-6 py-3 border-2 border-[#C8961F] text-[#C8961F] rounded-lg font-semibold hover:bg-[#C8961F]/10 transition"
               >
                 All Orders
               </button>

@@ -135,7 +135,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
     if (stock > 10) return null;
     if (stock > 0) {
       return (
-        <span className="text-[#FF6B9D] text-sm font-semibold mt-1">
+        <span className="text-[#C8961F] text-sm font-semibold mt-1">
           {lowStockMessages[messageIndex](stock)}
         </span>
       );
@@ -460,7 +460,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
     <div className="columns-2 md:columns-3 lg:columns-4 gap-2 md:gap-4 lg:gap-6">
       {products.map((product) => (
         <Link href={`/products/${product.id}`} key={product.id}>
-        <div className="break-inside-avoid mb-4 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-[#FF6B9D] hover:shadow-lg transition-all duration-300 bg-white dark:bg-gray-800 group">
+        <div className="break-inside-avoid mb-4 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-[#C8961F] hover:shadow-lg transition-all duration-300 bg-white dark:bg-gray-800 group">
           <div className="relative overflow-hidden">
             <Image
               src={product.images[0]?.image_url || "/placeholder.jpg"}
@@ -477,8 +477,8 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
             >
                 <HiHeart
                 size={20}
-                fill={likedProducts.has(product.id) ? "#FF6B9D" : "none"}
-                stroke={likedProducts.has(product.id) ? "#FF6B9D" : "#FF6B9D"}
+                fill={likedProducts.has(product.id) ? "#C8961F" : "none"}
+                stroke={likedProducts.has(product.id) ? "#C8961F" : "#C8961F"}
                 strokeWidth={2}
                 className="transition-all duration-300"
               />
@@ -499,7 +499,7 @@ export default function Listing({ searchQuery, filters = DEFAULT_FILTERS, sortBy
               </div>
               <button
                 onClick={(e) => handleAddToCart(e, product)}
-                className="w-fit bg-[#FF6B9D]/10 text-[#FF6B9D] p-2 rounded-full flex items-center justify-center hover:bg-[#FF6B9D] hover:text-white transition-all duration-300 z-10"
+                className="w-fit bg-[#C8961F]/10 text-[#C8961F] p-2 rounded-full flex items-center justify-center hover:bg-[#C8961F] hover:text-white transition-all duration-300 z-10"
               >
                 <HiShoppingBag size={18} />
               </button>
