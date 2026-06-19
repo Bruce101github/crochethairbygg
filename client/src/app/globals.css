@@ -6,8 +6,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-outfit);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -127,19 +127,14 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px; /* eBay base font size */
+    font-family: var(--font-outfit), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
-  
-  /* eBay-style font sizing - limit variations */
+
   html {
-    font-size: 16px; /* Base 16px for mobile */
-  }
-  
-  @media (min-width: 768px) {
-    html {
-      font-size: 16px; /* Keep 16px on larger screens too */
-    }
+    font-size: 16px;
   }
 }
 
@@ -179,4 +174,25 @@
 
 .Wk88:active {
   transform: scale(0.95);
+}
+
+/* ── Quality floor ──────────────────────────────────────────── */
+
+/* Visible keyboard focus everywhere (brand gold), without showing it on mouse click */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--brand-gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respect users who ask for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
