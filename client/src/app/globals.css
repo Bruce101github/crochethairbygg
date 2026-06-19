@@ -41,6 +41,13 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* Tighter leading on display sizes — keeps px sizes, refines rhythm */
+  --text-2xl--line-height: 1.2;
+  --text-3xl--line-height: 1.15;
+  --text-4xl--line-height: 1.1;
+  --text-5xl--line-height: 1.05;
+  --text-6xl--line-height: 1.02;
 }
 
 :root {
@@ -136,6 +143,18 @@
   html {
     font-size: 16px;
   }
+
+  /* Disciplined display type: tighter tracking on headings, balanced wrapping */
+  h1, h2, h3, h4 {
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  h1 {
+    letter-spacing: -0.03em;
+  }
+  p {
+    text-wrap: pretty;
+  }
 }
 
 
@@ -174,6 +193,26 @@
 
 .Wk88:active {
   transform: scale(0.95);
+}
+
+/* ── Signature: metallic gold ───────────────────────────────── */
+
+/* A short brushed-gold bar — the one repeated brand gesture under section titles */
+.brand-bar {
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  margin-top: 0.5rem;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--brand-gold-deep), var(--brand-gold) 45%, var(--brand-gold-bright) 60%, var(--brand-gold));
+}
+
+/* Gold sheen for the rare highlighted word/number */
+.brand-sheen {
+  background: linear-gradient(100deg, var(--brand-gold-deep), var(--brand-gold) 40%, var(--brand-gold-bright) 52%, var(--brand-gold) 64%, var(--brand-gold-deep));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* ── Quality floor ──────────────────────────────────────────── */

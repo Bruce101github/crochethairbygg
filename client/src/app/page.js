@@ -316,10 +316,13 @@ export default function Home() {
           return (
             <section className="py-8 lg:py-16 px-2 md:px-5 lg:px-40 bg-white dark:bg-gray-900 transition-colors">
               <div className="flex items-center justify-between mb-6 lg:mb-8">
-                <div className="flex items-center gap-2">
-                  <h2 className="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">
-                    Shop by Category
-                  </h2>
+                <div className="flex flex-col">
+                  <div className="flex items-center gap-2">
+                    <h2 className="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">
+                      Shop by Category
+                    </h2>
+                  </div>
+                  <span className="brand-bar" aria-hidden="true"></span>
                 </div>
                 <Link
                   href="/products"
@@ -446,10 +449,13 @@ export default function Home() {
       {/* Featured Products */}
       <section className="py-16 px-2 md:px-5 lg:px-40 bg-gray-50 dark:bg-gray-800 transition-colors">
         <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center gap-2">
-            <h2 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white">
-              Featured Products
-            </h2>
+          <div className="flex flex-col">
+            <div className="flex items-center gap-2">
+              <h2 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white">
+                Featured Products
+              </h2>
+            </div>
+            <span className="brand-bar" aria-hidden="true"></span>
           </div>
           <Link
             href="/products"
@@ -513,9 +519,12 @@ export default function Home() {
 
       {/* All Products Section */}
       <section className="py-16 px-2 md:px-5 lg:px-40 bg-white dark:bg-gray-900 transition-colors">
-        <h2 className="text-xl lg:text-2xl font-bold mb-8 text-gray-900 dark:text-white">
-          All Products
-        </h2>
+        <div className="flex flex-col mb-8">
+          <h2 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white">
+            All Products
+          </h2>
+          <span className="brand-bar" aria-hidden="true"></span>
+        </div>
         <Listing />
       </section>
 
