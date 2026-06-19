@@ -6,6 +6,7 @@ import Link from "next/link";
 import toast from "react-hot-toast";
 import { HiPlus, HiMinus, HiLocationMarker, HiTruck } from "react-icons/hi";
 import { clearGuestCart, getGuestCart } from "@/utils/guestCart";
+import DeliveryQuote from "@/components/DeliveryQuote";
 
 export default function CheckoutPage() {
   const router = useRouter();
@@ -14,6 +15,7 @@ export default function CheckoutPage() {
   const [cart, setCart] = useState(null);
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [selectedShipping, setSelectedShipping] = useState(null);
+  const [delivery, setDelivery] = useState(null);
   const [loading, setLoading] = useState(true);
   const [processing, setProcessing] = useState(false);
   const [showNewAddress, setShowNewAddress] = useState(false);
@@ -245,6 +247,28 @@ export default function CheckoutPage() {
       if (res.ok) {
         toast.dismiss();
         toast.success("Order created successfully!");
+
+        // Record the chosen drop-off + ride type so the courier auto-books on
+        // payment success. Non-blocking: never hold up the existing payment flow.
+        if (delivery?.coordinates) {
+          try {
+            await fetch(
+              `${process.env.NEXT_PUBLIC_API_URL}/api/orders/${data.order_id}/delivery/`,
+              {
+                method: "POST",
+                headers,
+                body: JSON.stringify({
+                  dropoff: delivery.coordinates,
+                  ride_type_id: delivery.ride_type_id ?? undefined,
+                  ...(isGuest ? { guest_email: guestInfo.email } : {}),
+                }),
+              }
+            );
+          } catch (e) {
+            console.error("Could not save delivery selection:", e);
+          }
+        }
+
         // Clear discount code from session
         sessionStorage.removeItem('discountCode');
         // Clear guest cart if guest checkout
@@ -544,6 +568,11 @@ export default function CheckoutPage() {
                   </label>
                 ))}
               </div>
+            </div>
+
+            {/* Delivery quote (Mckot) */}
+            <div className="border border-gray-200 rounded-md p-6">
+              <DeliveryQuote onChange={setDelivery} />
             </div>
           </div>
 
